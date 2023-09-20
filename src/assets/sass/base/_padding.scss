@@ -1,0 +1,80 @@
+/* ================================= padding Css Start =========================== */
+.py-120 {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include md-screen {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include msm-screen {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.pt-120 {
+  padding-top: 120px;
+
+  @include md-screen {
+    padding-top: 80px;
+  }
+
+  @include msm-screen {
+    padding-top: 60px;
+  }
+}
+
+.pb-120 {
+  padding-bottom: 120px;
+
+  @include md-screen {
+    padding-bottom: 80px;
+  }
+
+  @include msm-screen {
+    padding-bottom: 60px;
+  }
+}
+
+.py-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include md-screen {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include msm-screen {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.pt-60 {
+  padding-top: 60px;
+
+  @include md-screen {
+    padding-top: 40px;
+  }
+
+  @include msm-screen {
+    padding-top: 30px;
+  }
+}
+
+.pb-60 {
+  padding-bottom: 60px;
+
+  @include md-screen {
+    padding-bottom: 40px;
+  }
+
+  @include msm-screen {
+    padding-bottom: 30px;
+  }
+}
+
+/* ================================= padding Css End =========================== */

@@ -1,0 +1,175 @@
+/* ================================= Button Css Start =========================== */
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: none;
+    background-color: none;
+    border-color: none;
+}
+
+.pill {
+    border-radius: 40px;
+}
+
+.btn {
+      color: hsl(var(--white)) !important;
+      font-weight: 500;
+      padding: 15px 29px;
+      border-radius: 5px;
+      position: relative;
+      z-index: 1;
+      border: 1px solid transparent;
+      font-family: var(--body-font);
+      @extend .fs-16; 
+      line-height: 1;
+      @include sm-screen {
+          padding: 14px 25px;
+          @include fs-14; 
+      }
+      @include msm-screen {
+          padding: 12px 20px;
+      }
+      &:hover, &:focus, &:focus-visible {
+        box-shadow: none !important;
+      }
+      &:active {
+        top: 1px;
+      }
+      &--lg {
+        padding: 20px 35px;
+        @include md-screen {
+            padding: 18px 30px;
+        }
+        @include sm-screen {
+            padding: 16px 25px;
+        }
+      }
+      &--sm {
+        padding: 10px 15px;
+        @include sm-screen {
+            padding: 8px 12px;
+        }
+    }
+    &--icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        @extend .fs-15; 
+        padding: 0;
+    }
+    .icon {
+        margin-right: 5px;
+    }
+    // ============= Different Color Button Start ==================
+    &--base {
+        background-color: hsl(var(--base)) !important;
+        &:hover, &:focus &:focus-visible {
+            background-color: hsl(var(--base-d-200)) !important;
+            border: 1px solid hsl(var(--base-d-200)) !important;
+        }
+    }
+    &-outline--base {
+        background-color: transparent !important;
+        border: 1px solid hsl(var(--base)) !important;
+        color: hsl(var(--base)) !important;
+        &:hover, &:focus &:focus-visible{
+            background-color: hsl(var(--base)) !important;
+            color: hsl(var(--white)) !important;
+        }
+    }
+    &--primary {
+        background-color: hsl(var(--primary)) !important;
+        &:hover, &:focus &:focus-visible {
+            background-color: hsl(var(--primary-d-200)) !important;
+            border: 1px solid hsl(var(--primary-d-200)) !important;
+        }
+    }
+    &-outline--primary {
+        background-color: transparent !important;
+        border: 1px solid hsl(var(--primary)) !important;
+        color: hsl(var(--primary)) !important;
+        &:hover, &:focus &:focus-visible{
+            background-color: hsl(var(--primary)) !important;
+            color: hsl(var(--white)) !important;
+        }
+    }
+    &--secondary {
+        background-color: hsl(var(--secondary)) !important;
+        &:hover, &:focus &:focus-visible {
+            background-color: hsl(var(--secondary-d-200)) !important;
+            border: 1px solid hsl(var(--secondary-d-200)) !important;
+        }
+    }
+    &-outline--secondary {
+        background-color: transparent !important;
+        border: 1px solid hsl(var(--secondary)) !important;
+        color: hsl(var(--secondary)) !important;
+        &:hover, &:focus &:focus-visible{
+            background-color: hsl(var(--secondary)) !important;
+            color: hsl(var(--white)) !important;
+        }
+    }
+    &--success {
+        background-color: hsl(var(--success)) !important;
+        &:hover, &:focus &:focus-visible {
+            background-color: hsl(var(--success-d-200)) !important;
+            border: 1px solid hsl(var(--success-d-200)) !important;
+        }
+    }
+    &-outline--success {
+        background-color: transparent !important;
+        border: 1px solid hsl(var(--success)) !important;
+        color: hsl(var(--success)) !important;
+        &:hover, &:focus &:focus-visible{
+            background-color: hsl(var(--success)) !important;
+            color: hsl(var(--white)) !important;
+        }
+    }
+    &--danger {
+        background-color: hsl(var(--danger)) !important;
+        &:hover, &:focus &:focus-visible {
+            background-color: hsl(var(--danger-d-200)) !important;
+            border: 1px solid hsl(var(--danger-d-200)) !important;
+        }
+    }
+    &-outline--danger {
+        background-color: transparent !important;
+        border: 1px solid hsl(var(--danger)) !important;
+        color: hsl(var(--danger)) !important;
+        &:hover, &:focus &:focus-visible{
+            background-color: hsl(var(--danger)) !important;
+            color: hsl(var(--white)) !important;
+        }
+    }
+    &--warning {
+        background-color: hsl(var(--warning)) !important;
+        &:hover, &:focus &:focus-visible {
+            background-color: hsl(var(--warning-d-200)) !important;
+            border: 1px solid hsl(var(--warning-d-200)) !important;
+        }
+    }
+    &-outline--warning {
+        background-color: transparent !important;
+        border: 1px solid hsl(var(--warning)) !important;
+        color: hsl(var(--warning)) !important;
+        &:hover, &:focus &:focus-visible{
+            background-color: hsl(var(--warning)) !important;
+            color: hsl(var(--white)) !important;
+        }
+    }
+    &--info {
+        background-color: hsl(var(--info)) !important;
+        &:hover, &:focus &:focus-visible {
+            background-color: hsl(var(--info-d-200)) !important;
+            border: 1px solid hsl(var(--info-d-200)) !important;
+        }
+    }
+    &-outline--info {
+        background-color: transparent !important;
+        border: 1px solid hsl(var(--info)) !important;
+        color: hsl(var(--info)) !important;
+        &:hover, &:focus &:focus-visible{
+            background-color: hsl(var(--info)) !important;
+            color: hsl(var(--white)) !important;
+        }
+    }
+}
+/* ================================= Button Css End =========================== */
