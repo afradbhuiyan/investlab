@@ -318,6 +318,11 @@ button:focus {
         width: 50%;
     }
 }
+
+.custom--container {
+    max-width: 1296px !important;
+}
+
 /* Section Background */
 .section-bg {
     background-color: hsl(var(--section-bg));
@@ -2279,7 +2284,47 @@ input[type=number] {
     }
 }
 /* ================================= Preload Css End ===========================  */
-/* ============= Header Start Here ======================= */
+/* ==================== Header Start Here ===================== */
+.header {
+    position: relative;
+    padding: 15px 0;
+    background-color: hsl(var(--white));
+    box-shadow: 49px 18px 31px -13px rgba(147, 131, 128, 0.05);
+    z-index: 1000;
+}
+
+@media screen and (max-width: 991px) {
+    .header {
+        padding: 10px 0;
+        max-height: 101vh;
+        overflow-y: auto;
+    }
+
+    .header::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    .header::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+    }
+}
+
+.header.fixed-header {
+    width: 100%;
+    background-color: hsl(var(--white));
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    animation: slide-down 0.8s;
+    transition: 0.3s linear;
+}
+
+.navbar {
+    padding: 0 !important;
+}
+
 .navbar-brand {
     padding-top: 0;
     padding-bottom: 0;
@@ -2296,61 +2341,83 @@ input[type=number] {
     }
 }
 
-.header {
-    position: relative;
-    z-index: 5;
-    background-color: hsl(var(--black));
+.navbar-toggler.header-button {
+    border-color: transparent;
+    color: hsl(var(--white));
+    background: transparent !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    transition: 0.15s ease-in-out;
+    width: auto;
+    font-size: 2.5rem;
+}
+
+.navbar-toggler.header-button:focus {
+    box-shadow: none !important;
+}
+
+.navbar-toggler.header-button[aria-expanded=true] i::before {
+    content: "\f00d";
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    margin-left: 56px;
+}
+
+@media screen and (max-width: 1199px) {
+    .navbar-actions {
+        margin-left: 40px;
+    }
 }
 
 @media screen and (max-width: 991px) {
-    .header {
-        top: 0px;
-        background-color: hsl(var(--black));
-        padding: 10px 0;
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        max-height: 101vh;
-        overflow-y: auto;
-    }
-
-    .header::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-    }
-
-    .header::-webkit-scrollbar-thumb {
-        border-radius: 0px;
+    .navbar-actions {
+        margin-left: 0px;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: space-between;
     }
 }
 
-.header.fixed-header {
-    background-color: hsl(var(--black));
-    position: sticky;
-    transition: 0.3s linear;
-    top: 0px;
-    animation: slide-down 0.8s;
-    width: 100%;
+.language-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-@keyframes slide-down {
-    0% {
-        opacity: 0;
-        transform: translateY(-150%);
+.language-box .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(var(--black)/0.7);
+    flex-shrink: 0;
+    background-color: hsl(var(--black)/0.08);
+}
+
+@media screen and (max-width: 991px) {
+    .language-box .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 0.875rem;
     }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
-.navbar {
-    padding: 0 !important;
+.language-box .form-select {
+    width: 45px;
+    border-radius: 0px;
+    border: none;
+    padding: 2px 0px 2px 4px;
+    background-color: transparent;
+    font-weight: 500;
+    background-position: right 0px center;
 }
 
-/* ========================= Desktop Device Start ========================= */
 @media (min-width: 992px) {
     .nav-menu {
         padding-top: 0;
@@ -2359,74 +2426,51 @@ input[type=number] {
 
     .nav-menu .nav-item {
         position: relative;
-        padding-right: 30px;
     }
 
-    .nav-menu .nav-item:last-child {
-        padding-right: 0;
-    }
-
-    .nav-menu .nav-item.active .nav-link {
-        color: hsl(var(--base)) !important;
-    }
-
-    .nav-menu .nav-item.active .nav-link::before {
-        width: 100%;
-    }
-
-    .nav-menu .nav-item:hover .nav-link {
-        color: hsl(var(--base)) !important;
-    }
-
-    .nav-menu .nav-item:hover .nav-link::before {
-        width: 100%;
-    }
-
-    .nav-menu .nav-item:hover .nav-link .nav-item__icon {
-        transform: rotate(180deg);
-        transition: 0.2s;
-    }
-
-    .nav-menu .nav-item .nav-link {
-        font-weight: 500;
-        font-size: 1rem;
-        color: hsl(var(--white)) !important;
-        padding: 33px 0;
-        position: relative;
-        cursor: pointer;
-    /* ======================== Style two ================ */
-    }
-
-    .nav-menu .nav-item .nav-link:hover::before {
-        left: 0;
-        transition: 0.3s;
-    }
-
-    .nav-menu .nav-item .nav-link::before {
-        position: absolute;
-        content: "";
-        right: 0;
-        bottom: 25px;
-        width: 0;
-        height: 2px;
-        background-color: hsl(var(--base));
-        transition: 0.3s;
-    }
-
-    .nav-menu .nav-item .nav-link .nav-item__icon {
-        transition: 0.3s;
-        font-size: 0.8125rem;
-        margin-left: 2px;
+    .nav-menu .nav-item:not(:last-child) {
+        margin-right: 40px;
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 991px) {
-    .nav-menu .nav-item .nav-link .nav-item__icon {
-        margin-right: 6px;
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .nav-menu .nav-item:not(:last-child) {
+        margin-right: 32px;
     }
 }
 
 @media (min-width: 992px) {
+    .nav-menu .nav-item.active .nav-link::before {
+        background-color: hsl(var(--base));
+    }
+
+    .nav-menu .nav-link {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #2D2B2B !important;
+        padding: 0 0 !important;
+        cursor: pointer;
+        transition: 0.3s;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    .nav-menu .nav-link::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: transparent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -4px;
+        margin: auto;
+    }
+
+    .nav-menu .nav-link:hover, .nav-menu .nav-link:focus {
+        color: hsl(var(--base)) !important;
+    }
+
     .dropdown-menu {
         display: block;
         visibility: hidden;
@@ -2469,9 +2513,17 @@ input[type=number] {
         top: 100% !important;
         transform: scaleY(1);
     }
+
+    .language-box::after {
+        content: "";
+        width: 1px;
+        height: 20px;
+        margin: 0px 16px 0px 11px;
+        display: inline-block;
+        background-color: hsl(var(--black)/0.15);
+    }
 }
-/* ========================== Desktop Device End ========================= */
-/* ============================== Small Device ======================= */
+
 @media screen and (max-width: 991px) {
     .body-overlay.show {
         visibility: visible;
@@ -2554,35 +2606,18 @@ input[type=number] {
     }
 }
 
-.navbar-toggler.header-button {
-    border-color: transparent;
-    color: hsl(var(--white));
-    background: transparent !important;
-    padding: 0 !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    transition: 0.15s ease-in-out;
-    width: auto;
-    font-size: 2.5rem;
-}
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-150%);
+    }
 
-.navbar-toggler.header-button:focus {
-    box-shadow: none !important;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-.navbar-toggler.header-button[aria-expanded=true] i::before {
-    content: "\f00d";
-}
-
-.language-box .select {
-    color: hsl(var(--white)/0.6) !important;
-}
-
-.language-box .select:focus {
-    color: hsl(var(--white)) !important;
-}
-
-/* ================================= Header Css End =========================== */
+/* ==================== Header End Here ======================= */
 /* ============= Footer Start Here ======================= */
 .footer-area {
     background-color: hsl(var(--black));
