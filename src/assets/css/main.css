@@ -312,7 +312,6 @@ button:focus {
 
 /* ================================= Typography Css End =========================== */
 /* ================================= Custom Classes Css Start =========================== */
-/* Column Extra Small Screen */
 @media screen and (min-width: 425px) and (max-width: 575px) {
     .col-xsm-6 {
         width: 50%;
@@ -323,12 +322,10 @@ button:focus {
     max-width: 1296px !important;
 }
 
-/* Section Background */
 .section-bg {
     background-color: hsl(var(--section-bg));
 }
 
-/* Bg Image Css */
 .bg-img {
     background-size: cover !important;
     background-repeat: no-repeat;
@@ -337,7 +334,81 @@ button:focus {
     height: 100%;
 }
 
-/* Hide Scroll bar Css For Custom Modal */
+.bg-pattern {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-pattern::before, .bg-pattern::after {
+    content: "";
+    max-width: 670px;
+    max-height: 731px;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+}
+
+@media screen and (max-width: 374px) {
+    .bg-pattern::before, .bg-pattern::after {
+        width: 100%;
+    }
+}
+
+.bg-pattern::before {
+    left: 0;
+    bottom: 0;
+    background-image: url("../images/thumbs/pattern-bottom-left.png");
+}
+
+.bg-pattern::after {
+    right: 0;
+    top: 0;
+    background-image: url("../images/thumbs/pattern-top-right.png");
+}
+
+.bg-pattern2 {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-pattern2::before, .bg-pattern2::after {
+    content: "";
+    max-width: 364px;
+    max-height: 396px;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    z-index: -1;
+}
+
+@media screen and (max-width: 374px) {
+    .bg-pattern2::before, .bg-pattern2::after {
+        width: 100%;
+    }
+}
+
+.bg-pattern2::before {
+    left: 0;
+    bottom: 0;
+    background-image: url("../images/thumbs/pattern2-bottom-left.png");
+}
+
+.bg-pattern2::after {
+    right: 0;
+    top: 0;
+    background-image: url("../images/thumbs/pattern2-top-right.png");
+}
+
 .scroll-hide {
     position: absolute;
     overflow-y: hidden;
@@ -361,7 +432,6 @@ button:focus {
     width: calc(100% - 0px);
 }
 
-/* Overlay Start */
 .body-overlay {
     position: fixed;
     width: 100%;
@@ -401,7 +471,6 @@ button:focus {
     z-index: 999;
 }
 
-/* Overlay End */
 /* ================================= Custom Classes Css End =========================== */
 /* Fully Fit image Css */
 .fit-image {
@@ -477,7 +546,7 @@ button:focus {
     font-size: 0.8125rem;
 }
 
-.fs-14, .table tbody tr td:first-child, .table thead tr th, .form--radio .form-check-label, .form--check .form-check-label, .form--control::placeholder {
+.fs-14, .table tbody tr td:first-child, .table thead tr th, .form--radio .form-check-label, .form--check .form-check-label {
     font-size: 0.875rem;
 }
 
@@ -999,8 +1068,8 @@ button:focus {
     font-weight: 500;
     font-family: var(--body-font);
     color: hsl(var(--white)) !important;
-    padding: 10px 24px;
-    border-radius: 5px;
+    padding: 15px 30px;
+    border-radius: 4px;
     position: relative;
     z-index: 1;
     border: 1px solid transparent;
@@ -1017,11 +1086,11 @@ button:focus {
 }
 
 .btn--lg {
-    padding: 12px 34px;
+    padding: 20px 40px;
 }
 
 .btn--sm {
-    padding: 8px 20px;
+    padding: 10px 20px;
 }
 
 .btn--icon {
@@ -2336,11 +2405,6 @@ input[type=number] {
     align-items: center;
 }
 
-.navbar-actions .btn {
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
 .navbar-actions--sm {
     display: none;
     flex-wrap: wrap;
@@ -2532,113 +2596,178 @@ input[type=number] {
     }
 }
 /* ==================== Header End Here ======================= */
-/* ============= Footer Start Here ======================= */
-.footer-area {
-    background-color: hsl(var(--black));
+/* ============= Footer Css Start ======================= */
+.footer {
+    background-color: hsl(var(--base-two));
     margin-top: auto;
-}
-
-.footer-area.bg-img {
-    background-size: contain;
-    background-position: top center;
-}
-
-.footer-item__logo {
-    margin-bottom: 20px;
-}
-
-.footer-item__logo a img {
-    width: 100%;
-    height: 100%;
-    max-width: 190px;
-    max-height: 64px;
-}
-
-.footer-item__title {
-    color: hsl(var(--white));
-    padding-bottom: 10px;
-    margin-bottom: 25px;
     position: relative;
+    z-index: 1;
 }
 
-.footer-item__title::after {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 3px;
-    left: 0;
-    bottom: -2px;
-    background-color: hsl(var(--base));
+.footer__row {
+    display: flex;
+    align-items: start;
+    gap: 124px;
 }
 
-.footer-item .social-list {
-    margin-top: 30px;
+@media screen and (max-width: 1199px) {
+    .footer__row {
+        gap: 32px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer__row {
+        flex-direction: column;
+    }
+}
+
+.footer__col--one {
+    width: 310px;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .footer__col--one {
+        width: 100%;
+    }
+}
+
+.footer__col--two {
+    width: 100%;
+    display: flex;
+    gap: 80px;
 }
 
 @media screen and (max-width: 991px) {
-    .footer-item .social-list {
-        margin-top: 20px;
+    .footer__col--two {
+        gap: 32px;
+        flex-wrap: wrap;
     }
+
+    .footer__col--two .footer-item {
+        flex-grow: 1;
+    }
+}
+
+.footer-top {
+    margin-bottom: 64px;
+}
+
+@media screen and (max-width: 767px) {
+    .footer-top {
+        margin-bottom: 32px;
+    }
+}
+
+.footer-bottom {
+    padding: 36px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    border-top: 1px solid #0E4866;
 }
 
 @media screen and (max-width: 575px) {
-    .footer-item .social-list {
-        margin-top: 15px;
+    .footer-bottom {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
-/* Footer List Item */
-.footer-menu {
-    display: flex;
-    flex-direction: column;
+
+.footer-bottom .copyright {
+    font-weight: 500;
+    color: hsl(var(--white));
 }
 
-.footer-menu__item {
-    display: block;
+.footer-bottom .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+@media screen and (max-width: 575px) {
+    .footer-bottom .footer-links {
+        gap: 20px;
+    }
+}
+
+.footer-bottom .footer-link {
+    color: hsl(var(--white));
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.footer-bottom .footer-link:hover, .footer-bottom .footer-link:focus {
+    color: hsl(var(--base));
+}
+
+.footer-item__logo {
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.footer-item__logo img {
+    width: 81px;
+    height: 56px;
+    object-fit: cover;
+}
+
+.footer-item__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: hsl(var(--white));
+    white-space: nowrap;
+    position: relative;
     padding-bottom: 16px;
 }
 
-.footer-menu__item:last-child {
-    padding-bottom: 0;
+.footer-item__title::before {
+    content: "";
+    width: 48px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(var(--base));
+}
+
+.footer-item__desc {
+    font-weight: 400;
+    color: hsl(var(--white));
+    line-height: 150%;
+}
+
+.footer-item .social-list {
+    margin-top: 24px;
+}
+
+.footer-item .subscribe-form {
+    margin-top: 32px;
+}
+
+.footer-menu__item:not(:last-child) {
+    margin-bottom: 20px;
 }
 
 .footer-menu__link {
-    color: hsl(var(--body-color));
+    font-weight: 500;
+    color: hsl(var(--white));
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.footer-menu__link:hover {
+.footer-menu__link i {
     color: hsl(var(--base));
-    text-decoration: underline;
 }
 
-/* Footer Contact */
-.footer-contact-menu__item {
-    display: flex;
-    padding-bottom: 12px;
-}
-
-.footer-contact-menu__item:last-child {
-    padding-bottom: 0;
-}
-
-.footer-contact-menu__item-icon {
-    width: 15px;
-    color: hsl(var(--base));
-    font-size: 1.25rem;
-}
-
-.footer-contact-menu__item-content {
-    width: calc(100% - 15px);
-    padding-left: 15px;
-}
-
-/* ============= Footer End Here ======================= */
-/* ============= Bottom Footer End Here ======================= */
-.bottom-footer {
-    background-color: hsl(var(--black));
-    border-top: 1px solid hsl(var(--white)/0.2);
-}
-
-/* =============Bottom Footer End Here ======================= */
+/* ============= Footer Css End ======================= */
 /* ===================== Scroll to Top Start ================================= */
 .scroll-top {
     position: fixed;
@@ -2675,4 +2804,51 @@ input[type=number] {
 }
 
 /* ================================= Template Selection Css End ===========================  */
+/* ================================= Social Icon Css Start =========================== */
+.social-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 26px;
+}
+
+@media screen and (max-width: 424px) {
+    .social-list {
+        gap: 18px;
+    }
+}
+
+.social-list__link {
+    width: 24px;
+    height: 24px;
+    color: hsl(var(--base));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.375rem;
+}
+
+/* ================================= Social Icon Css End ===========================  */
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.subscribe-form .form--control {
+    border-radius: 0px;
+    border: none;
+    color: hsl(var(--white));
+    font-weight: 400;
+    padding: 13px 13px 13px 0px;
+    border-bottom: 1px solid #0E4866;
+}
+
+.subscribe-form .form--control::placeholder {
+    color: hsl(var(--white)/0.6);
+}
+
+.subscribe-form .btn {
+    margin-top: 22px;
+}
 /*# sourceMappingURL=main.css.map */

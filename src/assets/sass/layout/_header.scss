@@ -76,12 +76,7 @@
 .navbar-actions {
     display: flex;
     align-items: center;
-
-    .btn {
-        padding-top: 12px;
-        padding-bottom: 12px;
-    }
-
+    
     &--sm {
         display: none;
         flex-wrap: wrap;

@@ -18,8 +18,8 @@
     font-weight: 500;
     font-family: var(--body-font);
     color: hsl(var(--white)) !important;
-    padding: 10px 24px;
-    border-radius: 5px;
+    padding: 15px 30px;
+    border-radius: 4px;
     position: relative;
     z-index: 1;
     border: 1px solid transparent;
@@ -37,11 +37,11 @@
     }
 
     &--lg {
-        padding: 12px 34px;
+        padding: 20px 40px;
     }
 
     &--sm {
-        padding: 8px 20px;
+        padding: 10px 20px;
     }
 
     &--icon {

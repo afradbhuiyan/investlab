@@ -1,0 +1,22 @@
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    .form--control {
+        border-radius: 0px;
+        border: none;
+        color: hsl(var(--white));
+        font-weight: 400;
+        padding: 13px 13px 13px 0px;
+        border-bottom: 1px solid #0E4866;
+        
+        &::placeholder {
+            color: hsl(var(--white)/.6);
+        }
+    }
+
+    .btn {
+        margin-top: 22px;
+    }
+}

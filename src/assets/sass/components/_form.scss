@@ -37,7 +37,6 @@
     line-height: 1;
     &::placeholder {
         color: hsl(var(--black) / .6);
-        @extend .fs-14; 
     }
     &:focus {
         border-color: hsl(var(--base)); 
