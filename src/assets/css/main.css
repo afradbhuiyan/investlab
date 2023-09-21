@@ -2851,4 +2851,64 @@ input[type=number] {
 .subscribe-form .btn {
     margin-top: 22px;
 }
+
+/* =========================================== Account Css Start =========================*/
+.account {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.account-inner {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background-image: url("../images/thumbs/account-page-pattern.png");
+    background-repeat: no-repeat;
+    background-position: 100% bottom;
+    background-size: contain;
+}
+
+.account-form {
+    border-radius: 12px;
+    background-color: hsl(var(--white));
+    padding: 40px 64px;
+}
+
+@media screen and (max-width: 424px) {
+    .account-form {
+        padding: 24px 32px;
+    }
+}
+
+.account-form__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 424px) {
+    .account-form__header {
+        margin-bottom: 24px;
+    }
+}
+
+.account-form__title {
+    color: hsl(var(--black));
+    font-weight: 700;
+}
+
+.account-form__subtitle {
+    color: hsl(var(--base));
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.account-form__text {
+    color: hsl(var(--black)/0.7);
+    font-weight: 500;
+}
+
+/* ============================================ Account Css End ====================================*/
 /*# sourceMappingURL=main.css.map */
