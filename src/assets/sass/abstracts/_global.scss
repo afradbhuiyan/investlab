@@ -1,4 +1,4 @@
-/* ====================== Section Heading ==================== */
+/* ====================== Section Heading Start ==================== */
 .section-heading {
   text-align: center;
   margin-bottom: 50px;
@@ -51,4 +51,39 @@
     }
   }
 }
-/* ====================== Section Heading En d==================== */
+
+/* ====================== Section Heading End ==================== */
+
+/* ==================== Other Option Css Start ============ */
+.other-option {
+  margin: 24px 0px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+
+  @include xsm-screen {
+    margin: 16px 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: translateY(-50%);
+    background-color: #EAEDF0;
+    z-index: -1;
+  }
+
+  &__text {
+    @include fs-12;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0 16px;
+    background-color: hsl(var(--white));
+  }
+}
+
+/* ==================== Other Option Css End ============== */

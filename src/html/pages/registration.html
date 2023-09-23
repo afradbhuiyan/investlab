@@ -3,21 +3,108 @@
 @@include('../partials/_template-top.html')
 @@include('../partials/_header.html')
 
+
+@@include('../partials/_breadcrumb.html', {
+    "breadcrumbText": "Registration"
+})
+
 <!-- ==================== Account Section Start Here ================== -->
 <section class="account">
-    <!-- <div class="breadcrumb"></div> -->
     <div class="account-inner py-60">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6">
+                <div class="col-md-10 col-lg-8 col-xl-6">
                     <form class="account-form" action="">
                         <div class="account-form__header">
-                            <h5 class="account-form__title">Welcome To Sign In!</h5>
-                            <h6 class="account-form__subtitle">Create Account</h6>
-                            <p class="account-form__text">Already have an account? <a href="login.html">Log In</a></p>
+                            <h5 class="account-form__title">Create an Account</h5>
+                            <p class="account-form__subtitle">Already have an account? <a href="login.html">Log In</a></p>        
+
+                            <div class="account-form__social-btns">
+                                <a href="#" class="account-form__social-btn">
+                                    <img class="icon" src="assets/images/icons/google.png" alt="">
+                                </a>
+
+                                <a href="#" class="account-form__social-btn">
+                                    <img class="icon" src="assets/images/icons/facebook.png" alt="">
+                                </a>
+
+                                <a href="#" class="account-form__social-btn">
+                                    <img class="icon" src="assets/images/icons/linkedin.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="other-option">
+                                <span class="other-option__text">OR</span>
+                            </div>
                         </div>
+
                         <div class="account-form__body">
-                            <input class="form--control" placeholder="First name" type="text" name="" id="">
+                            <div class="row gx-3">
+                                <div class="col-xsm-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="username" class="form--label required">Username</label>
+                                        <input class="form--control" type="text" id="username">
+                                    </div>
+                                </div>
+                                <div class="col-xsm-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form--label required">Email</label>
+                                        <input class="form--control" type="text" id="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-xsm-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="country" class="form--label required">Country</label>
+                                        <select id="country" class="form-select form--control">
+                                            <option value="">Bangladesh</option>
+                                            <option value="">India</option>
+                                            <option value="">Pakistan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xsm-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label class="form--label required">Mobile</label>
+                                        <div class="input-group input-with-text">
+                                            <span class="input-group-text">+880</span>
+                                            <input class="form--control" type="number">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xsm-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="your-password" class="form--label required">Password</label>
+                                        <div class="position-relative">
+                                            <input class="form--control" type="password" id="your-password">
+                                            <span class="password-show-hide fas fa-eye toggle-password fa-eye-slash" id="#your-password"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xsm-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="your-password" class="form--label required">Confirm Password</label>
+                                        <div class="position-relative">
+                                            <input class="form--control" type="password" id="confirm-password">
+                                            <span class="password-show-hide fas fa-eye toggle-password fa-eye-slash" id="#confirm-password"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form--check">
+                                        <input class="form-check-input" type="checkbox" id="tos">
+                                        <label class="form-check-label" for="tos">I agree with the <a href="#">Privacy Policy</a>, <a href="#">Terms of Service</a></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-form__footer">
+                            <button type="button" class="w-100 btn btn--base">Sign up</button>
                         </div>
                     </form>
                 </div>
@@ -26,83 +113,6 @@
     </div>
 </section>
 <!-- ==================== Account Section End Here ==================== -->
-
-<!-- <section class="account py-60">
-    <div class="account-inner">
-        <div class="container">
-            <div class="row gy-4 flex-wrap-reverse">
-                <div class="col-lg-6  d-lg-block d-none">
-                    <div class="account-thumb">
-                        <img src="assets/images/thumbs/account-register.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="account-form">
-                        <div class="account-form__content mb-4">
-                            <h3 class="account-form__title mb-2"> Sign Up Your Account </h3>
-                            <p class="account-form__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. ipsam labore dolore sunt laudantium aperiam.</p>
-                        </div>
-                        <form action="#" method="POST">
-                            <div class="row">
-                                <div class="col-sm-6 form-group">
-                                     <div class="form--group">
-                                        <label for="name" class="form--label"> Name</label>
-                                        <input type="text" class="form--control" id="name">
-                                     </div>
-                                </div>
-                                <div class="col-sm-6 form-group">
-                                     <div class="form--group">
-                                        <label for="username" class="form--label">User Name</label>
-                                        <input type="text" class="form--control" id="username">
-                                     </div>
-                                </div>
-                                <div class="col-sm-12 form-group">
-                                    <div class="form--group">
-                                        <label for="email" class="form--label">Email Address</label>
-                                        <input type="text" class="form--control" id="email">
-                                     </div>
-                                </div>
-                                <div class="col-sm-6 form-group">
-                                    <label for="your-password" class="form--label">Password</label>
-                                    <div class="position-relative">
-                                        <input id="your-password" type="password" class="form-control form--control" value="Password">
-                                        <span class="password-show-hide fas fa-eye toggle-password fa-eye-slash" id="#your-password"></span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 form-group">
-                                    <label for="confirm-password" class="form--label">Confirm Password</label>
-                                    <div class="position-relative">
-                                        <input id="confirm-password" type="password" class="form-control form--control" value="Confirm Password">
-                                        <div class="password-show-hide fas fa-eye toggle-password fa-eye-slash" id="#confirm-password"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 form-group">
-                                    <div class="form--check">
-                                        <input class="form-check-input" type="checkbox" value="" id="remember">
-                                        <div class="form-check-label">
-                                            <label class="" for="remember"> I agree with Licences Info,</label>
-                                            <a href="#" class="text--base">Terms of Service</a>
-                                            <label class="" for="remember"> , Privacy Policy </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 form-group">
-                                    <button type="submit" class="btn btn--base w-100">Sign Up</button>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="have-account text-center">
-                                        <p class="have-account__text">Already Have An Account? <a href="login.html" class="have-account__link text--base">Login Now</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- ================================= Account Section End Here ============================ -->
 
 <!-- Footer -->
 @@include('../partials/_footer.html')

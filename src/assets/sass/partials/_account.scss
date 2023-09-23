@@ -1,11 +1,9 @@
 /* =========================================== Account Css Start =========================*/
-
-
 .account {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-
+    
     &-inner {
         flex-grow: 1;
         display: flex;
@@ -21,79 +19,67 @@
 .account-form {
     border-radius: 12px;
     background-color: hsl(var(--white));
-    padding: 40px 64px;
-    
-    @include xsm-screen {
-        padding: 24px 32px;
+    padding: 40px 30px;
+
+    @include msm-screen {
+        padding: 32px 16px;
     }
 
-    &__header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 40px;
-
-        @include xsm-screen {
-            margin-bottom: 24px;
-        }
+    &__header,
+    &__body,
+    &__footer {
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        padding-right: calc(var(--bs-gutter-x) * .5);
     }
 
-    &__body {}
-    &__footer {}
+    &__footer {
+        margin-top: 24px;
+    }
 
     &__title {
         color: hsl(var(--black));
         font-weight: 700;
+        text-align: center;
+        margin-bottom: 8px;
     }
 
     &__subtitle {
-        color: hsl(var(--base));
-        margin-bottom: 5px;
-        font-weight: 600;
+        font-weight: 500;
+        text-align: center;
     }
 
-    &__text {
-        color: hsl(var(--black)/.7);
-        font-weight: 500;
+    &__social-btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-top: 32px;
+        
+        @include xsm-screen {
+            margin-top: 20px;
+        }
+    }
+
+    &__social-btn {
+        flex-shrink: 0;
+        display: inline-block;
+
+        .icon {
+            width: 34px;
+            height: 34px;
+
+            @include xsm-screen {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+    }
+
+    .form-check-label a {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
     }
 }
-
-// .account-inner{
-//     position: relative;
-// }
-
-// .account-form  {
-//     box-shadow: 0 6px 20px hsl(var(--black)/.07);
-//     background-color: hsl(var(--white)/.1);
-//     padding: 50px;
-//     border-radius: 10px;
-//     overflow: hidden;
-//     @include lg-screen {
-//         padding: 40px 30px;
-//     }
-//     @include md-screen {
-//         padding: 35px 25px;
-//     }
-//     @include sm-screen {
-//         padding: 30px 20px;
-//     }
-//     @include xsm-screen {
-//         padding: 30px 15px;
-//     }
-// }
-
-// .account-thumb {
-//     @media (min-width: 1199px) {     
-//         position: absolute;
-//         left: 20px;
-//         top: 0;
-//         bottom: 0;
-//         width: 47%;
-//         img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: contain;
-//         }
-//     }
-// }
 /* ============================================ Account Css End ====================================*/

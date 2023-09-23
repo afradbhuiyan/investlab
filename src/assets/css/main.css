@@ -546,11 +546,11 @@ button:focus {
     font-size: 0.8125rem;
 }
 
-.fs-14, .table tbody tr td:first-child, .table thead tr th, .form--radio .form-check-label, .form--check .form-check-label {
+.fs-14, .table tbody tr td:first-child, .table thead tr th, .form--check .form-check-label {
     font-size: 0.875rem;
 }
 
-.fs-15, .table tbody tr td::before, .form--label, .btn--icon {
+.fs-15, .table tbody tr td::before, .form--radio .form-check-label, .form--label, .btn--icon {
     font-size: 0.9375rem;
 }
 
@@ -612,7 +612,7 @@ button:focus {
     }
 }
 /* ===================== Font Size For responsive devices End =================== */
-/* ====================== Section Heading ==================== */
+/* ====================== Section Heading Start ==================== */
 .section-heading {
     text-align: center;
     margin-bottom: 50px;
@@ -665,7 +665,42 @@ button:focus {
     margin-left: 0;
 }
 
-/* ====================== Section Heading En d==================== */
+/* ====================== Section Heading End ==================== */
+/* ==================== Other Option Css Start ============ */
+.other-option {
+    margin: 24px 0px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+@media screen and (max-width: 424px) {
+    .other-option {
+        margin: 16px 0;
+    }
+}
+
+.other-option::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: translateY(-50%);
+    background-color: #EAEDF0;
+    z-index: -1;
+}
+
+.other-option__text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0 16px;
+    background-color: hsl(var(--white));
+}
+
+/* ==================== Other Option Css End ============== */
 /* ================================= Background Color Css Start =========================== */
 .bg--base {
     background-color: hsl(var(--base)) !important;
@@ -1077,6 +1112,12 @@ button:focus {
     white-space: nowrap;
 }
 
+@media screen and (max-width: 424px) {
+    .btn {
+        padding: 12px 24px;
+    }
+}
+
 .btn:hover, .btn:focus, .btn:focus-visible {
     box-shadow: none !important;
 }
@@ -1089,8 +1130,20 @@ button:focus {
     padding: 20px 40px;
 }
 
+@media screen and (max-width: 424px) {
+    .btn--lg {
+        padding: 17px 34px;
+    }
+}
+
 .btn--sm {
     padding: 10px 20px;
+}
+
+@media screen and (max-width: 424px) {
+    .btn--sm {
+        padding: 7px 14px;
+    }
 }
 
 .btn--icon {
@@ -1277,18 +1330,48 @@ button:focus {
 
 /* ================================= Card Css End =========================== */
 /* ================================= Form Css Start =========================== */
-/* Form Label */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    -webkit-text-fill-color: hsl(var(--white)) !important;
+    caret-color: hsl(var(--white));
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .form--label {
-    margin-bottom: 6px;
-    color: hsl(var(--black)/0.6);
     font-weight: 500;
+    color: hsl(var(--black)/0.8);
+    margin-bottom: 8px;
+}
+
+.form--label.required::after {
+    content: "*";
+    display: inline-block;
+    margin-left: 4px;
+    color: hsl(var(--danger));
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
-/* Form Select */
 .select {
     color: hsl(var(--black)/0.6) !important;
 }
@@ -1303,18 +1386,42 @@ button:focus {
     color: hsl(var(--white));
 }
 
-/* Form Select End */
-/* Form Control Start */
 .form--control {
-    border-radius: 5px;
+    width: 100%;
     font-weight: 400;
     outline: none;
-    width: 100%;
-    padding: 13px 24px;
-    background-color: transparent;
-    border: 1px solid hsl(var(--black)/0.2);
-    color: hsl(var(--black));
+    border-radius: 8px;
+    padding: 12.5px 16px;
+    background-color: #F8F8F8;
+    border: 1px solid hsl(var(--black)/0.07);
+    color: hsl(var(--black)/0.8);
     line-height: 1;
+}
+
+@media screen and (max-width: 424px) {
+    .form--control {
+        padding: 9px 16px;
+    }
+}
+
+.form--control-sm {
+    padding: 7.5px 16px;
+}
+
+@media screen and (max-width: 424px) {
+    .form--control-sm {
+        padding: 4px 16px;
+    }
+}
+
+.form--control-lg {
+    padding: 17.5px 16px;
+}
+
+@media screen and (max-width: 424px) {
+    .form--control-lg {
+        padding: 14px 16px;
+    }
 }
 
 .form--control::placeholder {
@@ -1329,14 +1436,6 @@ button:focus {
     background-color: hsl(var(--black)/0.2);
     opacity: 1;
     border: 0;
-}
-
-.form--control[type=password] {
-    color: hsl(var(--black)/0.5);
-}
-
-.form--control[type=password]:focus {
-    color: hsl(var(--black));
 }
 
 .form--control[type=file] {
@@ -1363,57 +1462,42 @@ button:focus {
     color: hsl(var(--black));
 }
 
-/* Form Control End */
+select.form--control {
+    height: 48px;
+}
+
+@media screen and (max-width: 424px) {
+    select.form--control {
+        height: 41px;
+    }
+}
+
+select.form--control-sm {
+    height: 38px;
+}
+
+@media screen and (max-width: 424px) {
+    select.form--control-sm {
+        height: 31px;
+    }
+}
+
+select.form--control-lg {
+    height: 58px;
+}
+
+@media screen and (max-width: 424px) {
+    select.form--control-lg {
+        height: 51px;
+    }
+}
+
 textarea.form--control {
     height: 130px;
 }
 
-/* Autofill Css */
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
-    -webkit-transition: background-color 5000s ease-in-out 0s;
-    transition: background-color 5000s ease-in-out 0s;
-}
-
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-    -webkit-text-fill-color: hsl(var(--white)) !important;
-    caret-color: hsl(var(--white));
-}
-
-/* Autofill Css End */
-/* input group */
-.input--group {
-    position: relative;
-}
-
-/* Show Hide Password */
-input#your-password, input#confirm-password {
-    padding-right: 50px;
-}
-
-.password-show-hide {
-    position: absolute;
-    right: 20px;
-    z-index: 5;
-    cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%);
-    color: hsl(var(--black)/0.4);
-}
-
-/* --------------- Number Arrow None --------------------- */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-/* Custom Checkbox Design */
-.form--check a {
-    display: inline;
+.form--check {
+    align-items: center;
 }
 
 .form--check .form-check-input {
@@ -1422,10 +1506,11 @@ input[type=number] {
     box-shadow: none !important;
     border: 0;
     position: relative;
-    border-radius: 0px;
+    border-radius: 4px;
     width: 16px;
     height: 16px;
     border: 1px solid hsl(var(--black)/0.2);
+    margin-top: 0px;
     cursor: pointer;
 }
 
@@ -1451,24 +1536,20 @@ input[type=number] {
 }
 
 .form--check .form-check-label {
-    font-weight: 600;
     width: calc(100% - 16px);
+    font-weight: 500;
     padding-left: 12px;
     cursor: pointer;
 }
 
-@media screen and (max-width: 424px) {
-    .form--check label {
-        font-size: 0.9375rem;
-    }
+.form--check .form-check-label a {
+    display: inline-block;
 }
 
-@media screen and (max-width: 424px) {
-    .form--check a {
-        font-size: 0.9375rem;
-    }
+.form--radio {
+    align-items: center;
 }
-/* Custom Radio Design */
+
 .form--radio .form-check-input {
     box-shadow: none;
     border: 1px solid hsl(var(--black)/0.2);
@@ -1507,13 +1588,16 @@ input[type=number] {
 }
 
 .form--radio .form-check-label {
-    font-weight: 600;
     width: calc(100% - 16px);
+    font-weight: 500;
     padding-left: 12px;
     cursor: pointer;
 }
 
-/*  Custom Switch Design */
+.form--radio .form-check-label a {
+    display: inline-block;
+}
+
 .form--switch .form-check-input {
     border-radius: 3px;
     background-image: none;
@@ -1571,7 +1655,32 @@ input[type=number] {
     cursor: pointer;
 }
 
-/*  Custom Switch End Design */
+.input-group.input-with-text {
+    flex-wrap: nowrap;
+}
+
+.input-with-text .input-group-text {
+    color: hsl(var(--black)/0.8);
+    border: 1px solid hsl(var(--black)/0.07);
+    background-color: #F8F8F8 !important;
+    border-radius: 8px;
+}
+
+input#your-password,
+input#confirm-password {
+    padding-right: 50px;
+}
+
+.password-show-hide {
+    position: absolute;
+    right: 20px;
+    z-index: 5;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    color: hsl(var(--black)/0.4);
+}
+
 /* ================================= Form Css End =========================== */
 /* ================================= Modal Css Start =========================== */
 .custom--modal .modal-header {
@@ -2852,6 +2961,73 @@ input[type=number] {
     margin-top: 22px;
 }
 
+/* ====================== Breadcrumb Css Start ==================== */
+.breadcrumb {
+    padding: 40px 0;
+    position: relative;
+    background-position: center 0% !important;
+    margin-bottom: 0px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 424px) {
+    .breadcrumb {
+        padding: 30px 0px;
+    }
+}
+
+.breadcrumb::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: hsl(var(--white)/0.5);
+    z-index: -1;
+}
+
+.breadcrumb__title {
+    margin-bottom: 10px;
+    color: hsl(var(--black));
+}
+
+.breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb__item {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+    content: "\f061";
+    font-weight: 900;
+    font-family: "Line Awesome Free";
+    display: inline-block;
+    margin: 0px 4px;
+    color: hsl(var(--black)/0.8);
+}
+
+.breadcrumb__text {
+    color: hsl(var(--base));
+}
+
+.breadcrumb__link {
+    color: hsl(var(--black)/0.8);
+    font-weight: 500;
+}
+
+.breadcrumb__link:hover, .breadcrumb__link:focus {
+    color: hsl(var(--base));
+}
+
+/* ====================== Breadcrumb Css End ==================== */
 /* =========================================== Account Css Start =========================*/
 .account {
     flex-grow: 1;
@@ -2872,42 +3048,71 @@ input[type=number] {
 .account-form {
     border-radius: 12px;
     background-color: hsl(var(--white));
-    padding: 40px 64px;
+    padding: 40px 30px;
 }
 
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 575px) {
     .account-form {
-        padding: 24px 32px;
+        padding: 32px 16px;
     }
 }
 
-.account-form__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
+.account-form__header, .account-form__body, .account-form__footer {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
 }
 
-@media screen and (max-width: 424px) {
-    .account-form__header {
-        margin-bottom: 24px;
-    }
+.account-form__footer {
+    margin-top: 24px;
 }
 
 .account-form__title {
     color: hsl(var(--black));
     font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .account-form__subtitle {
-    color: hsl(var(--base));
-    margin-bottom: 5px;
-    font-weight: 600;
+    font-weight: 500;
+    text-align: center;
 }
 
-.account-form__text {
-    color: hsl(var(--black)/0.7);
-    font-weight: 500;
+.account-form__social-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+@media screen and (max-width: 424px) {
+    .account-form__social-btns {
+        margin-top: 20px;
+    }
+}
+
+.account-form__social-btn {
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.account-form__social-btn .icon {
+    width: 34px;
+    height: 34px;
+}
+
+@media screen and (max-width: 424px) {
+    .account-form__social-btn .icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.account-form .form-check-label a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 
 /* ============================================ Account Css End ====================================*/
