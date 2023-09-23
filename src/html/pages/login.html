@@ -3,61 +3,84 @@
 @@include('../partials/_template-top.html')
 @@include('../partials/_header.html')
 
-<!-- ================================= Account Section Start Here ============================ -->
-<section class="account py-120">
-    <div class="account-inner">
+
+@@include('../partials/_breadcrumb.html', {
+    "breadcrumbText": "Login"
+})
+
+<!-- ==================== Account Section Start Here ================== -->
+<section class="account">
+    <div class="account-inner py-60">
         <div class="container">
-            <div class="row gy-4 flex-wrap-reverse">
-                <div class="col-lg-6 d-lg-block d-none">
-                    <div class="account-thumb">
-                        <img src="assets/images/thumbs/account-register.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="account-form">
-                        <div class="account-form__content mb-4">
-                            <h3 class="account-form__title mb-2"> Sign In Your Account </h3>
-                            <p class="account-form__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. ipsam labore dolore sunt laudantium aperiam.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-6 col-xxl-5">
+                    <form class="account-form" action="">
+                        <div class="account-form__header">
+                            <h5 class="account-form__title">Account Login</h5>
+                            <p class="account-form__subtitle">Don't have an account? <a href="registration.html">Register</a></p>        
+
+                            <div class="account-form__social-btns">
+                                <a href="#" class="account-form__social-btn">
+                                    <img class="icon" src="assets/images/icons/google.png" alt="">
+                                </a>
+
+                                <a href="#" class="account-form__social-btn">
+                                    <img class="icon" src="assets/images/icons/facebook.png" alt="">
+                                </a>
+
+                                <a href="#" class="account-form__social-btn">
+                                    <img class="icon" src="assets/images/icons/linkedin.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="other-option">
+                                <span class="other-option__text">OR</span>
+                            </div>
                         </div>
-                        <form action="#" method="POST">
+
+                        <div class="account-form__body">
                             <div class="row">
-                                <div class="col-sm-12 form-group">
-                                    <label for="email" class="form--label">Email Address</label>
-                                    <input type="text" class="form--control" id="email">
-                                </div>
-                                <div class="col-sm-12 form-group">
-                                    <label for="your-password" class="form--label">Password</label>
-                                    <div class="position-relative">
-                                        <input id="your-password" type="password" class="form-control form--control" value="Password">
-                                        <span class="password-show-hide fas fa-eye toggle-password fa-eye-slash" id="#your-password"></span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 form-group">
-                                    <div class="d-flex flex-wrap justify-content-between">
-                                        <div class="form--check">
-                                            <input class="form-check-input" type="checkbox" value="" id="remember">
-                                            <label class="form-check-label" for="remember">Remember me </label>
-                                        </div>
-                                        <a href="#" class="forgot-password text--base">Forgot Your Password?</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 form-group">
-                                    <button type="submit" class="btn btn--base w-100">Sign In</button>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="have-account text-center">
-                                        <p class="have-account__text">Don't Have An Account? <a href="registration.html" class="have-account__link text--base">Create Account</a></p>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="usernameOrEmail" class="form--label required">Username or Email</label>
+                                        <input class="form--control" type="text" id="usernameOrEmail">
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="your-password" class="form--label required">Password</label>
+                                        <div class="position-relative">
+                                            <input class="form--control" type="password" id="your-password">
+                                            <span class="password-show-hide fas fa-eye toggle-password fa-eye-slash" id="#your-password"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="flex-between">
+                                        <div class="form--check">
+                                            <input class="form-check-input" type="checkbox" id="remember-me">
+                                            <label class="form-check-label" for="remember-me">Remember me</label>
+                                        </div>
+                                        <a href="forgot-password.html" class="account-form__forgot-pass">Forgot Password?</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-form__footer">
+                            <button type="button" class="w-100 btn btn--base">Login</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- ================================= Account Section End Here ============================ -->
+<!-- ==================== Account Section End Here ==================== -->
+
 <!-- Footer -->
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')

@@ -56,13 +56,13 @@
 
 /* ==================== Other Option Css Start ============ */
 .other-option {
-  margin: 24px 0px;
+  margin-top: 24px;
   position: relative;
   text-align: center;
   z-index: 1;
 
   @include xsm-screen {
-    margin: 16px 0;
+    margin-top: 16px;
   }
 
   &::before {

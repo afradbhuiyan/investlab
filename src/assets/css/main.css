@@ -668,7 +668,7 @@ button:focus {
 /* ====================== Section Heading End ==================== */
 /* ==================== Other Option Css Start ============ */
 .other-option {
-    margin: 24px 0px;
+    margin-top: 24px;
     position: relative;
     text-align: center;
     z-index: 1;
@@ -676,7 +676,7 @@ button:focus {
 
 @media screen and (max-width: 424px) {
     .other-option {
-        margin: 16px 0;
+        margin-top: 16px;
     }
 }
 
@@ -3062,6 +3062,16 @@ input#confirm-password {
     padding-right: calc(var(--bs-gutter-x) * 0.5);
 }
 
+.account-form__header:not(:last-child), .account-form__body:not(:last-child), .account-form__footer:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 424px) {
+    .account-form__header:not(:last-child), .account-form__body:not(:last-child), .account-form__footer:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
 .account-form__footer {
     margin-top: 24px;
 }
@@ -3076,6 +3086,11 @@ input#confirm-password {
 .account-form__subtitle {
     font-weight: 500;
     text-align: center;
+}
+
+.account-form__subtitle a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 
 .account-form__social-btns {
@@ -3107,6 +3122,19 @@ input#confirm-password {
     .account-form__social-btn .icon {
         width: 24px;
         height: 24px;
+    }
+}
+
+.account-form__forgot-pass {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+@media screen and (max-width: 374px) {
+    .account-form .form-check-label {
+        padding-left: 6px;
     }
 }
 

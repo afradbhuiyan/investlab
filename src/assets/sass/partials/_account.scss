@@ -30,8 +30,17 @@
     &__footer {
         padding-left: calc(var(--bs-gutter-x) * .5);
         padding-right: calc(var(--bs-gutter-x) * .5);
-    }
+        // border: 1px solid black;
+        
+        &:not(:last-child) {
+            margin-bottom: 24px;
 
+            @include xsm-screen {
+                margin-bottom: 16px;
+            }
+        }
+    }
+ 
     &__footer {
         margin-top: 24px;
     }
@@ -46,6 +55,10 @@
     &__subtitle {
         font-weight: 500;
         text-align: center;
+        a {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+        }
     }
 
     &__social-btns {
@@ -77,9 +90,22 @@
 
     }
 
-    .form-check-label a {
+    &__forgot-pass {
+        @include fs-14;
+        font-weight: 500;
         text-decoration: underline;
         text-decoration-thickness: 1px;
+    }
+
+    .form-check-label { 
+        @include xxsm-screen {
+            padding-left: 6px;
+        }
+        
+        a {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+        }
     }
 }
 /* ============================================ Account Css End ====================================*/
