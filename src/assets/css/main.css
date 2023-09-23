@@ -2950,6 +2950,7 @@ input#confirm-password {
     color: hsl(var(--white));
     font-weight: 400;
     padding: 13px 13px 13px 0px;
+    background-color: transparent;
     border-bottom: 1px solid #0E4866;
 }
 
@@ -3028,6 +3029,12 @@ input#confirm-password {
 }
 
 /* ====================== Breadcrumb Css End ==================== */
+/* ============= Contact Page Css Start =================== */
+.contact-page {
+    border: 1px solid black;
+}
+
+/* ============= Contact Page Css End ===================== */
 /* =========================================== Account Css Start =========================*/
 .account {
     flex-grow: 1;
