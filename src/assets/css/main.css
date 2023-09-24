@@ -1342,8 +1342,8 @@ input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-    -webkit-text-fill-color: hsl(var(--white)) !important;
-    caret-color: hsl(var(--white));
+    -webkit-text-fill-color: hsl(var(--black)) !important;
+    caret-color: hsl(var(--black));
 }
 
 input::-webkit-outer-spin-button,
@@ -3031,7 +3031,132 @@ input#confirm-password {
 /* ====================== Breadcrumb Css End ==================== */
 /* ============= Contact Page Css Start =================== */
 .contact-page {
-    border: 1px solid black;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-page__section {
+    width: 100%;
+}
+
+.contact-page__section:not(:last-child) {
+    margin-bottom: 120px;
+}
+
+@media screen and (max-width: 991px) {
+    .contact-page__section:not(:last-child) {
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .contact-page__section:not(:last-child) {
+        margin-bottom: 60px;
+    }
+}
+
+.contact-page__thumb {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contact-card {
+    height: 100%;
+    border: 1px solid hsl(var(--base)/0.32);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    align-items: start;
+    gap: 24px;
+}
+
+@media screen and (max-width: 1199px) {
+    .contact-card {
+        padding: 32px 24px;
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contact-card {
+        gap: 12px;
+        padding: 32px 16px;
+    }
+}
+
+.contact-card__icon {
+    width: 57px;
+    height: 57px;
+    border-radius: 8px;
+    border: 1px solid hsl(var(--base));
+    color: hsl(var(--base));
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-card__icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+}
+
+.contact-card__title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-card__title {
+        margin-bottom: 0px;
+    }
+}
+
+.contact-card__desc {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-card__desc {
+        white-space: normal;
+    }
+}
+
+.contact-form__header {
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-form__header {
+        margin-bottom: 20px;
+    }
+}
+
+.contact-form__title {
+    margin-bottom: 10px;
+}
+
+.contact-form__desc {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-form__desc {
+        font-size: 1rem;
+    }
+}
+
+.contact-form .form--control {
+    background-color: hsl(var(--white));
 }
 
 /* ============= Contact Page Css End ===================== */

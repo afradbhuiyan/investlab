@@ -1,5 +1,116 @@
 /* ============= Contact Page Css Start =================== */
 .contact-page {
-    border: 1px solid black;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    &__section {
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 120px;
+
+            @include md-screen {
+              margin-bottom: 80px;
+            }
+          
+            @include msm-screen {
+              margin-bottom: 60px;
+            }
+        }
+    }
+
+    &__thumb {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.contact-card {
+    height: 100%;
+    border: 1px solid hsl(var(--base)/.32);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    align-items: start;
+    gap: 24px;
+
+    @include lg-screen {
+        padding: 32px 24px;
+        gap: 16px;
+    }
+
+    @include sm-screen {
+        gap: 12px;
+        padding: 32px 16px;
+    }
+
+    &__icon {
+        width: 57px;
+        height: 57px;
+        border-radius: 8px;
+        border: 1px solid hsl(var(--base));
+        color: hsl(var(--base));
+        @include fs-32;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        @include sm-screen {
+            width: 48px;
+            height: 48px;
+            @include fs-24;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        margin-bottom: 10px;
+        
+        @include sm-screen {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__desc {
+        font-weight: 500;
+        white-space: nowrap;
+
+        @include sm-screen {
+            white-space: normal;
+        }
+    }
+}
+
+.contact-form {
+
+    &__header {
+        margin-bottom: 40px;   
+        
+        @include sm-screen {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+    
+    &__desc {
+        @include fs-20;
+        font-weight: 500;
+        
+        @include sm-screen {
+            @include fs-16;
+        }
+    }
+
+    .form--control {
+        background-color: hsl(var(--white));
+    }
+    
 }
 /* ============= Contact Page Css End ===================== */
