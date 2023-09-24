@@ -6,6 +6,10 @@
 }
 
 /* ============================= Display Flex Css Start ============================= */
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;

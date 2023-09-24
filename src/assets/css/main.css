@@ -493,6 +493,10 @@ button:focus {
 }
 
 /* ============================= Display Flex Css Start ============================= */
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
 .flex-wrap, .form--radio, .form--check {
     display: flex;
     flex-wrap: wrap;
@@ -2584,8 +2588,8 @@ input#confirm-password {
 }
 
 .language-box .icon {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -2597,8 +2601,8 @@ input#confirm-password {
 
 @media screen and (max-width: 991px) {
     .language-box .icon {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         font-size: 0.875rem;
     }
 }
@@ -3048,9 +3052,6 @@ input#confirm-password {
 /* ============= Contact Page Css Start =================== */
 .contact-page {
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .contact-page__section {

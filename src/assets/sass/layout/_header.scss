@@ -126,8 +126,8 @@
     gap: 5px;
 
     .icon {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         display: inline-flex;
         align-items: center;
@@ -137,8 +137,8 @@
         background-color: hsl(var(--black)/0.08);
         
         @include md-screen {
-            width: 35px;
-            height: 35px;
+            width: 30px;
+            height: 30px;
             @include fs-14;
         }
     }
