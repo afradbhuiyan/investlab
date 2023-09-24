@@ -1,75 +1,94 @@
-/* =========================== Accordion Css start ============================= */ 
+/* =================== Accordion Css Start =================== */
 .custom--accordion {
+
     .accordion-item {
-        border: 1px solid hsl(var(--black) / .09);
-        background-color: transparent !important;
-        border-radius: 5px;
+        background-color: hsl(var(--white));
+        border-color: transparent;
         overflow: hidden;
+
         &:not(:last-child) {
-            margin-bottom:20px;
+            border-bottom-color: hsl(var(--base)/.13);
+        }
+        
+        &:first-of-type {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        
+        &:last-of-type {
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
         }
     }
-    .accordion-header {
-        line-height: 1;
-    }
+
     .accordion-body {
+        padding: 0px 20px 20px 20px;
+        color: hsl(var(--body-color));
+    }
+
+    .accordion-button {
+        @extend .fs-18;
+        font-weight: 500;
         padding: 20px;
-        background-color: hsl(var(--section-bg));
-        .text {
-            max-width: 60%;
-            @include msm-screen {
-                max-width: 100%;
-            }
-        }
-    }
-    &:first-of-type .accordion-button.collapsed {
-        border-radius: 5px;  
-    }
-    &:last-of-type .accordion-button.collapsed {
-        border-radius: 5px;  
-    }
-    .accordion-button{
-        background-color: hsl(var(--section-bg));
         color: var(--heading-color);
-        @extend .fs-18; 
-        padding: 15px ;
+        background-color: transparent;
+        justify-content: space-between;
+        align-items: start;
+        line-height: 24px;
+
         @include msm-screen {
-            padding: 13px;
+            padding: 16px;
             padding-right: 30px;
         }
+
         &::after {
             background-image: none;
         }
+
         &:focus {
             box-shadow: none;
         }
+
         &:not(.collapsed) {
-            color: hsl(var(--white)); 
-            background-color: hsl(var(--black)) !important;
+            color: hsl(var(--base));
             box-shadow: none;
+
             &::after {
                 background-image: none;
-                color: hsl(var(--base)); ; 
             }
         }
-        &[aria-expanded="true"], &[aria-expanded="false"] {
-            &::after {
-                font-family: "Line Awesome Free";
-                font-weight: 900;
-                content: "\f068";
-                display: inline-block;
-                position: absolute;
-                @extend .top-center-extend; 
-                right: 15px;
-                height: unset;
-            }
-        }
+
+        &[aria-expanded="true"],
         &[aria-expanded="false"] {
             &::after {
-                content: "\f067";
-                color: hsl(var(--body-color));
+                content: "\f106";
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                color: hsl(var(--base)) !important;
+                background-color: hsl(var(--base)/.13);
+                font-family: "Line Awesome Free";
+                font-weight: 900;
+                @include fs-13;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 20px;
+                transform: none;
+
+                @include msm-screen {
+                    width: 20px;
+                    height: 20px;
+                    @include fs-12;
+                }
+            }
+        }
+
+        &[aria-expanded="false"] {
+            &::after {
+                content: "\f107";
             }
         }
     }
 }
-/* ================================= Accordion Css End =========================== */
+/* =================== Accordion Css End =================== */

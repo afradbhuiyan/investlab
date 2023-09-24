@@ -1,14 +1,58 @@
-<!-- meta tags and other links -->
-<!-- Header -->
 @@include('../partials/_template-top.html')
 @@include('../partials/_header.html')
 
-<section class="py-120">
-    <div class="container">
-        <h1>FAQ</h1>
+@@include('../partials/_breadcrumb.html', {
+"breadcrumbText": "FAQ"
+})
+
+<!-- ================== FAQ Page Start ==================== -->
+<section class="faq-page py-120">
+    <div class="container custom--container">
+        <h2 class="mb-4 mb-md-5">We've Got Answers</h2>
+
+        <div class="accordion custom--accordion" id="faq-accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-item-1" aria-expanded="true">
+                        Who can invest with greece House?
+                    </button>
+                </h2>
+                <div id="faq-accordion-item-1" class="accordion-collapse collapse show" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. Molestiae similique incidunt eveniet vitae pariatur repellendus animi odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. 
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-item-2" aria-expanded="false">
+                        How does liquidity work at Greece House?
+                    </button>
+                </h2>
+                <div id="faq-accordion-item-2" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. Molestiae similique incidunt eveniet vitae pariatur repellendus animi odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. 
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-item-3" aria-expanded="false">
+                        Is Greece House a long-term investment?
+                    </button>
+                </h2>
+                <div id="faq-accordion-item-3" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                        <p class="text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. Molestiae similique incidunt eveniet vitae pariatur repellendus animi odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+<!-- ================== FAQ Page End ====================== -->
 
-<!-- Footer -->
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')
