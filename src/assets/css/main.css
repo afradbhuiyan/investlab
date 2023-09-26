@@ -422,6 +422,12 @@ button:focus {
     background-image: url("../images/thumbs/pattern2-top-right.png");
 }
 
+.bg-pattern3 {
+    background-image: url("../images/thumbs/pattern-3.png");
+    background-position: 100% bottom;
+    background-repeat: repeat-x;
+}
+
 .scroll-hide {
     position: absolute;
     overflow-y: hidden;
@@ -3049,6 +3055,191 @@ input#confirm-password {
 }
 
 /* ====================== Breadcrumb Css End ==================== */
+.banner {
+    padding-top: 135px;
+    padding-bottom: 155px;
+}
+
+@media screen and (max-width: 991px) {
+    .banner {
+        padding-top: 85px;
+        padding-bottom: 105px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .banner {
+        padding-top: 55px;
+        padding-bottom: 75px;
+    }
+}
+
+.banner-content__subtitle {
+    color: hsl(var(--base));
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 150%;
+}
+
+@media screen and (max-width: 991px) {
+    .banner-content__subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+.banner-content__title {
+    text-transform: capitalize;
+    margin-bottom: 32px;
+    line-height: 120%;
+}
+
+@media screen and (max-width: 991px) {
+    .banner-content__title {
+        max-width: 65%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner-content__title {
+        max-width: 75%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .banner-content__title {
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .banner-content__title {
+        max-width: 100%;
+    }
+}
+
+.banner-content .btn {
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 991px) {
+    .banner-content .btn {
+        font-size: 1rem;
+    }
+}
+
+.banner-info {
+    margin-top: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+}
+
+@media screen and (max-width: 991px) {
+    .banner-info {
+        margin-top: 28px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .banner-info {
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .banner-info {
+        gap: 16px;
+    }
+}
+
+.banner-info__item .title {
+    margin-bottom: 10px;
+}
+
+.banner-info__item .title span {
+    color: hsl(var(--base));
+}
+
+.banner-info__item .text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+@media screen and (max-width: 575px) {
+    .banner-info__item .text {
+        font-size: 1rem;
+    }
+}
+
+.banner-thumbs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.banner-thumbs__thumb {
+    width: calc(50% - 24px);
+    max-width: 257px;
+    height: 270px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-thumbs__thumb img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.banner-thumbs__thumb::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 8px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: -1;
+}
+
+.banner-thumbs__thumb:nth-child(even) {
+    margin-top: -40px;
+}
+
+.banner-thumbs__thumb:nth-child(1)::after, .banner-thumbs__thumb:nth-child(4)::after {
+    border: 2px solid hsl(var(--base));
+}
+
+.banner-thumbs__thumb:nth-child(1)::after {
+    top: -24px;
+    left: -24px;
+}
+
+.banner-thumbs__thumb:nth-child(4)::after {
+    bottom: -24px;
+    right: -24px;
+}
+
+.banner-thumbs__thumb:nth-child(2)::after, .banner-thumbs__thumb:nth-child(3)::after {
+    background-color: hsl(var(--base)/0.15);
+}
+
+.banner-thumbs__thumb:nth-child(2)::after {
+    top: -24px;
+    right: -24px;
+}
+
+.banner-thumbs__thumb:nth-child(3)::after {
+    bottom: -24px;
+    left: -24px;
+}
+
 /* ============= Contact Page Css Start =================== */
 .contact-page {
     flex-grow: 1;
@@ -3189,10 +3380,6 @@ input#confirm-password {
     flex-grow: 1;
     display: flex;
     align-items: center;
-    background-image: url("../images/thumbs/account-page-pattern.png");
-    background-repeat: no-repeat;
-    background-position: 100% bottom;
-    background-size: contain;
 }
 
 .account-form {

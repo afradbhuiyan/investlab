@@ -103,6 +103,12 @@
     }
 }
 
+.bg-pattern3 {
+    background-image: url("../images/thumbs/pattern-3.png");
+	background-position: 100% bottom;
+	background-repeat: repeat-x;
+}
+
 .scroll-hide {
     position: absolute;
     overflow-y: hidden;
