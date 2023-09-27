@@ -24,6 +24,7 @@
     &.fixed-header {
         width: 100%;
         background-color: hsl(var(--white));
+        border-bottom: 1px solid hsl(var(--black)/.08);
         position: sticky;
         top: 0px;
         left: 0px;

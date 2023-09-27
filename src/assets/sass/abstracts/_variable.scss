@@ -41,7 +41,7 @@
   // Base Color
   --base-h: 24;
   --base-s: 100%;
-  --base-l: 50% ;
+  --base-l: 50%;
   --base: var(--base-h) var(--base-s) var(--base-l);
   // Base Darken
   --base-d-100: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.1);
@@ -212,7 +212,7 @@
   // Section Color
   --section-bg: 208 100% 97%;
   // Heading Color
-  --heading-color: var(--black);
+  --heading-color: var(--black-two);
   // Body Color
   --body-color: var(--gray);
   // Body Background

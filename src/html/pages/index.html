@@ -1,9 +1,9 @@
 @@include('../partials/_template-top.html')
 @@include('../partials/_header.html')
 
-<!-- ================== Banner Section Start ================= -->
+<!-- ======================= Banner Section Start =========================== -->
 <section class="banner bg-pattern3">
-    <div class="container">
+    <div class="container custom--container">
         <div class="row gy-4">
             <div class="col-lg-6 col-xl-7">
                 <div class="flex-center h-100">
@@ -48,10 +48,11 @@
         </div>
     </div>
 </section>
-<!-- ================== Banner Section End =================== -->
-<!-- ================== Why Invest Section Start ============= -->
+<!-- ======================= Banner Section End ============================= -->
+
+<!-- ======================= Why Invest Section Start ======================= -->
 <section class="why-invest py-120">
-    <div class="container">
+    <div class="container custom--container">
         <div class="section-heading style-xsm-left">
             <p class="section-heading__subtitle">
                 Built to help smart investors invest smarter
@@ -101,7 +102,42 @@
         </div>
     </div>
 </section>
-<!-- ================== Why Invest Section End =============== -->
+<!-- ======================= Why Invest Section End ========================== -->
+
+<!-- ======================= Latest Property Section Start =================== -->
+<section class="latest-property pt-120 pb-60">
+    <div class="container custom--container">
+        <div class="section-heading style-left">
+            <p class="section-heading__subtitle">Latest Property</p>
+            <div class="section-heading__wrapper">
+                <h2 class="section-heading__title">Latest Property</h2>
+                <a class="section-heading__link" href="#">
+                    <span>Explore</span>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="row gy-4">
+            <div class="col-sm-6 col-lg-4">
+                @@include('../partials/_property-card.html', {
+                    "card-img": "assets/images/thumbs/property-card-img-1.jpg"
+                })
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                @@include('../partials/_property-card.html', {
+                    "card-img": "assets/images/thumbs/property-card-img-2.jpg"
+                })
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                @@include('../partials/_property-card.html', {
+                    "card-img": "assets/images/thumbs/property-card-img-3.jpg"
+                })
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======================= Latest Property Section End ===================== -->
 
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')

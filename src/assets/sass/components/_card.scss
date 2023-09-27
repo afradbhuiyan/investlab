@@ -24,4 +24,162 @@
         border-top: 1px solid hsl(var(--black)/.1);
     }
 }
+
+.property--card {
+    --bs-card-border-width: 0px;
+    --bs-card-border-radius: 12px;
+    --bs-card-inner-border-radius: 12px;
+    --bs-card-spacer-y: 32px;
+    --bs-card-spacer-x: 32px;
+    height: 100%;
+
+    @include xl-screen {
+        --bs-card-spacer-y: 24px;
+        --bs-card-spacer-x: 24px;
+    }
+
+    @include lg-screen {
+        --bs-card-spacer-y: 16px;
+        --bs-card-spacer-x: 16px;
+    }
+
+    img[class*="card-img"] {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        max-height: 290px;
+
+        @include xl-screen {
+            max-height: 230px;
+        }
+
+        @include lg-screen {
+            max-height: 200px;
+        }
+
+        @include sm-screen {
+            max-height: 180px;
+        }
+    }
+
+    .card-wrapper {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px 8px;
+    }
+
+    .card-title {
+        font-weight: 600;
+        line-height: 150%;
+    }
+
+    .card-price {
+        color: hsl(var(--gray-two));
+        @include fs-20;
+        font-weight: 700;
+        line-height: 120%;
+        // border: 1px solid black;
+
+        @include xl-screen {
+            @include fs-18;
+        }
+
+        @include lg-screen {
+            @include fs-16;
+        }
+    }
+
+    .card-progress {
+        margin-bottom: 32px;
+        
+        @include sm-screen {
+            margin-bottom: 24px;
+        }
+
+        &__bar {
+            border-radius: 10px;
+            background-color: hsl(var(--base-l-900));
+            height: 6px;
+        }
+
+        &__thumb {
+            height: 100%;
+            border-radius: 10px;
+            background-color: hsl(var(--base));
+        }
+
+        &__label {
+            @include fs-12;
+            font-weight: 500;
+            line-height: 117%;
+            color: hsl(var(--gray-two));
+            margin-top: 10px;
+        }
+    }
+
+    .card-meta--one {
+        margin-bottom: 32px;
+        
+        @include sm-screen {
+            margin-bottom: 24px;
+        }
+
+        .card-meta__item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+
+                @include sm-screen {
+                    margin-bottom: 16px;
+                }
+            }
+
+            i {
+                color: hsl(var(--base));
+            }
+
+            .text {
+                @include fs-14;
+                font-weight: 500;
+                line-height: 150%;
+            }
+        }
+    }
+
+    .card-meta--two {
+        margin-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        @include sm-screen {
+            margin-bottom: 18px;
+            justify-content: start;
+            gap: 8px 16px;
+        }
+
+        .card-meta__item {
+            
+            .text {
+                @include fs-14;
+                color: hsl(var(--base));
+                font-weight: 700;
+                line-height: 150%;
+            }
+
+            .subtext {
+                color: hsl(var(--gray-two));
+                @include fs-12;
+                font-weight: 500;
+                line-height: 150%;
+            }
+        }
+    }
+}
 /* ================================= Card Css End =================================== */
