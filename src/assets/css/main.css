@@ -649,6 +649,22 @@ button:focus {
     }
 }
 
+.section-heading.mb-less {
+    margin-bottom: 32px;
+}
+
+@media screen and (max-width: 991px) {
+    .section-heading.mb-less {
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section-heading.mb-less {
+        margin-bottom: 18px;
+    }
+}
+
 .section-heading__wrapper {
     width: 100%;
     display: flex;
@@ -3485,6 +3501,101 @@ input#confirm-password {
     }
 }
 /* Why Invest Section Css End */
+/* About Us Section Css Start */
+.about-us .section-heading__title {
+    max-width: 55%;
+}
+
+@media screen and (max-width: 991px) {
+    .about-us .section-heading__title {
+        max-width: 65%;
+    }
+}
+
+.about-us__subheading {
+    font-size: 1.25rem;
+    color: hsl(var(--base));
+    line-height: 150%;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    .about-us__subheading {
+        font-size: 1.125rem;
+    }
+}
+
+.about-us__desc {
+    max-width: 74%;
+    margin-bottom: 64px;
+}
+
+.about-us__desc p {
+    line-height: 150%;
+}
+
+.about-us__desc p:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+@media screen and (max-width: 767px) {
+    .about-us__desc p:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.about-us__wrapper {
+    max-width: 570px;
+    max-height: 660px;
+    position: relative;
+}
+
+.about-us__thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 200px 14px 14px 14px;
+    border: 12px solid hsl(var(--base));
+}
+
+.about-us .floating-card {
+    background-color: hsl(var(--white));
+    border-radius: 16px;
+    box-shadow: 10px 14px 74px 0px rgba(2, 92, 138, 0.27);
+    padding: 32px 64px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-us .floating-card--one {
+    top: 24px;
+    left: -20%;
+}
+
+.about-us .floating-card--two {
+    bottom: 24px;
+    left: 20%;
+}
+
+.about-us .floating-card .title {
+    font-size: 2.125rem;
+    margin-bottom: 0px;
+}
+
+.about-us .floating-card .title span {
+    color: hsl(var(--base));
+}
+
+.about-us .floating-card .text {
+    color: hsl(var(--heading-color));
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+/* About Us Section Css End */
 /* ================================= Home Page Css End ========================== */
 /* ================================= Contact Page Css Start ===================== */
 .contact-page {

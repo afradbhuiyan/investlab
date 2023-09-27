@@ -13,6 +13,18 @@
     margin-bottom: 32px;
   }
 
+  &.mb-less {
+    margin-bottom: 32px;
+    
+    @include md-screen {
+      margin-bottom: 24px;
+    }
+
+    @include sm-screen {
+      margin-bottom: 18px;
+    }
+  }
+
   &__wrapper {
     width: 100%;
     display: flex;

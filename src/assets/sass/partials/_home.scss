@@ -105,7 +105,6 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 24px;        
-        // border: 1px solid black;
 
         &__thumb {
             width: calc(50% - 24px);
@@ -229,4 +228,106 @@
     }
 }
 /* Why Invest Section Css End */
+
+/* About Us Section Css Start */
+.about-us {
+
+    .row {
+        & > div {
+            // border: 1px solid black;
+        }
+    }
+
+    .section-heading__title {
+        max-width: 55%;
+
+        @include md-screen {
+            max-width: 65%;
+        }
+    }
+
+    &__subheading {
+        @include fs-20;
+        color: hsl(var(--base));
+        line-height: 150%;
+        margin-bottom: 16px;
+
+        @include sm-screen {
+            @include fs-18;
+        }
+    }
+
+    &__desc {
+        max-width: 74%;
+        margin-bottom: 64px;
+
+        p {
+            line-height: 150%;
+
+            &:not(:last-child) {
+                margin-bottom: 32px;
+                @include sm-screen {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        max-width: 570px;
+        max-height: 660px;
+        position: relative;
+        // border: 1px solid black;
+    }
+
+    &__thumb {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 200px 14px 14px 14px;
+        border: 12px solid hsl(var(--base));
+    }
+
+    .floating-card {
+        background-color: hsl(var(--white));
+        border-radius: 16px;
+        box-shadow: 10px 14px 74px 0px rgba(2, 92, 138, 0.27); 
+        padding: 32px 64px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        
+        &__content {
+            // border: 1px solid black;
+        }
+
+        &--one {
+            top: 24px;
+            left: -20%;
+        }
+
+        &--two {
+            bottom: 24px;
+            left: 20%;
+        }
+
+        .title {
+            @include fs-34;
+            margin-bottom: 0px;
+            
+            span {
+                color: hsl(var(--base));
+            }
+        }
+
+        .text {
+            color: hsl(var(--heading-color));
+            @include fs-20;
+            font-weight: 500;
+            line-height: 24px;
+        }
+    }
+}
+/* About Us Section Css End */
 /* ================================= Home Page Css End ========================== */
