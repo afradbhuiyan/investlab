@@ -146,15 +146,15 @@
 
             &:nth-child(1) {
                 &::after {
-                    top: -24px;
-                    left: -24px;
+                    top: -32px;
+                    left: -32px;
                 }
             }
 
             &:nth-child(4) {
                 &::after {
-                    bottom: -24px;
-                    right: -24px;
+                    bottom: -32px;
+                    right: -32px;
                 }
             }
 
@@ -167,15 +167,15 @@
 
             &:nth-child(2) {
                 &::after {
-                    top: -24px;
-                    right: -24px;
+                    top: -20px;
+                    right: -20px;
                 }
             }
 
             &:nth-child(3) {
                 &::after {
-                    bottom: -24px;
-                    left: -24px;
+                    bottom: -20px;
+                    left: -20px;
                 }
             }
         }
