@@ -1,3 +1,5 @@
+/* ================================= Home Page Css Start ======================== */
+/* Banner Section Css Start */
 .banner {
     padding-top: 135px;
     padding-bottom: 155px;
@@ -179,3 +181,52 @@
         }
     }
 }
+/* Why Invest Section Css Start */
+.why-invest {
+    background-color: hsl(var(--white));
+
+    &-card {
+        height: 100%;
+        text-align: center;
+
+        &__img {
+            margin-bottom: 24px;
+
+            @include sm-screen {
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 12px;
+        }
+
+        &__desc {
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            @include fs-18;
+            font-weight: 400;
+            line-height: 150%;
+            
+            @include lg-screen {
+                max-width: 100%;
+            }
+
+            @include xsm-screen {
+                max-width: 70%;
+            }
+
+            @include xxsm-screen {
+                max-width: 100%;
+            }
+            
+            @include sm-screen {
+                @include fs-16;
+            }
+        }
+    }
+}
+/* Why Invest Section Css End */
+/* ================================= Home Page Css End ========================== */

@@ -1,11 +1,10 @@
-/* Fully Fit image Css */
+/* ================================= Extend Classes Css Start ========================= */
 .fit-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* ============================= Display Flex Css Start ============================= */
 .flex-grow-1 {
     flex-grow: 1;
 }
@@ -35,9 +34,7 @@
     align-items: center;
 }
 
-/* ============================= Display Flex Css End ============================= */
 
-/* ============================= Positioning Css Class Start ===================== */
 .pa-extend {
     position: absolute;
     content: "";
@@ -59,9 +56,6 @@
     transform: translate(-50%, -50%);
 }
 
-/* ============================= Positioning Css Class End ===================== */
-
-/* ===================== Font Size For responsive devices Start =================== */
 .fs-10 {
     @include fs-10;
 }
@@ -130,4 +124,4 @@
     }
 }
 
-/* ===================== Font Size For responsive devices End =================== */
+/* ================================= Extend Classes Css End =========================== */

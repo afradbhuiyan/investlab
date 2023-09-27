@@ -1,4 +1,3 @@
-/* Font Family*/
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap");
 /* ========================= Css Variables Start ======================== */
 :root {
@@ -311,7 +310,7 @@ button:focus {
 }
 
 /* ================================= Typography Css End =========================== */
-/* ================================= Custom Classes Css Start =========================== */
+/* ================================= Custom Classes Css Start ===================== */
 @media screen and (min-width: 425px) and (max-width: 575px) {
     .col-xsm-6 {
         width: 50%;
@@ -491,14 +490,13 @@ button:focus {
 }
 
 /* ================================= Custom Classes Css End =========================== */
-/* Fully Fit image Css */
+/* ================================= Extend Classes Css Start ========================= */
 .fit-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* ============================= Display Flex Css Start ============================= */
 .flex-grow-1 {
     flex-grow: 1;
 }
@@ -528,8 +526,6 @@ button:focus {
     align-items: center;
 }
 
-/* ============================= Display Flex Css End ============================= */
-/* ============================= Positioning Css Class Start ===================== */
 .pa-extend, .alert__link::before {
     position: absolute;
     content: "";
@@ -551,8 +547,6 @@ button:focus {
     transform: translate(-50%, -50%);
 }
 
-/* ============================= Positioning Css Class End ===================== */
-/* ===================== Font Size For responsive devices Start =================== */
 .fs-10 {
     font-size: 0.625rem;
 }
@@ -634,62 +628,77 @@ button:focus {
         font-size: 1.0625rem;
     }
 }
-/* ===================== Font Size For responsive devices End =================== */
-/* ====================== Section Heading Start ==================== */
+/* ================================= Extend Classes Css End =========================== */
+/* ================================= Global Classes Css Start ========================= */
 .section-heading {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-@media screen and (max-width: 1199px) {
-    .section-heading {
-        margin-bottom: 40px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 64px;
 }
 
 @media screen and (max-width: 991px) {
     .section-heading {
-        margin-bottom: 30px;
+        margin-bottom: 48px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section-heading {
+        margin-bottom: 32px;
+    }
+}
+
+.section-heading__wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.section-heading__subtitle {
+    padding: 4px 12px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    background-color: #FFEFE5;
+    color: hsl(var(--base));
+    font-weight: 400;
+    line-height: 150%;
+}
+
+@media screen and (max-width: 374px) {
+    .section-heading__subtitle {
+        font-size: 0.875rem;
     }
 }
 
 .section-heading__title {
-    position: relative;
-    padding-bottom: 10px;
+    line-height: 120%;
+    margin-bottom: 0px;
 }
 
-.section-heading__title::before {
-    position: absolute;
-    content: "";
-    left: 50%;
-    bottom: 0px;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 2px;
-    background-color: hsl(var(--base));
-}
-
-.section-heading__desc {
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
+.section-heading__link {
+    color: hsl(var(--base));
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .section-heading.style-left {
-    text-align: left;
+    align-items: start;
 }
 
-.section-heading.style-left .section-heading__title::before {
-    left: 0;
-    transform: translateX(0);
+@media screen and (max-width: 424px) {
+    .section-heading.style-xsm-left {
+        align-items: start;
+    }
 }
 
-.section-heading.style-left .section-heading__desc {
-    margin-left: 0;
-}
-
-/* ====================== Section Heading End ==================== */
-/* ==================== Other Option Css Start ============ */
 .other-option {
     margin-top: 24px;
     position: relative;
@@ -723,8 +732,8 @@ button:focus {
     background-color: hsl(var(--white));
 }
 
-/* ==================== Other Option Css End ============== */
-/* ================================= Background Color Css Start =========================== */
+/* ================================= Global Classes Css End =========================== */
+/* ================================= BG Color Classes Css Start ======================= */
 .bg--base {
     background-color: hsl(var(--base)) !important;
 }
@@ -753,8 +762,8 @@ button:focus {
     background-color: hsl(var(--info)) !important;
 }
 
-/* ================================= Background Color Css End =========================== */
-/* ================================= Color Css Start =========================== */
+/* ================================= BG Color Classes Css End ========================= */
+/* ================================= Text Color Classes Css Start ===================== */
 .text--base {
     color: hsl(var(--base)) !important;
 }
@@ -783,8 +792,8 @@ button:focus {
     color: hsl(var(--info)) !important;
 }
 
-/* ================================= Color Css End =========================== */
-/* ================================= margin Css Start =========================== */
+/* ================================= Text Color Classes Css End ======================= */
+/* ================================= Margin Classes Css Start ========================= */
 .my-120 {
     margin-top: 120px;
     margin-bottom: 120px;
@@ -886,8 +895,8 @@ button:focus {
         margin-bottom: 30px;
     }
 }
-/* ================================= margin Css End =========================== */
-/* ================================= padding Css Start =========================== */
+/* ================================= Margin Classes Css End =========================== */
+/* ================================= Padding Classes Css Start ======================== */
 .py-120 {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -989,8 +998,8 @@ button:focus {
         padding-bottom: 30px;
     }
 }
-/* ================================= padding Css End =========================== */
-/* ================================= Border Color Css Start =========================== */
+/* ================================= Padding Classes Css End ======================== */
+/* ================================= Border Classes Css Start ======================= */
 .border--base {
     border-color: hsl(var(--base)) !important;
 }
@@ -1019,8 +1028,8 @@ button:focus {
     border-color: hsl(var(--info)) !important;
 }
 
-/* ================================= Border Color Css End =========================== */
-/* =================== Accordion Css Start =================== */
+/* ================================= Border Classes Css End ========================= */
+/* ================================= Accordrion Css Start =========================== */
 .custom--accordion .accordion-item {
     background-color: hsl(var(--white));
     border-color: transparent;
@@ -1109,8 +1118,8 @@ button:focus {
     content: "\f107";
 }
 
-/* =================== Accordion Css End =================== */
-/* ================================= Button Css Start =========================== */
+/* ================================= Accordrion Css End ============================= */
+/* ================================= Button Css Start =============================== */
 .btn-check:checked + .btn,
 .btn.active,
 .btn.show,
@@ -1323,8 +1332,8 @@ button:focus {
     color: hsl(var(--white)) !important;
 }
 
-/* ================================= Button Css End =========================== */
-/* ================================= Card Css Start =========================== */
+/* ================================= Button Css End ================================= */
+/* ================================= Card Css Start ================================= */
 .custom--card {
     border-radius: 5px;
     box-shadow: var(--box-shadow);
@@ -1354,8 +1363,8 @@ button:focus {
     border-top: 1px solid hsl(var(--black)/0.1);
 }
 
-/* ================================= Card Css End =========================== */
-/* ================================= Form Css Start =========================== */
+/* ================================= Card Css End =================================== */
+/* ================================= Form Css Start ================================= */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -1707,8 +1716,8 @@ input#confirm-password {
     color: hsl(var(--black)/0.4);
 }
 
-/* ================================= Form Css End =========================== */
-/* ================================= Modal Css Start =========================== */
+/* ================================= Form Css End =================================== */
+/* ================================= Modal Css Start ================================ */
 .custom--modal .modal-header {
     border-bottom: 1px solid hsl(var(--white)/0.12);
     padding: 15px;
@@ -1764,7 +1773,7 @@ input#confirm-password {
     justify-content: flex-end;
 }
 
-/* ================================= Modal Css End =========================== */
+/* ================================= Modal Css End ================================== */
 /* ================================= Pagination Css Start =========================== */
 .pagination {
     flex-wrap: wrap;
@@ -1821,9 +1830,8 @@ input#confirm-password {
     box-shadow: none;
 }
 
-/* ================================= Pagination Css End =========================== */
-/* ================================= Table Css Start =========================== */
-/* Table Content Css start */
+/* ================================= Pagination Css End ============================= */
+/* ================================= Table Css Start ================================ */
 @media screen and (max-width: 374px) {
     .customer {
         display: block;
@@ -1890,8 +1898,6 @@ input#confirm-password {
     background-color: hsl(var(--danger)/0.08);
 }
 
-/* Table Content Css end */
-/* Table Css Start */
 .table {
     margin: 0;
     border-collapse: collapse;
@@ -2180,8 +2186,8 @@ input#confirm-password {
         border: 0;
     }
 }
-/* ================================= Table Css End =========================== */
-/* ================================= Tab Css Start =========================== */
+/* ================================= Table Css End ================================== */
+/* ================================= Tab Css Start ================================== */
 .custom--tab {
     justify-content: center;
     border-radius: 6px;
@@ -2222,8 +2228,8 @@ input#confirm-password {
     color: hsl(var(--base));
 }
 
-/* ================================= Tab Css End =========================== */
-/* ================================= Badge Css Start =========================== */
+/* ================================= Tab Css End ================================== */
+/* ================================= Badge Css Start ============================== */
 .badge {
     border-radius: 5px;
     padding: 8px 10px;
@@ -2267,8 +2273,8 @@ input#confirm-password {
     color: hsl(var(--info)) !important;
 }
 
-/* ================================= Badge Css End =========================== */
-/* ====================================== Alert Css Start =============================== */
+/* ================================= Badge Css End ================================ */
+/* ================================= Alert Css Start ============================== */
 .alert {
     margin-bottom: 0;
     background-color: hsl(var(--white)) !important;
@@ -2409,8 +2415,8 @@ input#confirm-password {
     color: hsl(var(--secondary));
 }
 
-/* ====================================== Alert Css End =============================== */
-/* ================================= Preload Css Start =========================== */
+/* ================================= Alert Css End ================================ */
+/* ================================= Preload Css Start ============================ */
 .preloader {
     position: fixed;
     z-index: 999999;
@@ -2461,8 +2467,8 @@ input#confirm-password {
         opacity: 0;
     }
 }
-/* ================================= Preload Css End ===========================  */
-/* ==================== Header Start Here ===================== */
+/* ================================= Preload Css End ============================== */
+/* ================================= Header Css Start ============================= */
 .header {
     position: relative;
     padding: 15px 0;
@@ -2730,8 +2736,8 @@ input#confirm-password {
         transform: translateY(0);
     }
 }
-/* ==================== Header End Here ======================= */
-/* ============= Footer Css Start ======================= */
+/* ================================= Header Css End =============================== */
+/* ================================= Footer Css Start ============================= */
 .footer {
     background-color: hsl(var(--base-two));
     margin-top: auto;
@@ -2902,8 +2908,8 @@ input#confirm-password {
     color: hsl(var(--base));
 }
 
-/* ============= Footer Css End ======================= */
-/* ===================== Scroll to Top Start ================================= */
+/* ================================= Footer Css End =============================== */
+/* ================================= Scroll Top Css Start ========================= */
 .scroll-top {
     position: fixed;
     right: 30px;
@@ -2931,15 +2937,15 @@ input#confirm-password {
     transform: scale(1);
 }
 
-/* ===================== Scroll to Top End ================================= */
-/* ================================= Template Selection Css Start =========================== */
+/* ================================= Scroll Top Css End =========================== */
+/* ================================= Selection Css Start ========================== */
 ::selection {
     color: hsl(var(--white));
     background: hsl(var(--base-d-100));
 }
 
-/* ================================= Template Selection Css End ===========================  */
-/* ================================= Social Icon Css Start =========================== */
+/* ================================= Selection Css End ============================ */
+/* ================================= Social Icon Css Start ======================== */
 .social-list {
     display: flex;
     flex-wrap: wrap;
@@ -2963,7 +2969,8 @@ input#confirm-password {
     font-size: 1.375rem;
 }
 
-/* ================================= Social Icon Css End ===========================  */
+/* ================================= Social Icon Css End ======================== */
+/* ================================= Subscribe Form Css Start =================== */
 .subscribe-form {
     display: flex;
     flex-direction: column;
@@ -2988,7 +2995,8 @@ input#confirm-password {
     margin-top: 22px;
 }
 
-/* ====================== Breadcrumb Css Start ==================== */
+/* ================================= Subscribe Form Css End ===================== */
+/* ================================= Breadcrumb Css Start ======================= */
 .breadcrumb {
     padding: 40px 0;
     position: relative;
@@ -3054,7 +3062,9 @@ input#confirm-password {
     color: hsl(var(--base));
 }
 
-/* ====================== Breadcrumb Css End ==================== */
+/* ================================= Breadcrumb Css End ========================= */
+/* ================================= Home Page Css Start ======================== */
+/* Banner Section Css Start */
 .banner {
     padding-top: 135px;
     padding-bottom: 155px;
@@ -3240,7 +3250,66 @@ input#confirm-password {
     left: -24px;
 }
 
-/* ============= Contact Page Css Start =================== */
+/* Why Invest Section Css Start */
+.why-invest {
+    background-color: hsl(var(--white));
+}
+
+.why-invest-card {
+    height: 100%;
+    text-align: center;
+}
+
+.why-invest-card__img {
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 767px) {
+    .why-invest-card__img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.why-invest-card__title {
+    margin-bottom: 12px;
+}
+
+.why-invest-card__desc {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+@media screen and (max-width: 1199px) {
+    .why-invest-card__desc {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .why-invest-card__desc {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .why-invest-card__desc {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .why-invest-card__desc {
+        font-size: 1rem;
+    }
+}
+/* Why Invest Section Css End */
+/* ================================= Home Page Css End ========================== */
+/* ================================= Contact Page Css Start ===================== */
 .contact-page {
     flex-grow: 1;
 }
@@ -3368,8 +3437,8 @@ input#confirm-password {
     background-color: hsl(var(--white));
 }
 
-/* ============= Contact Page Css End ===================== */
-/* =========================================== Account Css Start =========================*/
+/* ================================= Contact Page Css End ======================= */
+/* ================================= Account Pages Css Start ==================== */
 .account {
     flex-grow: 1;
     display: flex;
@@ -3480,5 +3549,5 @@ input#confirm-password {
     text-decoration-thickness: 1px;
 }
 
-/* ============================================ Account Css End ====================================*/
+/* ================================= Account Pages Css End ====================== */
 /*# sourceMappingURL=main.css.map */
