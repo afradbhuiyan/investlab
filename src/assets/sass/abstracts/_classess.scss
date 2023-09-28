@@ -36,6 +36,7 @@
         background-repeat: no-repeat;
         background-position: center center;
         z-index: -1;
+        opacity: .5;
         
         @include lg-screen {
             width: 30%;
@@ -63,6 +64,18 @@
         right: 0;
         top: 0;
         background-image: url('../images/thumbs/pattern-top-right.png');
+    }
+}
+
+.bg-pattern-top-left {
+    &::before {
+        content: none;
+    }
+}
+
+.bg-pattern-bottom-right {
+    &::after {
+        content: none;
     }
 }
 

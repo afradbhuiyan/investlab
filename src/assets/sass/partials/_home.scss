@@ -13,7 +13,7 @@
         padding-top: 55px;
         padding-bottom: 75px;
     }
-    
+
     &-content {
 
         &__subtitle {
@@ -49,12 +49,12 @@
                 max-width: 100%;
             }
         }
-        
+
         .btn {
             @include fs-20;
-            
+
             @include md-screen {
-                @include fs-16;
+                @include fs-18;
             }
         }
     }
@@ -65,7 +65,7 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 32px;
-        
+
         @include md-screen {
             margin-top: 28px;
         }
@@ -99,18 +99,18 @@
             }
         }
     }
-    
+
     &-thumbs {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 24px;        
+        gap: 24px;
 
         &__thumb {
             width: calc(50% - 24px);
-            max-width: 257px; 
+            max-width: 257px;
             height: 270px;
-            position: relative;           
+            position: relative;
             z-index: 1;
 
             img {
@@ -180,6 +180,7 @@
         }
     }
 }
+
 /* Why Invest Section Css Start */
 .why-invest {
     background-color: hsl(var(--white));
@@ -208,7 +209,7 @@
             @include fs-18;
             font-weight: 400;
             line-height: 150%;
-            
+
             @include lg-screen {
                 max-width: 100%;
             }
@@ -220,29 +221,40 @@
             @include xxsm-screen {
                 max-width: 100%;
             }
-            
+
             @include sm-screen {
                 @include fs-16;
             }
         }
     }
 }
+
 /* Why Invest Section Css End */
 
 /* About Us Section Css Start */
 .about-us {
-
-    .row {
-        & > div {
-            // border: 1px solid black;
-        }
-    }
 
     .section-heading__title {
         max-width: 55%;
 
         @include md-screen {
             max-width: 65%;
+        }
+
+        @include xsm-screen {
+            max-width: 80%;
+        }
+
+        @include xxsm-screen {
+            max-width: 100%;
+        }
+    }
+
+    .btn {
+        @include fs-20;
+
+        @include md-screen {
+            @include fs-18;
         }
     }
 
@@ -261,12 +273,34 @@
         max-width: 74%;
         margin-bottom: 64px;
 
+        @include xl-screen {
+            max-width: 85%;
+        }
+
+        @include lg-screen {
+            max-width: 80%;
+            margin-bottom: 32px;
+        }
+
+        @include md-screen {
+            max-width: 100%;
+        }
+
+        @include sm-screen {
+            max-width: 90%;
+        }
+
+        @include xsm-screen {
+            max-width: 100%;
+        }
+
         p {
             line-height: 150%;
 
             &:not(:last-child) {
                 margin-bottom: 32px;
-                @include sm-screen {
+
+                @include lg-screen {
                     margin-bottom: 16px;
                 }
             }
@@ -277,7 +311,6 @@
         max-width: 570px;
         max-height: 660px;
         position: relative;
-        // border: 1px solid black;
     }
 
     &__thumb {
@@ -289,43 +322,91 @@
     }
 
     .floating-card {
+        max-width: max-content;
         background-color: hsl(var(--white));
         border-radius: 16px;
-        box-shadow: 10px 14px 74px 0px rgba(2, 92, 138, 0.27); 
-        padding: 32px 64px;
+        box-shadow: 10px 14px 74px 0px rgba(2, 92, 138, 0.27);
+        padding: 32px 48px;
         position: absolute;
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        
-        &__content {
-            // border: 1px solid black;
+
+        @include lg-screen {
+            padding: 32px;
         }
+
+        @include md-screen {
+            padding: 24px;
+        }
+
 
         &--one {
-            top: 24px;
-            left: -20%;
-        }
+            top: 36px;
+            left: -100px;
 
-        &--two {
-            bottom: 24px;
-            left: 20%;
-        }
+            @include lg-screen {
+                left: -70px;
+            }
 
-        .title {
-            @include fs-34;
-            margin-bottom: 0px;
-            
-            span {
-                color: hsl(var(--base));
+            @include md-screen {
+                top: 72px;
+                left: 0px;
+                right: 0px;
+                margin: auto;
             }
         }
 
-        .text {
+        &--two {
+            bottom: 36px;
+            left: 100px;
+            display: flex;
+            flex-wrap: wrap-reverse;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+
+            @include xl-screen {
+                gap: 24px;
+            }
+
+            @include lg-screen {
+                left: 0px;
+                right: 0px;
+                margin: auto;
+                gap: 16px;
+            }
+        }
+
+        &__thumb {
+            width: 100%;
+            height: 100%;
+            max-width: 160px;
+            max-height: 60px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &__title {
+            @include fs-34;
+            margin-bottom: 0px;
+            line-height: 80%;
+
+            span {
+                color: hsl(var(--base));
+            }
+
+            @include md-screen {
+                @include fs-24;
+            }
+        }
+
+        &__text {
             color: hsl(var(--heading-color));
             @include fs-20;
             font-weight: 500;
             line-height: 24px;
+
+            @include md-screen {
+                @include fs-18;
+            }
         }
     }
 }

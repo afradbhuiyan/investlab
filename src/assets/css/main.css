@@ -348,6 +348,7 @@ button:focus {
     background-repeat: no-repeat;
     background-position: center center;
     z-index: -1;
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 1199px) {
@@ -381,6 +382,14 @@ button:focus {
     right: 0;
     top: 0;
     background-image: url("../images/thumbs/pattern-top-right.png");
+}
+
+.bg-pattern-top-left::before {
+    content: none;
+}
+
+.bg-pattern-bottom-right::after {
+    content: none;
 }
 
 .bg-pattern2 {
@@ -680,13 +689,20 @@ button:focus {
     border-radius: 4px;
     background-color: hsl(var(--base-l-900));
     color: hsl(var(--base));
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 150%;
 }
 
+@media screen and (max-width: 575px) {
+    .section-heading__subtitle {
+        font-size: 1rem;
+    }
+}
+
 @media screen and (max-width: 374px) {
     .section-heading__subtitle {
-        font-size: 0.875rem;
+        font-size: 1rem;
     }
 }
 
@@ -3327,7 +3343,7 @@ input#confirm-password {
 
 @media screen and (max-width: 991px) {
     .banner-content .btn {
-        font-size: 1rem;
+        font-size: 1.125rem;
     }
 }
 
@@ -3512,6 +3528,28 @@ input#confirm-password {
     }
 }
 
+@media screen and (max-width: 424px) {
+    .about-us .section-heading__title {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .about-us .section-heading__title {
+        max-width: 100%;
+    }
+}
+
+.about-us .btn {
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 991px) {
+    .about-us .btn {
+        font-size: 1.125rem;
+    }
+}
+
 .about-us__subheading {
     font-size: 1.25rem;
     color: hsl(var(--base));
@@ -3530,6 +3568,37 @@ input#confirm-password {
     margin-bottom: 64px;
 }
 
+@media screen and (max-width: 1399px) {
+    .about-us__desc {
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .about-us__desc {
+        max-width: 80%;
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .about-us__desc {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-us__desc {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .about-us__desc {
+        max-width: 100%;
+    }
+}
+
 .about-us__desc p {
     line-height: 150%;
 }
@@ -3538,7 +3607,7 @@ input#confirm-password {
     margin-bottom: 32px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
     .about-us__desc p:not(:last-child) {
         margin-bottom: 16px;
     }
@@ -3559,42 +3628,108 @@ input#confirm-password {
 }
 
 .about-us .floating-card {
+    max-width: max-content;
     background-color: hsl(var(--white));
     border-radius: 16px;
     box-shadow: 10px 14px 74px 0px rgba(2, 92, 138, 0.27);
-    padding: 32px 64px;
+    padding: 32px 48px;
     position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 40px;
+}
+
+@media screen and (max-width: 1199px) {
+    .about-us .floating-card {
+        padding: 32px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .about-us .floating-card {
+        padding: 24px;
+    }
 }
 
 .about-us .floating-card--one {
-    top: 24px;
-    left: -20%;
+    top: 36px;
+    left: -100px;
+}
+
+@media screen and (max-width: 1199px) {
+    .about-us .floating-card--one {
+        left: -70px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .about-us .floating-card--one {
+        top: 72px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+    }
 }
 
 .about-us .floating-card--two {
-    bottom: 24px;
-    left: 20%;
+    bottom: 36px;
+    left: 100px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
 
-.about-us .floating-card .title {
+@media screen and (max-width: 1399px) {
+    .about-us .floating-card--two {
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .about-us .floating-card--two {
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        gap: 16px;
+    }
+}
+
+.about-us .floating-card__thumb {
+    width: 100%;
+    height: 100%;
+    max-width: 160px;
+    max-height: 60px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-us .floating-card__title {
     font-size: 2.125rem;
     margin-bottom: 0px;
+    line-height: 80%;
 }
 
-.about-us .floating-card .title span {
+.about-us .floating-card__title span {
     color: hsl(var(--base));
 }
 
-.about-us .floating-card .text {
+@media screen and (max-width: 991px) {
+    .about-us .floating-card__title {
+        font-size: 1.5rem;
+    }
+}
+
+.about-us .floating-card__text {
     color: hsl(var(--heading-color));
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 24px;
 }
 
+@media screen and (max-width: 991px) {
+    .about-us .floating-card__text {
+        font-size: 1.125rem;
+    }
+}
 /* About Us Section Css End */
 /* ================================= Home Page Css End ========================== */
 /* ================================= Contact Page Css Start ===================== */

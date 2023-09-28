@@ -40,11 +40,16 @@
     border-radius: 4px;
     background-color: hsl(var(--base-l-900));
     color: hsl(var(--base));
+    @include fs-20;
     font-weight: 400;
     line-height: 150%;
 
+    @include msm-screen {
+      @include fs-16;
+    }
+
     @include xxsm-screen {
-      @include fs-14;
+      @include fs-16;
     }
   }
 
