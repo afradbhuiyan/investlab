@@ -3554,7 +3554,7 @@ input#confirm-password {
 }
 
 .banner-thumbs__thumb:nth-child(2)::after, .banner-thumbs__thumb:nth-child(3)::after {
-    background-color: hsl(var(--base)/0.15);
+    background-color: hsl(var(--base-l-900));
 }
 
 .banner-thumbs__thumb:nth-child(2)::after {

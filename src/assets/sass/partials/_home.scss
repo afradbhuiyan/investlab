@@ -160,7 +160,7 @@
             &:nth-child(2),
             &:nth-child(3) {
                 &::after {
-                    background-color: hsl(var(--base)/.15);
+                    background-color: hsl(var(--base-l-900));
                 }
             }
 
