@@ -180,56 +180,7 @@
         }
     }
 }
-
-/* Why Invest Section Css Start */
-.why-invest {
-    background-color: hsl(var(--white));
-
-    &-card {
-        height: 100%;
-        text-align: center;
-
-        &__img {
-            margin-bottom: 24px;
-
-            @include sm-screen {
-                width: 64px;
-                height: 64px;
-            }
-        }
-
-        &__title {
-            margin-bottom: 12px;
-        }
-
-        &__desc {
-            max-width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            @include fs-18;
-            font-weight: 400;
-            line-height: 150%;
-
-            @include lg-screen {
-                max-width: 100%;
-            }
-
-            @include xsm-screen {
-                max-width: 70%;
-            }
-
-            @include xxsm-screen {
-                max-width: 100%;
-            }
-
-            @include sm-screen {
-                @include fs-16;
-            }
-        }
-    }
-}
-
-/* Why Invest Section Css End */
+/* Banner Section Css End */
 
 /* About Us Section Css Start */
 .about-us {
@@ -411,4 +362,167 @@
     }
 }
 /* About Us Section Css End */
+
+/* Why Invest Section Css Start */
+.why-invest {
+    background-color: hsl(var(--white));
+
+    &-card {
+        height: 100%;
+        text-align: center;
+
+        &__img {
+            margin-bottom: 24px;
+
+            @include sm-screen {
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 12px;
+        }
+
+        &__desc {
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            @include fs-18;
+            font-weight: 400;
+            line-height: 150%;
+
+            @include lg-screen {
+                max-width: 100%;
+            }
+
+            @include xsm-screen {
+                max-width: 70%;
+            }
+
+            @include xxsm-screen {
+                max-width: 100%;
+            }
+
+            @include sm-screen {
+                @include fs-16;
+            }
+        }
+    }
+}
+/* Why Invest Section Css End */
+
+/* Featured Property Section Css Start */
+.featured-property {
+    background-color: hsl(var(--white));
+
+    &__cards  {
+        margin-top: -64px;
+
+        @include md-screen {
+            margin-top: -48px;
+        }
+
+        @include sm-screen {
+            margin-top: -32px;
+        }
+
+        .slick-list {
+            padding-top: 64px; 
+
+            @include md-screen {
+                padding-top: 48px;
+            }
+    
+            @include sm-screen {
+                padding-top: 32px;
+            }
+        }
+    }
+
+    .city-card {
+        width: 100%;
+        height: 100%;
+        max-height: 395px;
+        display: inline-block;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        transform-origin: center bottom;
+        transition: transform ease-in-out 300ms;
+
+        @include md-screen {
+            max-height: 350px;
+        }
+
+        &:hover {
+            transform: scaleY(1.12);
+            
+            @include md-screen {
+                transform: scaleY(1.07);
+            }
+
+            @include sm-screen {
+                transform: scaleY(1.02);
+            }
+            
+            .city-card__content {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &__thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &__content {
+            position: absolute;
+            inset: 0;
+            background-color: hsl(var(--base-two)/.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity linear 300ms;
+        }
+
+        &__title {
+            color: hsl(var(--base));
+            @include fs-32;
+            line-height: 120%;
+            margin-bottom: 8px;
+            
+            @include lg-screen {
+                @include fs-28;
+            }
+
+            @include sm-screen {
+                @include fs-24;
+            }
+        }
+
+        &__text {
+            color: hsl(var(--white));
+            @include fs-20;
+            font-weight: 500;
+            line-height: 150%;
+
+            @include lg-screen {
+                @include fs-18;
+            }
+
+            @include sm-screen {
+                @include fs-16;
+            }
+        }
+    }
+}
+/* Featured Property Section Css End */
+
 /* ================================= Home Page Css End ========================== */

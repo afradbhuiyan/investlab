@@ -1,35 +1,31 @@
 (function ($) {
   "use strict";
 
-  // ============== Header Hide Click On Body Js Start ========
-  $('.header-button').on('click', function () {
-    $('.body-overlay').toggleClass('show')
-  });
-  $('.body-overlay').on('click', function () {
-    $('.header-button').trigger('click')
-    $(this).removeClass('show');
-  });
-  // =============== Header Hide Click On Body Js End =========
-
   // ==========================================
   //      Start Document Ready function
   // ==========================================
   $(document).ready(function () {
 
-    // ========================== Header Hide Scroll Bar Js Start =====================
+    // ============== Header Hide Click On Body Js Start ===============
+    $('.header-button').on('click', function () {
+      $('.body-overlay').toggleClass('show')
+    });
+
+    $('.body-overlay').on('click', function () {
+      $('.header-button').trigger('click')
+      $(this).removeClass('show');
+    });
+    // =============== Header Hide Click On Body Js End ===============
+
+    // =============== Header Hide Scroll Bar Js Start ===============
     $('.navbar-toggler.header-button').on('click', function () {
       $('body').toggleClass('scroll-hide-sm')
     });
+
     $('.body-overlay').on('click', function () {
       $('body').removeClass('scroll-hide-sm')
     });
-    // ========================== Header Hide Scroll Bar Js End =====================
-
-    // ========================== Small Device Header Menu On Click Dropdown menu collapse Stop Js Start =====================
-    $('.dropdown-item').on('click', function () {
-      $(this).closest('.dropdown-menu').addClass('d-block')
-    });
-    // ========================== Small Device Header Menu On Click Dropdown menu collapse Stop Js End =====================
+    // =============== Header Hide Scroll Bar Js End ===============
 
     // ========================== Add Attribute For Bg Image Js Start =====================
     $(".bg-img").css('background', function () {
@@ -38,33 +34,36 @@
     });
     // ========================== Add Attribute For Bg Image Js End =====================
 
-    // ========================== add active class to ul>li top Active current page Js Start =====================
+    // ========================== Add active class to ul > li top Active current page Js Start =====================
     function dynamicActiveMenuClass(selector) {
-    	let FileName = window.location.pathname.split("/").reverse()[0];
+      let FileName = window.location.pathname.split("/").reverse()[0];
 
-    	selector.find("li").each(function () {
-    		let anchor = $(this).find("a");
-    		if ($(anchor).attr("href") == FileName) {
-    			$(this).addClass("active");
-    		}
-    	});
-    	// if any li has active element add class
-    	selector.children("li").each(function () {
-    		if ($(this).find(".active").length) {
-    			$(this).addClass("active");
-    		}
-    	});
-    	// if no file name return
-    	if ("" == FileName) {
-    		selector.find("li").eq(0).addClass("active");
-    	}
+      selector.find("li").each(function () {
+        let anchor = $(this).find("a");
+        if ($(anchor).attr("href") == FileName) {
+          $(this).addClass("active");
+        }
+      });
+
+      // if any li has active element add class
+      selector.children("li").each(function () {
+        if ($(this).find(".active").length) {
+          $(this).addClass("active");
+        }
+      });
+
+      // if no file name return
+      if ("" == FileName) {
+        selector.find("li").eq(0).addClass("active");
+      }
     }
+
     if ($('ul').length) {
-    	dynamicActiveMenuClass($('ul'));
+      dynamicActiveMenuClass($('ul'));
     }
-    // ========================== add active class to ul>li top Active current page Js End =====================
+    // ========================== Add active class to ul>li top Active current page Js End =====================
 
-    // ================== Password Show Hide Js Start ==========
+    // ========================== Password Show Hide Js Start ==========================
     $(".toggle-password").on('click', function () {
       $(this).toggleClass(" fa-eye-slash");
       var input = $($(this).attr("id"));
@@ -74,147 +73,44 @@
         input.attr("type", "password");
       }
     });
-    // =============== Password Show Hide Js End =================
+    // ========================== Password Show Hide Js End ==========================
 
-    // ========================= Slick Slider Js Start ==============
-    $('.testimonial-slider').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      speed: 1500,
-      dots: true,
-      pauseOnHover: true,
-      arrows: false,
-      prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
-      nextArrow: '<button type="button" class="slick-next"><i class="fas fa-long-arrow-alt-right"></i></button>',
-      responsive: [
-        {
-          breakpoint: 1199,
-          settings: {
-            arrows: false,
-            slidesToShow: 2,
-            dots: true,
+    // ========================== Featured Property Cards Slider Js Start ========================
+    $('.featured-property').each(function (index, element) {
+      $(element).find('.featured-property__cards').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        speed: 2000,
+        dots: false,
+        arrows: true,
+        appendArrows: $(element).find('.featured-property__arrows'),
+        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
+        responsive: [
+          {
+            breakpoint: 991 + 1,
+            settings: {
+              slidesToShow: 3,
+            }
+          },
+          {
+            breakpoint: 600 + 1,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 424 + 1,
+            settings: {
+              slidesToShow: 1,
+              dots: true,
+              arrows: false
+            }
           }
-        },
-        {
-          breakpoint: 991,
-          settings: {
-            arrows: false,
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            arrows: false,
-            slidesToShow: 1
-          }
-        }
-      ]
+        ]
+      })
     });
-    // ========================= Slick Slider Js End ===================
-
-    // ========================= Client Slider Js Start ===============
-    $('.client-slider').slick({
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1000,
-      pauseOnHover: true,
-      speed: 2000,
-      dots: false,
-      arrows: false,
-      prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
-      nextArrow: '<button type="button" class="slick-next"><i class="fas fa-long-arrow-alt-right"></i></button>',
-      responsive: [
-        {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 6,
-          }
-        },
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 5
-          }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 4
-          }
-        },
-        {
-          breakpoint: 400,
-          settings: {
-            slidesToShow: 3
-          }
-        }
-      ]
-    });
-    // ========================= Client Slider Js End ===================
-
-    // ================== Sidebar Menu Js Start ===============
-    // Sidebar Dropdown Menu Start
-    $(".has-dropdown > a").click(function () {
-      $(".sidebar-submenu").slideUp(200);
-      if (
-        $(this)
-          .parent()
-          .hasClass("active")
-      ) {
-        $(".has-dropdown").removeClass("active");
-        $(this)
-          .parent()
-          .removeClass("active");
-      } else {
-        $(".has-dropdown").removeClass("active");
-        $(this)
-          .next(".sidebar-submenu")
-          .slideDown(200);
-        $(this)
-          .parent()
-          .addClass("active");
-      }
-    });
-    // Sidebar Dropdown Menu End
-    // Sidebar Icon & Overlay js 
-    $(".dashboard-body__bar-icon").on("click", function () {
-      $(".sidebar-menu").addClass('show-sidebar');
-      $(".sidebar-overlay").addClass('show');
-    });
-    $(".sidebar-menu__close, .sidebar-overlay").on("click", function () {
-      $(".sidebar-menu").removeClass('show-sidebar');
-      $(".sidebar-overlay").removeClass('show');
-    });
-    // Sidebar Icon & Overlay js 
-    // ===================== Sidebar Menu Js End =================
-
-    // ==================== Dashboard User Profile Dropdown Start ==================
-    $('.user-info__button').on('click', function () {
-      $('.user-info-dropdown').toggleClass('show');
-    });
-    $('.user-info__button').attr('tabindex', -1).focus();
-
-    $('.user-info__button').on('focusout', function () {
-      $('.user-info-dropdown').removeClass('show');
-    });
-    // ==================== Dashboard User Profile Dropdown End ==================
-
-    // ========================= Odometer Counter Up Js End ==========
-    $(".counterup-item").each(function () {
-      $(this).isInViewport(function (status) {
-        if (status === "entered") {
-          for (var i = 0; i < document.querySelectorAll(".odometer").length; i++) {
-            var el = document.querySelectorAll('.odometer')[i];
-            el.innerHTML = el.getAttribute("data-odometer-final");
-          }
-        }
-      });
-    });
-    // ========================= Odometer Up Counter Js End =====================
+    // ========================== Featured Property Cards Slider Js End ==========================
 
   });
   // ==========================================

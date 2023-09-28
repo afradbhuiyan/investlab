@@ -3272,6 +3272,114 @@ input#confirm-password {
 }
 
 /* ================================= Breadcrumb Css End ========================= */
+/* ================= Slick Arrow & Dots css Start ================ */
+.slick-initialized.slick-slider {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.slick-initialized.slick-slider .slick-track {
+    display: flex;
+}
+
+.slick-initialized.slick-slider .slick-slide {
+    height: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.slick-initialized.slick-slider .slick-slide > div {
+    height: 100%;
+}
+
+.slick-arrow {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: hsl(var(--gray-two));
+    border: 2px solid hsl(var(--gray-two));
+    border: 2px solid #8A8A8A;
+    background-color: transparent;
+    transition: 0.2s linear;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 991px) {
+    .slick-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .slick-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 0.875rem;
+    }
+}
+
+.slick-arrow:not(:last-child) {
+    margin-right: 24px;
+}
+
+@media screen and (max-width: 991px) {
+    .slick-arrow:not(:last-child) {
+        margin-right: 16px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .slick-arrow:not(:last-child) {
+        margin-right: 12px;
+    }
+}
+
+.slick-arrow:hover, .slick-arrow:focus {
+    color: hsl(var(--white));
+    border-color: hsl(var(--base));
+    background-color: hsl(var(--base));
+}
+
+.slick-dots {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 16px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 424px) {
+    .slick-dots {
+        gap: 8px 12px;
+    }
+}
+
+.slick-dots li button {
+    border: none;
+    border: 1px solid hsl(var(--gray-two));
+    background-color: transparent;
+    color: hsl(var(--white));
+    width: 24px;
+    height: 6px;
+    border-radius: 10px;
+    text-indent: -9999px;
+    transition: 0.3s linear;
+}
+
+.slick-dots li.slick-active button {
+    border-color: hsl(var(--base));
+    background-color: hsl(var(--base));
+}
+
+/* ================= Slick Arrow & Dots css Start ================ */
 /* ================================= Home Page Css Start ======================== */
 /* Banner Section Css Start */
 .banner {
@@ -3459,64 +3567,7 @@ input#confirm-password {
     left: -20px;
 }
 
-/* Why Invest Section Css Start */
-.why-invest {
-    background-color: hsl(var(--white));
-}
-
-.why-invest-card {
-    height: 100%;
-    text-align: center;
-}
-
-.why-invest-card__img {
-    margin-bottom: 24px;
-}
-
-@media screen and (max-width: 767px) {
-    .why-invest-card__img {
-        width: 64px;
-        height: 64px;
-    }
-}
-
-.why-invest-card__title {
-    margin-bottom: 12px;
-}
-
-.why-invest-card__desc {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.125rem;
-    font-weight: 400;
-    line-height: 150%;
-}
-
-@media screen and (max-width: 1199px) {
-    .why-invest-card__desc {
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 424px) {
-    .why-invest-card__desc {
-        max-width: 70%;
-    }
-}
-
-@media screen and (max-width: 374px) {
-    .why-invest-card__desc {
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .why-invest-card__desc {
-        font-size: 1rem;
-    }
-}
-/* Why Invest Section Css End */
+/* Banner Section Css End */
 /* About Us Section Css Start */
 .about-us .section-heading__title {
     max-width: 55%;
@@ -3731,6 +3782,198 @@ input#confirm-password {
     }
 }
 /* About Us Section Css End */
+/* Why Invest Section Css Start */
+.why-invest {
+    background-color: hsl(var(--white));
+}
+
+.why-invest-card {
+    height: 100%;
+    text-align: center;
+}
+
+.why-invest-card__img {
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 767px) {
+    .why-invest-card__img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.why-invest-card__title {
+    margin-bottom: 12px;
+}
+
+.why-invest-card__desc {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+@media screen and (max-width: 1199px) {
+    .why-invest-card__desc {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .why-invest-card__desc {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .why-invest-card__desc {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .why-invest-card__desc {
+        font-size: 1rem;
+    }
+}
+/* Why Invest Section Css End */
+/* Featured Property Section Css Start */
+.featured-property {
+    background-color: hsl(var(--white));
+}
+
+.featured-property__cards {
+    margin-top: -64px;
+}
+
+@media screen and (max-width: 991px) {
+    .featured-property__cards {
+        margin-top: -48px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .featured-property__cards {
+        margin-top: -32px;
+    }
+}
+
+.featured-property__cards .slick-list {
+    padding-top: 64px;
+}
+
+@media screen and (max-width: 991px) {
+    .featured-property__cards .slick-list {
+        padding-top: 48px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .featured-property__cards .slick-list {
+        padding-top: 32px;
+    }
+}
+
+.featured-property .city-card {
+    width: 100%;
+    height: 100%;
+    max-height: 395px;
+    display: inline-block;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transform-origin: center bottom;
+    transition: transform ease-in-out 300ms;
+}
+
+@media screen and (max-width: 991px) {
+    .featured-property .city-card {
+        max-height: 350px;
+    }
+}
+
+.featured-property .city-card:hover {
+    transform: scaleY(1.12);
+}
+
+@media screen and (max-width: 991px) {
+    .featured-property .city-card:hover {
+        transform: scaleY(1.07);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .featured-property .city-card:hover {
+        transform: scaleY(1.02);
+    }
+}
+
+.featured-property .city-card:hover .city-card__content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.featured-property .city-card__thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.featured-property .city-card__content {
+    position: absolute;
+    inset: 0;
+    background-color: hsl(var(--base-two)/0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity linear 300ms;
+}
+
+.featured-property .city-card__title {
+    color: hsl(var(--base));
+    font-size: 2rem;
+    line-height: 120%;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1199px) {
+    .featured-property .city-card__title {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .featured-property .city-card__title {
+        font-size: 1.5rem;
+    }
+}
+
+.featured-property .city-card__text {
+    color: hsl(var(--white));
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+@media screen and (max-width: 1199px) {
+    .featured-property .city-card__text {
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .featured-property .city-card__text {
+        font-size: 1rem;
+    }
+}
+/* Featured Property Section Css End */
 /* ================================= Home Page Css End ========================== */
 /* ================================= Contact Page Css Start ===================== */
 .contact-page {
