@@ -3954,7 +3954,7 @@ input#confirm-password {
     justify-content: center;
     visibility: hidden;
     opacity: 0;
-    transition: 0.3s linear;
+    transition: 0.5s linear;
 }
 
 .featured-property .city-card__title {
