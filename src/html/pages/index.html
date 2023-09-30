@@ -166,8 +166,45 @@
 <!-- ======================= All Property Section End ========================= -->
 
 @@include('../partials/_testimonial.html', {
-    "bgClass": ""
+    "bg-class": ""
 })
+
+<!-- ======================= Latest Blogs Section start ======================= -->
+<section class="latest-blogs py-120 bg-pattern">
+    <div class="container custom--container">
+        <div class="section-heading style-left">
+            <p class="section-heading__subtitle">Our Blogs</p>
+            <div class="section-heading__wrapper">
+                <h2 class="section-heading__title">Latest News & Articles</h2>
+                <a class="section-heading__link" href="blogs.html">
+                    <span>Explore</span>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row gy-4 g-md-3 g-lg-4">
+            <div class="col-xsm-6 col-sm-6 col-md-4">
+                @@include('../partials/_blog-card.html', {
+                    "card-img": "assets/images/thumbs/blog-card-img-1.jpg",
+                    "card-title": "Ten Important Tips For Launching"
+                })
+            </div>
+            <div class="col-xsm-6 col-sm-6 col-md-4">
+                @@include('../partials/_blog-card.html', {
+                    "card-img": "assets/images/thumbs/blog-card-img-2.jpg",
+                    "card-title": "What Is Turn Key Real Estate Investing?"
+                })
+            </div>
+            <div class="col-xsm-6 col-sm-6 col-md-4">
+                @@include('../partials/_blog-card.html', {
+                    "card-img": "assets/images/thumbs/blog-card-img-3.jpg",
+                    "card-title": "How to Make Better Investments"
+                })
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======================= Latest Blogs Section End ========================= -->
 
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')

@@ -716,4 +716,41 @@
     }
 }
 /* Testimonial Section Css End */
+
+/* Latest Blogs Section Css Start */
+.latest-blogs {
+    
+    .section-heading { 
+        margin-bottom: calc(64px + 40px); //Add the  translateY(-40px) padding
+  
+        @include md-screen {
+            margin-bottom: calc(48px + 40px);
+        }
+
+        @include sm-screen {
+            margin-bottom: 32px;
+        }
+    }
+
+    .row {
+
+        & > [class*="col-"]:nth-child(3n+1),
+        & > [class*="col-"]:nth-child(3n+3) {
+            .blog--card {
+                transform: translateY(-40px);
+
+                @include sm-screen {
+                    transform: translateY(0px);
+                }
+            }
+        }
+    }
+
+    .blog--card {
+        &:hover {
+            box-shadow: 20px 79px 76px 0px rgba(159, 144, 132, 0.10); 
+        }
+    }
+}
+/* Latest Blogs Section Css End */
 /* ================================= Home Page Css End ========================== */
