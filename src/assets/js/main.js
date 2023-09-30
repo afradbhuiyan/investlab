@@ -123,9 +123,6 @@
       $(element).find('.testimonial__cards').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        pauseOnHover: true,
         speed: 1500,
         arrows: false,
         dots: true,
@@ -137,6 +134,37 @@
               appendDots: $(element).find('.testimonial__cards'),
             }
           },
+        ]
+      });
+
+      $(element).find('.testimonial__brands').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        pauseOnHover: true,
+        speed: 2000,
+        dots: false,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 1199 + 1,
+            settings: {
+              slidesToShow: 4,
+            }
+          },
+          {
+            breakpoint: 767 + 1,
+            settings: {
+              slidesToShow: 3,
+            }
+          },
+          {
+            breakpoint: 600 + 1,
+            settings: {
+              slidesToShow: 2,
+            }
+          }
         ]
       });
 
