@@ -108,12 +108,16 @@
             }
           }
         ]
+      });
+      // Remove slick dots numbers
+      var textNodes = $(element).find('.slick-dots > li button').contents().filter(function () {
+        return this.nodeType === Node.TEXT_NODE;
       })
+      textNodes.remove();
     });
     // ========================== Featured Property Cards Slider Js End ==========================
 
     // ========================== Testimonial Cards Slider Js Start ========================
-    // ========================== Testimonial Cards Slider Js End ========================
     $('.testimonial').each(function (index, element) {
       
       $(element).find('.testimonial__cards').slick({
@@ -142,6 +146,7 @@
       })
       textNodes.remove();
     });
+    // ========================== Testimonial Cards Slider Js End ==========================
 
   });
   // ==========================================
