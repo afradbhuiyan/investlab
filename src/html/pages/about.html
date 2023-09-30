@@ -1,14 +1,15 @@
-<!-- meta tags and other links -->
-<!-- Header -->
 @@include('../partials/_template-top.html')
 @@include('../partials/_header.html')
+@@include('../partials/_breadcrumb.html', {
+    "breadcrumbText": "About Us"
+})
 
-<section class="py-120">
-    <div class="container">
-        <h1>About us</h1>
-    </div>
-</section>
+@@include('../partials/_about-us.html')
+@@include('../partials/_why-invest.html')
+@@include('../partials/_testimonial.html', {
+    "bgClass": "bg-transparent"
+})
 
-<!-- Footer -->
+
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')
