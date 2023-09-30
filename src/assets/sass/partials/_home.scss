@@ -525,4 +525,182 @@
 }
 /* Featured Property Section Css End */
 
+/* Testimonial Section Css Start */
+.testimonial {
+    background-color: hsl(var(--white));
+
+    .section-heading {
+        margin-bottom: 54px;
+
+        @include lg-screen {
+            margin-bottom: 32px;
+        }
+
+        @include md-screen {
+            margin-bottom: 24px;
+        }
+
+        @include sm-screen {
+            max-width: 70%;
+            margin-bottom: 0px !important;
+        }
+
+        @include msm-screen {
+            max-width: 80%;
+        }
+
+        @include xsm-screen {
+            max-width: 100%;
+        }
+    }
+    
+    .slick-dots {
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        & > li {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__cards {
+
+        .slick-dots  {
+            margin-top: 32px;
+            
+            @include msm-screen {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    &__dots {
+        .slick-dots  {
+            justify-content: start;
+        }
+    }
+
+    &-card {
+        height: 100%;
+        padding: 30px;
+        padding-bottom: 0px;
+
+        @include msm-screen {
+            padding: 22px;
+        }
+
+        &__wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 26px 0px;
+        }
+
+        &__content {
+            position: relative;
+
+            &::before {
+                content: '\f10d';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                color: hsl(var(--base));
+                background-color: hsl(var(--base-l-900));
+                position: absolute;
+                top: -30px;
+                left: -30px;
+                @include fs-14;
+
+                @include msm-screen {
+                    width: 20px;
+                    height: 20px;
+                    top: -22px;
+                    left: -22px;
+                    @include fs-12;
+                }
+            }
+        }
+
+        &__desc {
+            @include fs-18;
+            line-height: 150%;
+        }
+
+        &__info {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        &__thumb {
+            width: 100%;
+            height: 100%;
+            max-width: 64px;
+            max-height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &__name { 
+            @include fs-18;
+            font-weight: 500;
+            line-height: 150%;
+            margin-bottom: 0px;
+        }
+
+        &__country { 
+            @include fs-16;
+            line-height: 150%;
+        }
+    }
+
+    &__brands {
+        border-top: 2px solid hsl(var(--gray));
+        margin-top: 48px;
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 24px 54px;
+
+        @include lg-screen {
+            gap: 24px 48px;
+        }
+
+        @include sm-screen {
+            margin-top: 32px;
+            padding-top: 34px;
+        }
+
+        @include xsm-screen {
+            gap: 24px;
+        }
+
+        & > li {
+
+            @include xsm-screen {
+                width: calc(50% - 24px);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-height: 34px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+/* Testimonial Section Css End */
 /* ================================= Home Page Css End ========================== */

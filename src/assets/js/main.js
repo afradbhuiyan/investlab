@@ -112,6 +112,37 @@
     });
     // ========================== Featured Property Cards Slider Js End ==========================
 
+    // ========================== Testimonial Cards Slider Js Start ========================
+    // ========================== Testimonial Cards Slider Js End ========================
+    $('.testimonial').each(function (index, element) {
+      
+      $(element).find('.testimonial__cards').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        pauseOnHover: true,
+        speed: 1500,
+        arrows: false,
+        dots: true,
+        appendDots: $(element).find('.testimonial__dots'),
+        responsive: [
+          {
+            breakpoint: 767 + 1,
+            settings: {
+              appendDots: $(element).find('.testimonial__cards'),
+            }
+          },
+        ]
+      });
+
+      // Remove slick dots numbers
+      var textNodes = $(element).find('.slick-dots > li button').contents().filter(function () {
+        return this.nodeType === Node.TEXT_NODE;
+      })
+      textNodes.remove();
+    });
+
   });
   // ==========================================
   //      End Document Ready function
