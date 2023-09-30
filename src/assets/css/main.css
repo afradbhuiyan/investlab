@@ -1451,9 +1451,15 @@ button:focus {
     gap: 16px 8px;
 }
 
-.property--card .card-title {
+.property--card .card-title,
+.property--card .card-title a {
     font-weight: 600;
     line-height: 150%;
+}
+
+.property--card .card-title:hover,
+.property--card .card-title a:hover {
+    color: hsl(var(--base));
 }
 
 .property--card .card-price {

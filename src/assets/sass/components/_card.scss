@@ -70,9 +70,14 @@
         gap: 16px 8px;
     }
 
-    .card-title {
+    .card-title,
+    .card-title a {
         font-weight: 600;
         line-height: 150%;
+        
+        &:hover {
+            color: hsl(var(--base));
+        }
     }
 
     .card-price {
