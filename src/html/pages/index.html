@@ -152,7 +152,7 @@
 <section class="all-property py-120 bg-pattern">
     <div class="container custom--container">
         <div class="section-heading style-left">
-            <p class="section-heading__subtitle">All Property Spotlight</p>
+            <p class="section-heading__subtitle">Featured Properties</p>
             <div class="section-heading__wrapper">
                 <h2 class="section-heading__title">All Property Spotlight</h2>
                 <a class="section-heading__link" href="#">
@@ -160,6 +160,21 @@
                     <i class="fas fa-long-arrow-alt-right"></i>
                 </a>
             </div>
+        </div>
+        
+        <div class="all-property__cards">
+            @@include('../partials/_property-horizontal-card.html',{
+                "card-img": "assets/images/thumbs/property-horizontal-card-img-1.jpg",
+                "card-title": "Elegant Family Home",
+            })
+            @@include('../partials/_property-horizontal-card.html', {
+                "card-img": "assets/images/thumbs/property-horizontal-card-img-2.jpg",
+                "card-title": "San Francisco, CA",
+            })
+            @@include('../partials/_property-horizontal-card.html', {
+                "card-img": "assets/images/thumbs/property-horizontal-card-img-3.jpg",
+                "card-title": "Los Angeles",
+            })
         </div>
     </div>
 </section>

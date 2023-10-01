@@ -43,27 +43,27 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(2.25rem, 3vw + 1rem, 4.5rem); //Min: 36px - Max: 72px
+  font-size: clamp(2.25rem, 1.6871rem + 2.8147vw, 4.5rem); //Min: 36px - Max: 72px
 }
 
 h2 {
-  font-size: clamp(2rem, 1.7vw + 1rem, 3rem); //Min: 32px - Max: 48px
+  font-size: clamp(2rem, 1.7498rem + 1.251vw, 3rem); //Min: 32px - Max: 48px
 }
 
 h3 {
-  font-size: clamp(1.75rem, 1.5vw + 1rem, 2.25rem); //Min: 28px - Max: 36px
+  font-size: clamp(1.75rem, 1.6249rem + 0.6255vw, 2.25rem); //Min: 28px - Max: 36px
 }
 
 h4 {
-  font-size: clamp(1.5rem, 1.3vw + 1rem, 1.75rem); //Min: 24px - Max: 28px
+  font-size: clamp(1.5rem, 1.4375rem + 0.3127vw, 1.75rem); //Min: 24px - Max: 28px
 }
 
 h5 {
-  font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem); //Min: 20px - Max: 24px
+  font-size: clamp(1.25rem, 1.1875rem + 0.3127vw, 1.5rem); //Min: 20px - Max: 24px
 }
 
 h6 {
-  font-size: clamp(1.125rem, .8vw + 1rem, 1.25rem); //Min: 18px - Max: 20px
+  font-size: clamp(1.125rem, 1.0937rem + 0.1564vw, 1.25rem); //Min: 18px - Max: 20px
 }
 
 h1>a,

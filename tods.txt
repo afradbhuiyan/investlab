@@ -1,0 +1,5 @@
+Todos
+======
+1. Design Horizontal Card
+2. Apply header & card Shadow from a variable
+3. Apply heading font sizes from clamp generator

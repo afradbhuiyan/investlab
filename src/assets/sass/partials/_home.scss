@@ -538,6 +538,16 @@
 }
 /* Featured Property Section Css End */
 
+/* All Property Section Css Start */
+.all-property {
+    &__cards {
+        .card:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+}
+/* All Property Section Css End */
+
 /* Testimonial Section Css Start */
 .testimonial {
     background-color: hsl(var(--white));

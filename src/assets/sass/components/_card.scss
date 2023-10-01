@@ -43,11 +43,16 @@
         --bs-card-spacer-x: 16px;
     }
 
-    img[class*="card-img"] {
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+    .card-img-top {
         max-height: 290px;
+        overflow: hidden;        
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
 
         @include xl-screen {
             max-height: 230px;
@@ -184,6 +189,207 @@
                 font-weight: 500;
                 line-height: 150%;
             }
+        }
+    }
+}
+
+.property-horizontal--card {
+    --bs-card-border-width: 0px;
+    --bs-card-border-radius: 12px;
+    --bs-card-inner-border-radius: 8px;
+    --bs-card-spacer-y: 26px;
+    --bs-card-spacer-x: 44px;
+    flex-direction: row;
+    
+    @include md-screen {
+        --bs-card-spacer-x: 24px;
+    }
+    
+    @include msm-screen {
+        --bs-card-spacer-y: 12px;
+        --bs-card-spacer-x: 12px;
+    }
+
+    .card-img {
+        overflow: hidden;
+
+        &--lg {
+            max-width: 552px;
+            max-height: 368px;
+            margin: 12px 0px 12px 12px;
+            
+            @include sm-screen {
+                max-width: 200px;
+            }
+        }
+        
+        &--sm {
+            max-width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-body {
+        width: 100%;
+
+        &-top {
+            margin-bottom: 32px;
+            
+            @include md-screen {
+                margin-bottom: 24px;
+            }
+        }
+
+        &-bottom {
+            border-top: 1px solid hsl(0, 0%, 54%, .2);
+            margin-top: 20px;
+            padding-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            @include md-screen {
+                margin-top: 16px;
+                padding-top: 16px;
+            }
+        }
+    }  
+
+    .card-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 8px;
+
+        @include msm-screen {
+            flex-wrap: wrap-reverse;
+        }
+    }
+
+    .card-title{
+        font-size: clamp(1.25rem, 1.1249rem + 0.6255vw, 1.75rem); //Min: 20px - Max: 28px
+        font-weight: 600;
+        line-height: 150%;
+        margin-bottom: 0px;
+
+        @supports (-webkit-line-clamp: 2) {
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        &:hover a {
+            color: hsl(var(--base));
+        }
+    }
+
+    .card-meta--one {
+        
+        .card-meta__item {
+            display: flex;
+            align-items: start;
+            gap: 0px 10px;
+
+            &:not(:last-child) {
+                margin-bottom: 36px;
+                
+                @include md-screen {
+                    margin-bottom: 16px;
+                }
+            }
+
+            i {
+                color: hsl(var(--base));
+                
+                @include sm-screen {
+                    @include fs-12;
+                }
+            }
+
+            .text {
+                color: hsl(var(--gray-two));
+                font-weight: 500;
+                line-height: 100%;
+                
+                @include sm-screen {
+                    @include fs-14;
+                }
+            }
+        }
+    }
+
+    .card-progress {
+        margin-bottom: 32px;
+
+        &__bar {
+            border-radius: 10px;
+            background-color: hsl(var(--base-l-900));
+            height: 6px;
+        }
+
+        &__thumb {
+            height: 100%;
+            border-radius: 10px;
+            background-color: hsl(var(--base));
+        }
+
+        &__label {
+            @include fs-14;
+            font-weight: 500;
+            line-height: 100%;
+            color: hsl(var(--gray-two));
+            margin-top: 10px;
+        }
+    }
+
+    .card-meta--two {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        @include sm-screen {
+            justify-content: start;
+            gap: 8px 16px;
+        }
+
+        .card-meta__item {
+            
+            .text {
+                color: hsl(var(--base));
+                font-weight: 700;
+                line-height: 87.5%;
+            }
+
+            .subtext {
+                color: hsl(var(--gray-two));
+                @include fs-14;
+                font-weight: 400;
+                line-height: 100%; /* 14px */
+            }
+        }
+    }
+
+    .card-price {
+        color: hsl(var(--gray-two));
+        @include fs-20;
+        font-weight: 700;
+        line-height: 120%;
+
+        @include xl-screen {
+            @include fs-18;
+        }
+
+        @include lg-screen {
+            @include fs-16;
         }
     }
 }
