@@ -1,0 +1,75 @@
+/* ================================= Property Page Css Start ==================== */
+.property-page {
+    &-inner {
+        display: flex;
+        align-items: start;
+        gap: 0px 56px;
+
+        @include lg-screen {
+            gap: 0px 28px;
+        }
+    }
+    
+    .property-sidebar {
+        width: 310px;
+        flex-shrink: 0;
+
+        @include lg-screen {
+            width: 250px;
+        }
+
+        @include md-screen {
+            display: none;
+        }
+    }
+    
+    .property-content {
+        width: 100%;
+    }
+
+    .property-form {
+
+        &__block {
+
+            .title {
+                @include fs-18;
+                font-weight: 500;
+                line-height: 120%;
+                margin-bottom: 24px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 36px;
+            }
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0px;
+        }
+
+        .form--control {
+            color: hsl(var(--gray));
+            border-color: transparent;
+            background-color: hsl(var(--white));
+
+            &:focus {
+                border-color: hsl(var(--base));
+            }
+        }
+    }
+
+    .property-cards {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
+
+        @include lg-screen {
+            gap: 24px;
+        }
+
+        @include msm-screen {
+            grid-template-columns: auto;
+        }
+    }
+}
+/* ================================= Property Page Css End ====================== */

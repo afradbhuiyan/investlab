@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap");
-/* ========================= Css Variables Start ======================== */
+/* ================================= Css Variable Css Start ========================= */
 :root {
     --white-h: 0;
     --white-s: 0%;
@@ -172,10 +172,8 @@
     --box-shadow: 0px 2px 15px hsl(var(--black) /.05);
 }
 
-/* ========================= Css Variables End =========================== */
-/* ============================ Media Breakpoint for Each Device Start ============================ */
-/* ================================== Font Size For responsive devices End =============================== */
-/* ================================= Typography Css Start =========================== */
+/* ================================= Css Variable Css End ========================= */
+/* ================================= Typography Css Start ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -1449,21 +1447,25 @@ button:focus {
     object-position: center;
 }
 
+.property--card .card-img-top.card--img-sm {
+    max-height: 245px;
+}
+
 @media screen and (max-width: 1399px) {
     .property--card .card-img-top {
-        max-height: 230px;
+        max-height: 230px !important;
     }
 }
 
 @media screen and (max-width: 1199px) {
     .property--card .card-img-top {
-        max-height: 200px;
+        max-height: 200px !important;
     }
 }
 
 @media screen and (max-width: 767px) {
     .property--card .card-img-top {
-        max-height: 180px;
+        max-height: 180px !important;
     }
 }
 
@@ -4690,6 +4692,83 @@ input#confirm-password {
 
 /* Latest Blogs Section Css End */
 /* ================================= Home Page Css End ========================== */
+/* ================================= Property Page Css Start ==================== */
+.property-page-inner {
+    display: flex;
+    align-items: start;
+    gap: 0px 56px;
+}
+
+@media screen and (max-width: 1199px) {
+    .property-page-inner {
+        gap: 0px 28px;
+    }
+}
+
+.property-page .property-sidebar {
+    width: 310px;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 1199px) {
+    .property-page .property-sidebar {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .property-page .property-sidebar {
+        display: none;
+    }
+}
+
+.property-page .property-content {
+    width: 100%;
+}
+
+.property-page .property-form__block .title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 24px;
+}
+
+.property-page .property-form__block:not(:last-child) {
+    margin-bottom: 36px;
+}
+
+.property-page .property-form .form-group:last-child {
+    margin-bottom: 0px;
+}
+
+.property-page .property-form .form--control {
+    color: hsl(var(--gray));
+    border-color: transparent;
+    background-color: hsl(var(--white));
+}
+
+.property-page .property-form .form--control:focus {
+    border-color: hsl(var(--base));
+}
+
+.property-page .property-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+}
+
+@media screen and (max-width: 1199px) {
+    .property-page .property-cards {
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .property-page .property-cards {
+        grid-template-columns: auto;
+    }
+}
+/* ================================= Property Page Css End ====================== */
 /* ================================= Contact Page Css Start ===================== */
 .contact-page {
     flex-grow: 1;

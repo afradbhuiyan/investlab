@@ -1,14 +1,139 @@
-<!-- meta tags and other links -->
-<!-- Header -->
 @@include('../partials/_template-top.html')
 @@include('../partials/_header.html')
 
-<section class="py-120">
-    <div class="container">
-        <h1>Property</h1>
+
+@@include('../partials/_breadcrumb.html', {
+    "breadcrumbText": "Property"
+})
+
+<section class="property-page py-120 bg-pattern">
+    <div class="container custom--container">
+        <div class="property-page-inner">
+            <aside class="property-sidebar">
+                <form class="property-form" action="">
+                    <div class="property-form__block">
+                        <h6 class="title">Search Property</h6>
+                        
+                        <div class="form-group">
+                            <input class="form--control form--control-lg" type="text" placeholder="What are you looking for?">
+                        </div>
+
+                        <div class="form-group">
+                            <select class="form-select form--control form--control-lg">
+                                <option value="">Select Location</option>
+                                <option value="">Option 1</option>
+                                <option value="">Option 2</option>
+                                <option value="">Option 3</option>
+                                <option value="">Option 4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="property-form__block">
+                        <h6 class="title">Filter By Available Funding</h6>
+                    </div>
+                </form>
+            </aside>
+
+            <div class="property-content">
+                <div class="text-end d-lg-none">
+                    <button type="button" class="mb-4 btn btn--sm btn-outline--base">
+                        <i class="fas fa-filter"></i>
+                        <span>Filter</span>
+                    </button>
+                </div>
+
+                <div class="property-cards">
+                    @@include('../partials/_property-card.html', {
+                        "card-img": "assets/images/thumbs/property-card-img-1.jpg",
+                        "card-img-class": "card--img-sm",
+                        "card-title": "Greece House"
+                    })
+                    @@include('../partials/_property-card.html', {
+                        "card-img": "assets/images/thumbs/property-card-img-1.jpg",
+                        "card-img-class": "card--img-sm",
+                        "card-title": "Greece House"
+                    })
+                    @@include('../partials/_property-card.html', {
+                        "card-img": "assets/images/thumbs/property-card-img-1.jpg",
+                        "card-img-class": "card--img-sm",
+                        "card-title": "Greece House"
+                    })
+                    @@include('../partials/_property-card.html', {
+                        "card-img": "assets/images/thumbs/property-card-img-1.jpg",
+                        "card-img-class": "card--img-sm",
+                        "card-title": "Greece House"
+                    })
+                    @@include('../partials/_property-card.html', {
+                        "card-img": "assets/images/thumbs/property-card-img-1.jpg",
+                        "card-img-class": "card--img-sm",
+                        "card-title": "Greece House"
+                    })
+                    @@include('../partials/_property-card.html', {
+                        "card-img": "assets/images/thumbs/property-card-img-1.jpg",
+                        "card-img-class": "card--img-sm",
+                        "card-title": "Greece House"
+                    })
+                    @@include('../partials/_property-card.html', {
+                        "card-img": "assets/images/thumbs/property-card-img-1.jpg",
+                        "card-img-class": "card--img-sm",
+                        "card-title": "Greece House"
+                    })
+                    @@include('../partials/_property-card.html', {
+                        "card-img": "assets/images/thumbs/property-card-img-1.jpg",
+                        "card-img-class": "card--img-sm",
+                        "card-title": "Greece House"
+                    })
+                </div>                
+            </div>
+        </div>
+
+        <!-- <div class="row gy-4">
+            <div class="col-lg-3">
+                <div class="d-lg-none text-end">
+                    <button class="btn btn--sm btn-outline--base">
+                        <i class="fas fa-filter"></i>
+                        <span>Filter Property</span>
+                    </button>
+                </div>
+
+                
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-sm-6">
+                        @@include('../partials/_property-card.html', {
+                            "card-img": "assets/images/thumbs/property-card-img-1.jpg",
+                            "card-img-class": "card--img-sm",
+                            "card-title": "Greece House"
+                        })
+                    </div>
+                    <div class="col-sm-6">
+                        @@include('../partials/_property-card.html', {
+                            "card-img": "assets/images/thumbs/property-card-img-2.jpg",
+                            "card-img-class": "card--img-sm",
+                            "card-title": "Elegant Family Home"
+                        })
+                    </div>
+                    <div class="col-sm-6">
+                        @@include('../partials/_property-card.html', {
+                            "card-img": "assets/images/thumbs/property-card-img-3.jpg",
+                            "card-img-class": "card--img-sm",
+                            "card-title": "Park House"
+                        })
+                    </div>
+                    <div class="col-sm-6">
+                        @@include('../partials/_property-card.html', {
+                            "card-img": "assets/images/thumbs/property-card-img-3.jpg",
+                            "card-img-class": "card--img-sm",
+                            "card-title": "Park House"
+                        })
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
 </section>
 
-<!-- Footer -->
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')

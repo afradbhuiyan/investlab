@@ -1,4 +1,3 @@
-/* ============================ Media Breakpoint for Each Device Start ============================ */
 //Mobile Landscape
 @mixin landscape {
   @media all and (orientation:landscape) {
@@ -169,4 +168,3 @@
 @mixin fs-40 {
   font-size: 2.5rem;
 }
-/* ================================== Font Size For responsive devices End =============================== */

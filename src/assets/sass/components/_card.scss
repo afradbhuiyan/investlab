@@ -54,16 +54,20 @@
             object-position: center;
         }
 
+        &.card--img-sm {
+            max-height: 245px;
+        }
+
         @include xl-screen {
-            max-height: 230px;
+            max-height: 230px !important;
         }
 
         @include lg-screen {
-            max-height: 200px;
+            max-height: 200px !important;
         }
 
         @include sm-screen {
-            max-height: 180px;
+            max-height: 180px !important;
         }
     }
 
