@@ -49,13 +49,14 @@
     }
 
     @include xxsm-screen {
-      @include fs-16;
+      @include fs-14;
     }
   }
 
   &__title {
     line-height: 120%;
     margin-bottom: 0px;
+    text-align: center;
   }
 
   &__link {
@@ -70,11 +71,9 @@
 
   &.style-left {
     align-items: start;
-  }
-  
-  &.style-xsm-left {
-    @include xsm-screen {
-      align-items: start;
+
+    .section-heading__title {
+      text-align: left;
     }
   }
 }

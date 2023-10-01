@@ -702,13 +702,14 @@ button:focus {
 
 @media screen and (max-width: 374px) {
     .section-heading__subtitle {
-        font-size: 1rem;
+        font-size: 0.875rem;
     }
 }
 
 .section-heading__title {
     line-height: 120%;
     margin-bottom: 0px;
+    text-align: center;
 }
 
 .section-heading__link {
@@ -725,10 +726,8 @@ button:focus {
     align-items: start;
 }
 
-@media screen and (max-width: 424px) {
-    .section-heading.style-xsm-left {
-        align-items: start;
-    }
+.section-heading.style-left .section-heading__title {
+    text-align: left;
 }
 
 .other-option {
