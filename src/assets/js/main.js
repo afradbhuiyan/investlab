@@ -154,13 +154,13 @@
             }
           },
           {
-            breakpoint: 767 + 1,
+            breakpoint: 576 + 1,
             settings: {
               slidesToShow: 3,
             }
           },
           {
-            breakpoint: 600 + 1,
+            breakpoint: 424 + 1,
             settings: {
               slidesToShow: 2,
             }
