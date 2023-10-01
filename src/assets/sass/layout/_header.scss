@@ -173,6 +173,8 @@
 
             &.active {
                 .nav-link {
+                    color: hsl(var(--base)) !important;
+                    
                     &::before {
                         background-color: hsl(var(--base));
                     }

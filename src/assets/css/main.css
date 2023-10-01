@@ -3031,6 +3031,10 @@ input#confirm-password {
 }
 
 @media (min-width: 992px) {
+    .nav-menu .nav-item.active .nav-link {
+        color: hsl(var(--base)) !important;
+    }
+
     .nav-menu .nav-item.active .nav-link::before {
         background-color: hsl(var(--base));
     }
