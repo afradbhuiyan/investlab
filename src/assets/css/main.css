@@ -4421,6 +4421,14 @@ input#confirm-password {
 }
 /* Featured Property Section Css End */
 /* All Property Section Css Start */
+.all-property__cards .card {
+    transition: 0.2s linear;
+}
+
+.all-property__cards .card:hover {
+    box-shadow: 20px 79px 76px 0px rgba(159, 144, 132, 0.1);
+}
+
 .all-property__cards .card:not(:last-child) {
     margin-bottom: 24px;
 }
