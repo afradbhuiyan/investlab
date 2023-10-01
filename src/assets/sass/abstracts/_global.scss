@@ -61,12 +61,28 @@
 
   &__link {
     color: hsl(var(--base));
-    @include fs-18;
     font-weight: 500;
     line-height: 18px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+
+    span {
+      @include fs-18;
+    }
+    
+    i {
+      @include fs-40;
+      line-height: 1;
+
+      @include sm-screen {
+        @include fs-30;
+      }
+
+      @include msm-screen {
+        @include fs-24;
+      }
+    }
   }
 
   &.style-left {

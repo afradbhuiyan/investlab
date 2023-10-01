@@ -366,6 +366,13 @@
 /* Why Invest Section Css Start */
 .why-invest {
     background-color: hsl(var(--white));
+    .section-heading__subtitle {
+        @include fs-16;
+        
+        @include xxsm-screen {
+            @include fs-13;
+        }
+    }
 
     &-card {
         height: 100%;
