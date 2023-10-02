@@ -10,12 +10,57 @@
     <div class="container custom--container">
         <div class="property-page-inner">
             <aside class="property-page-sidebar">
-                @@include('../partials/_filter-form.html')
+                <button class="close-btn" type="button">
+                    <i class="fas fa-times"></i>
+                </button>
+                <form class="filter-form" action="">
+                    <div class="filter-form__block">
+                        <h6 class="title">Search Property</h6>
+                        
+                        <div class="form-group">
+                            <input class="form--control form--control-lg" type="text" placeholder="What are you looking for?">
+                        </div>
+                
+                        <div class="form-group">
+                            <select class="form-select form--control form--control-lg">
+                                <option value="">Select Location</option>
+                                <option value="">Option 1</option>
+                                <option value="">Option 2</option>
+                                <option value="">Option 3</option>
+                                <option value="">Option 4</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="filter-form__block">
+                        <h6 class="title">Filter By Available Funding</h6>
+                        
+                        <div class="range-slider" data-min="0" data-max="500" data-min-default="50" data-max-default="300">
+                            <div class="range-slider__slide"></div>
+                
+                            <div class="range-slider__inputs">
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input id="min-range" class="form--control" type="number" placeholder="Min: 0" min="0" max="500">
+                                </div>
+                
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input id="max-range" class="form--control" type="number" placeholder="Max: 500" min="0" max="500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="w-100 btn btn--lg btn-outline--base">
+                        Filter Now
+                    </button>
+                </form>
             </aside>
 
             <div class="property-page-content">
                 <div class="text-end d-lg-none">
-                    <button type="button" class="mb-4 btn btn--sm btn-outline--base" data-bs-toggle="offcanvas" data-bs-target="#filter-form-offcanvas">
+                    <button type="button" class="btn btn--sm btn-outline--base btn--filter mb-4">
                         <i class="fas fa-filter"></i>
                         <span>Filter</span>
                     </button>
@@ -48,20 +93,6 @@
     </div>
 </section>
 <!-- ======================= Property Page End ============================ -->
-
-<!-- ======================= Filter Form Offcanvas Start =================== -->
-<div class="offcanvas offcanvas-start offcanvas--filter-form" id="filter-form-offcanvas">
-    <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-
-    <div class="offcanvas-body">
-        @@include('../partials/_filter-form.html')
-    </div>
-</div>
-<!-- ======================= Filter Form Offcanvas End ===================== -->
 
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')

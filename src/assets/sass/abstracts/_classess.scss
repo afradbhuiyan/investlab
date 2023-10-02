@@ -23,8 +23,7 @@
 
 .bg-pattern {
     position: relative;
-    z-index: 1;
-
+    
     &::before,
     &::after {
         content: '';

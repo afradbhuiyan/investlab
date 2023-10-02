@@ -19,12 +19,68 @@
         }
 
         @include md-screen {
+            width: 100%;
+            max-width: 350px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            transform: translateX(-100%);
+            border-right: 1px solid hsl(var(--black)/.08);
+            background-color: hsl(var(--white));
+            z-index: 1001;
+            padding: 32px;
+            transition: .3s linear;
+
+            &.show {
+                transform: none;
+            }
+
+            .filter-form {
+                .form--control {
+                    background-color: #F8F8F8;
+                }
+            }
+        }
+
+        @include xxsm-screen {
+            padding: 24px;
+        }
+
+        .close-btn {
+            @include fs-20;
+            padding: 0;
             display: none;
+            border-radius: 50%;
+            color: hsl(var(--black)/.7);
+            position: absolute;
+            top: 25px;
+            right: 32px;
+
+            @include md-screen {
+                display: block;
+            }
+
+            @include xxsm-screen {
+                top: 17px;
+                right: 24px;
+            }
+
+            &:focus,
+            &:hover {
+                color: hsl(var(--black));
+            }
         }
     }
     
     &-content {
         width: 100%;
+
+        .btn--filter {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
     }
 }
 

@@ -216,6 +216,16 @@
       textNodes.remove();
     });
     // ========================== Testimonial Cards Slider Js End ==========================
+    
+    // ========================== Show filter sidebar Js Start =============================
+    $('.btn--filter').on('click', function () {
+      $('.property-page-sidebar').addClass('show');
+    });
+    
+    $('.property-page-sidebar .close-btn').on('click', function () {
+      $('.property-page-sidebar').removeClass('show');
+    })
+    // ========================== Show filter sidebar Js End ===============================
 
   });
   // ==========================================

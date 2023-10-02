@@ -333,7 +333,6 @@ button:focus {
 
 .bg-pattern {
     position: relative;
-    z-index: 1;
 }
 
 .bg-pattern::before, .bg-pattern::after {
@@ -3124,38 +3123,6 @@ input#confirm-password {
 }
 
 /* ================================= Alert Css End ================================ */
-/* ================================= Offcanvas Css Start ============================ */
-.offcanvas--filter-form {
-    --bs-offcanvas-padding-x: 2rem;
-}
-
-@media screen and (max-width: 374px) {
-    .offcanvas--filter-form {
-        --bs-offcanvas-padding-x: 1.5rem;
-    }
-}
-
-.offcanvas--filter-form .btn-close {
-    width: auto;
-    height: auto;
-    padding: 0px;
-    margin-left: auto;
-    background: none;
-    font-size: 1.5rem;
-    color: hsl(var(--black)/0.8);
-    border-radius: 0px;
-}
-
-.offcanvas--filter-form .btn-close:focus, .offcanvas--filter-form .btn-close:hover {
-    color: hsl(var(--black));
-    box-shadow: none;
-}
-
-.offcanvas--filter-form .filter-form .form--control {
-    background-color: #F8F8F8;
-}
-
-/* ================================= Offcanvas Css End ============================== */
 /* ================================= Preload Css Start ============================ */
 .preloader {
     position: fixed;
@@ -4851,12 +4818,71 @@ input#confirm-password {
 
 @media screen and (max-width: 991px) {
     .property-page-sidebar {
-        display: none;
+        width: 100%;
+        max-width: 350px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        border-right: 1px solid hsl(var(--black)/0.08);
+        background-color: hsl(var(--white));
+        z-index: 1001;
+        padding: 32px;
+        transition: 0.3s linear;
     }
+
+    .property-page-sidebar.show {
+        transform: none;
+    }
+
+    .property-page-sidebar .filter-form .form--control {
+        background-color: #F8F8F8;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .property-page-sidebar {
+        padding: 24px;
+    }
+}
+
+.property-page-sidebar .close-btn {
+    font-size: 1.25rem;
+    padding: 0;
+    display: none;
+    border-radius: 50%;
+    color: hsl(var(--black)/0.7);
+    position: absolute;
+    top: 25px;
+    right: 32px;
+}
+
+@media screen and (max-width: 991px) {
+    .property-page-sidebar .close-btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .property-page-sidebar .close-btn {
+        top: 17px;
+        right: 24px;
+    }
+}
+
+.property-page-sidebar .close-btn:focus, .property-page-sidebar .close-btn:hover {
+    color: hsl(var(--black));
 }
 
 .property-page-content {
     width: 100%;
+}
+
+.property-page-content .btn--filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .property-cards {
