@@ -28,7 +28,7 @@
     // =============== Header Hide Scroll Bar Js End ===============
 
     // ========================== Add Attribute For Bg Image Js Start =====================
-    $(".bg-img").css('background', function () {
+    $(".bg-img").css('background-image', function () {
       var bg = ('url(' + $(this).data("background-image") + ')');
       return bg;
     });

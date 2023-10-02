@@ -324,7 +324,7 @@ button:focus {
 }
 
 .bg-img {
-    background-size: cover !important;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
@@ -3743,16 +3743,17 @@ input#confirm-password {
 /* ================================= Subscribe Form Css End ===================== */
 /* ================================= Breadcrumb Css Start ======================= */
 .breadcrumb {
-    padding: 40px 0;
-    position: relative;
-    background-position: center 0% !important;
+    min-height: 185px;
     margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
     z-index: 1;
 }
 
 @media screen and (max-width: 424px) {
     .breadcrumb {
-        padding: 30px 0px;
+        min-height: 140px;
     }
 }
 
@@ -3764,7 +3765,7 @@ input#confirm-password {
     left: 0;
     top: 0;
     right: 0;
-    background-color: hsl(var(--white)/0.5);
+    background-color: hsl(var(--base-two)/0.05);
     z-index: -1;
 }
 
