@@ -1,12 +1,54 @@
 @@include('../partials/_template-top.html')
 @@include('../partials/_header.html')
 
+@@include('../partials/_breadcrumb.html', {
+    "breadcrumbText": "Property Details"
+})
 
-<section class="py-120">
-    <div class="container">
-        <h2>Property Details</h2>
+<!-- ======================= Property Details Page Start ========================= -->
+<section class="property-details py-120">
+    <div class="container custom--container">
+        <div class="row row--one gy-4  gy-md-0">
+            <div class="col-md-7 col-lg-8">
+                <h2 class="property-details__title">Greece House Family Home</h2>
+                <ul class="property-details-meta">
+                    <li class="property-details-meta__item">
+                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="text">Jakarta Barat, USA</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-5 col-lg-4">
+                <div class="property-details__price">
+                    <h3 class="title">$5000</h3>
+                    <span class="subtitle">(Invest Range)</span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <button type="button" class="w-100 btn btn--lg btn--base">
+                        Invest Now
+                    </button>
+
+                    <button type="button" class="w-100 btn btn--lg btn-outline--base">
+                        Invest Info
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row--two">
+            <div class="col-md-7 col-lg-8">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus laboriosam vitae ad sint hic impedit incidunt eius at alias porro similique voluptates itaque quisquam tempore blanditiis nulla odio, voluptatem vero!
+            </div>
+            <div class="col-md-5 col-lg-4">
+                <aside>
+                    <h6>Sidebar</h6>
+                </aside>
+            </div>
+        </div>
     </div>
 </section>
+<!-- ======================= Property Details Page End =========================== -->
 
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')

@@ -3737,6 +3737,7 @@ input#confirm-password {
 }
 
 .breadcrumb__title {
+    font-size: clamp(1.5rem, 1.3749rem + 0.6255vw, 2rem);
     margin-bottom: 10px;
     color: hsl(var(--black));
 }
@@ -4903,6 +4904,57 @@ input#confirm-password {
     }
 }
 /* ================================= Property Page Css End ====================== */
+.property-details .row--one {
+    margin-bottom: 42px;
+}
+
+.property-details__title {
+    font-size: 2.5rem;
+    line-height: 150%;
+    margin-bottom: 16px;
+}
+
+.property-details__price {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.property-details__price .title {
+    line-height: 150%;
+    margin-bottom: 0px;
+}
+
+.property-details__price .subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.property-details-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.property-details-meta__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.property-details-meta__item .icon {
+    font-size: 1.375rem;
+    color: hsl(var(--base));
+}
+
+.property-details-meta__item .text {
+    color: hsl(var(--gray-two));
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 100.32%;
+}
+
 /* ================================= Contact Page Css Start ===================== */
 .contact-page {
     flex-grow: 1;
