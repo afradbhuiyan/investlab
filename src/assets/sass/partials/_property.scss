@@ -10,7 +10,7 @@
         }
     }
     
-    .property-sidebar {
+    &-sidebar {
         width: 310px;
         flex-shrink: 0;
 
@@ -23,53 +23,22 @@
         }
     }
     
-    .property-content {
+    &-content {
         width: 100%;
     }
+}
 
-    .property-form {
+.property-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
 
-        &__block {
-
-            .title {
-                @include fs-18;
-                font-weight: 500;
-                line-height: 120%;
-                margin-bottom: 24px;
-            }
-
-            &:not(:last-child) {
-                margin-bottom: 36px;
-            }
-        }
-
-        .form-group:last-child {
-            margin-bottom: 0px;
-        }
-
-        .form--control {
-            color: hsl(var(--gray));
-            border-color: transparent;
-            background-color: hsl(var(--white));
-
-            &:focus {
-                border-color: hsl(var(--base));
-            }
-        }
+    @include lg-screen {
+        gap: 24px;
     }
 
-    .property-cards {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 30px;
-
-        @include lg-screen {
-            gap: 24px;
-        }
-
-        @include msm-screen {
-            grid-template-columns: auto;
-        }
+    @include msm-screen {
+        grid-template-columns: auto;
     }
 }
 /* ================================= Property Page Css End ====================== */

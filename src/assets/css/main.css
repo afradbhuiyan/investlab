@@ -2365,6 +2365,65 @@ input#confirm-password {
     color: hsl(var(--black)/0.4);
 }
 
+.range-slider__slide {
+    border-width: 0px !important;
+    background-color: hsl(var(--base)/0.15);
+    margin-bottom: 28px;
+}
+
+.range-slider .ui-slider-horizontal {
+    height: 3px;
+}
+
+.range-slider .ui-widget-header {
+    background-color: hsl(var(--base));
+}
+
+.range-slider .ui-slider-handle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.range-slider .ui-state-default,
+.range-slider .ui-widget-content .ui-state-default,
+.range-slider .ui-widget-header .ui-state-default,
+.range-slider .ui-button,
+.range-slider html .ui-button.ui-state-disabled:hover,
+.range-slider html .ui-button.ui-state-disabled:active {
+    background-color: hsl(var(--base)) !important;
+    border-color: hsl(var(--base)) !important;
+    outline: none;
+}
+
+.range-slider__inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.range-slider__inputs .input-group {
+    width: 40%;
+    flex-wrap: nowrap;
+}
+
+.range-slider__inputs .input-group-text {
+    color: hsl(var(--gray));
+    border-color: hsl(var(--base));
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 0px 6px;
+}
+
+.range-slider__inputs .form--control {
+    font-weight: 500;
+    border: 1px solid hsl(var(--base)) !important;
+    background-color: transparent !important;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 4px;
+}
+
 /* ================================= Form Css End =================================== */
 /* ================================= Modal Css Start ================================ */
 .custom--modal .modal-header {
@@ -3065,6 +3124,38 @@ input#confirm-password {
 }
 
 /* ================================= Alert Css End ================================ */
+/* ================================= Offcanvas Css Start ============================ */
+.offcanvas--filter-form {
+    --bs-offcanvas-padding-x: 2rem;
+}
+
+@media screen and (max-width: 374px) {
+    .offcanvas--filter-form {
+        --bs-offcanvas-padding-x: 1.5rem;
+    }
+}
+
+.offcanvas--filter-form .btn-close {
+    width: auto;
+    height: auto;
+    padding: 0px;
+    margin-left: auto;
+    background: none;
+    font-size: 1.5rem;
+    color: hsl(var(--black)/0.8);
+    border-radius: 0px;
+}
+
+.offcanvas--filter-form .btn-close:focus, .offcanvas--filter-form .btn-close:hover {
+    color: hsl(var(--black));
+    box-shadow: none;
+}
+
+.offcanvas--filter-form .filter-form .form--control {
+    background-color: #F8F8F8;
+}
+
+/* ================================= Offcanvas Css End ============================== */
 /* ================================= Preload Css Start ============================ */
 .preloader {
     position: fixed;
@@ -3825,6 +3916,47 @@ input#confirm-password {
 }
 
 /* ================= Slick Arrow & Dots css Start ================ */
+.filter-form__block .title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 24px;
+}
+
+.filter-form__block:not(:last-child) {
+    margin-bottom: 36px;
+}
+
+.filter-form .form-group:last-child {
+    margin-bottom: 0px;
+}
+
+.filter-form .form--control {
+    color: hsl(var(--gray));
+    border-color: transparent;
+    background-color: hsl(var(--white));
+}
+
+.filter-form .form--control:focus {
+    border-color: hsl(var(--base));
+}
+
+.filter-form .btn {
+    font-size: 1.25rem;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 1199px) {
+    .filter-form .btn {
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .filter-form .btn {
+        font-size: 1rem;
+    }
+}
 /* ================================= Home Page Css Start ======================== */
 /* Banner Section Css Start */
 .banner {
@@ -4705,66 +4837,41 @@ input#confirm-password {
     }
 }
 
-.property-page .property-sidebar {
+.property-page-sidebar {
     width: 310px;
     flex-shrink: 0;
 }
 
 @media screen and (max-width: 1199px) {
-    .property-page .property-sidebar {
+    .property-page-sidebar {
         width: 250px;
     }
 }
 
 @media screen and (max-width: 991px) {
-    .property-page .property-sidebar {
+    .property-page-sidebar {
         display: none;
     }
 }
 
-.property-page .property-content {
+.property-page-content {
     width: 100%;
 }
 
-.property-page .property-form__block .title {
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 120%;
-    margin-bottom: 24px;
-}
-
-.property-page .property-form__block:not(:last-child) {
-    margin-bottom: 36px;
-}
-
-.property-page .property-form .form-group:last-child {
-    margin-bottom: 0px;
-}
-
-.property-page .property-form .form--control {
-    color: hsl(var(--gray));
-    border-color: transparent;
-    background-color: hsl(var(--white));
-}
-
-.property-page .property-form .form--control:focus {
-    border-color: hsl(var(--base));
-}
-
-.property-page .property-cards {
+.property-cards {
     display: grid;
     grid-template-columns: auto auto;
     gap: 30px;
 }
 
 @media screen and (max-width: 1199px) {
-    .property-page .property-cards {
+    .property-cards {
         gap: 24px;
     }
 }
 
 @media screen and (max-width: 575px) {
-    .property-page .property-cards {
+    .property-cards {
         grid-template-columns: auto;
     }
 }

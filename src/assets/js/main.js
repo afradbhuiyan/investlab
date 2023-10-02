@@ -75,6 +75,47 @@
     });
     // ========================== Password Show Hide Js End ==========================
 
+    // ========================== Range Slider Js Start ==============================
+    $('.range-slider').each(function (index, element) {
+      var slide = $(element).find('.range-slider__slide');
+      var minValue = $(element).data('min');
+      var maxValue = $(element).data('max');
+      var minDefaultValue = $(element).data('min-default');
+      var maxDefaultValue = $(element).data('max-default');
+      var minRange = $(element).find('#min-range');
+      var maxRange = $(element).find('#max-range');
+      
+      // Initialize range slider
+      var rangeSlider = $(slide).slider({
+        range: true,
+        animate: false,
+        min: minValue,
+        max: maxValue,
+        values: [minDefaultValue, maxDefaultValue],
+        slide: function (event, ui) {
+          $(minRange).val(ui.values[0]);
+          $(maxRange).val(ui.values[1]);
+        }
+      });
+
+      // Set Default Slider values
+      $(minRange).val(rangeSlider.slider('values', 0));
+      $(maxRange).val(rangeSlider.slider('values', 1));
+      
+
+      $(minRange).on('change', function () {
+        var inputValue = parseInt($(this).val());
+        $(this).value(rangeSlider.slider('values', 0, inputValue));
+      });
+
+      $(maxRange).on('change', function () {
+        var inputValue = parseInt($(this).val());
+        $(this).value(rangeSlider.slider('values', 1, inputValue));
+      });
+      
+    });
+    // ========================== Range Slider Js End ================================
+
     // ========================== Featured Property Cards Slider Js Start ========================
     $('.featured-property').each(function (index, element) {
       $(element).find('.featured-property__cards').slick({

@@ -1,0 +1,43 @@
+.filter-form {
+    
+    &__block {
+
+        .title {
+            @include fs-18;
+            font-weight: 500;
+            line-height: 120%;
+            margin-bottom: 24px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 36px;
+        }
+    }
+
+    .form-group:last-child {
+        margin-bottom: 0px;
+    }
+
+    .form--control {
+        color: hsl(var(--gray));
+        border-color: transparent;
+        background-color: hsl(var(--white));
+
+        &:focus {
+            border-color: hsl(var(--base));
+        }
+    }
+
+    .btn {
+        @include fs-20;
+        border-radius: 8px;
+
+        @include lg-screen {
+            @include fs-18;
+        }
+
+        @include md-screen {
+            @include fs-16;
+        }
+    }
+}
