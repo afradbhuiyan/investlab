@@ -115,6 +115,58 @@
       
     });
     // ========================== Range Slider Js End ================================
+    
+    // ========================== Copy To Clipboard Js Start ==============================
+    $('.input-group--copy .btn').on('click', function () {
+
+      var copyInput = $('.input-group--copy .form--control');
+
+      // Select the text field
+      copyInput.select()
+      copyInput[0].setSelectionRange(0, 99999); // For mobile devices
+
+      // Copy the text inside the text field
+      if (navigator.clipboard.writeText(copyInput.val())) {
+        $(this).find('span').text('Copied');
+        
+        var timer = setTimeout(() => {
+          $(this).find('span').text('Copy');
+          clearTimeout(timer);
+        }, 2000);
+
+      }
+    });
+    // ========================== Copy To Clipboard Js End ================================
+
+    // ========================== Sidebar Show & Hide Js Start ============================
+    $('[data-toggle="sidebar"]').on('click', function () {
+      var target = $(this).data('target');
+      var sidebar = $(target);
+      var closeBtn = sidebar.find('.close-btn');
+      var sidebarOverlay = $('.sidebar-overlay');
+
+      var actions = {
+        open() {
+          sidebar.addClass('show');
+          sidebarOverlay.addClass('show');
+        },
+
+        close() {
+          sidebar.removeClass('show');
+          sidebarOverlay.removeClass('show');
+
+          // remove click event listener after closing the sidebar
+          closeBtn.off('click', actions.close);
+          sidebarOverlay.off('click', actions.close);
+        }
+      }
+      
+      actions.open();
+      closeBtn.on('click', actions.close);
+      sidebarOverlay.on('click', actions.close);
+
+    })
+    // ========================== Sidebar Show & Hide Js End ==============================
 
     // ========================== Featured Property Cards Slider Js Start ========================
     $('.featured-property').each(function (index, element) {
@@ -212,20 +264,58 @@
       // Remove slick dots numbers
       var textNodes = $(element).find('.slick-dots > li button').contents().filter(function () {
         return this.nodeType === Node.TEXT_NODE;
-      })
+      });
+
       textNodes.remove();
     });
     // ========================== Testimonial Cards Slider Js End ==========================
-    
-    // ========================== Show filter sidebar Js Start =============================
-    $('.btn--filter').on('click', function () {
-      $('.property-page-sidebar').addClass('show');
+
+    // ========================== Property Details Slider Js Start ===============================
+    $('.property-details__slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      asNavFor: '.property-details__thumb',
+      prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>'
     });
-    
-    $('.property-page-sidebar .close-btn').on('click', function () {
-      $('.property-page-sidebar').removeClass('show');
-    })
-    // ========================== Show filter sidebar Js End ===============================
+
+    $('.property-details__thumb').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.property-details__slider',
+      dots: false,
+      arrows: false,
+      centerMode: true,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 600 + 1,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 424 + 1,
+          settings: {
+            slidesToShow: 2,
+          }
+        }
+      ]
+    });
+
+    $('.property-details-sidebar__block.investors').each(function(index, element) {
+      $(element).find('.property-details__investors').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 1500,
+        arrows: true,
+        appendArrows: $(element).find('.block-heading__arrows'),
+        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
+      });
+    });
+    // ========================== Property Details Slider Js End ===============================
 
   });
   // ==========================================

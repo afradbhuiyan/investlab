@@ -19,4 +19,28 @@
         @include fs-22;
     }
 }
+
+.social-list--soft {
+    gap: 16px;
+
+    .social-list__link {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: hsl(var(--base-l-900));
+        @include fs-24;
+     
+        @include msm-screen {
+            width: 36px;
+            height: 36px;
+            @include fs-18;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: hsl(var(--base));
+            color: hsl(var(--white));
+        }
+    }
+}
 /* ================================= Social Icon Css End ======================== */

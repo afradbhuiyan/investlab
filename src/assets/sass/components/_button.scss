@@ -36,11 +36,7 @@
     &:focus-visible {
         box-shadow: none !important;
     }
-
-    &:active {
-        top: 1px;
-    }
-
+    
     &--lg {
         padding: 20px 40px;
         
@@ -91,7 +87,19 @@
             color: hsl(var(--white)) !important;
         }
     }
-    
+
+    &-soft--base {
+        background-color: hsl(var(--base-l-900)) !important;
+        border: 1px solid hsl(var(--base-l-900)) !important;
+        color: hsl(var(--base)) !important;
+
+        &:hover,
+        &:focus &:focus-visible {
+            background-color: hsl(var(--base)) !important;
+            color: hsl(var(--white)) !important;
+        }
+    }
+
     &--primary {
         background-color: hsl(var(--primary)) !important;
 

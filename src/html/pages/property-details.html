@@ -4,12 +4,11 @@
 @@include('../partials/_breadcrumb.html', {
     "breadcrumbText": "Property Details"
 })
-
-<!-- ======================= Property Details Page Start ========================= -->
+<!-- ==================== Property Details Page Start ==================== -->
 <section class="property-details py-120">
     <div class="container custom--container">
-        <div class="row row--one gy-4  gy-md-0">
-            <div class="col-md-7 col-lg-8">
+        <div class="row gy-4 gy-lg-0 row--one">
+            <div class="col-lg-7 col-xxl-8">
                 <h2 class="property-details__title">Greece House Family Home</h2>
                 <ul class="property-details-meta">
                     <li class="property-details-meta__item">
@@ -18,37 +17,371 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-5 col-lg-4">
+            <div class="col-lg-5 col-xxl-4">
                 <div class="property-details__price">
                     <h3 class="title">$5000</h3>
                     <span class="subtitle">(Invest Range)</span>
                 </div>
 
-                <div class="d-flex align-items-center">
-                    <button type="button" class="w-100 btn btn--lg btn--base">
+                <div class="property-details__buttons">
+                    <button type="button" class="btn btn--lg btn--base" data-bs-toggle="modal" data-bs-target="#custom-modal">
                         Invest Now
                     </button>
 
-                    <button type="button" class="w-100 btn btn--lg btn-outline--base">
-                        Invest Info
+                    <button type="button" class="btn btn--lg btn-outline--base d-lg-none" data-toggle="sidebar" data-target="#property-details-sidebar">
+                        <i class="fas fa-info-circle"></i>
+                        <span>View Details</span>
                     </button>
                 </div>
             </div>
         </div>
 
         <div class="row row--two">
-            <div class="col-md-7 col-lg-8">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus laboriosam vitae ad sint hic impedit incidunt eius at alias porro similique voluptates itaque quisquam tempore blanditiis nulla odio, voluptatem vero!
+            <div class="col-lg-7 col-xxl-8">
+                <div class="property-details__block">
+                    <div class="property-details__slider">
+                        <img class="property-details__slider-img" src="assets/images/thumbs/property-details-slider-1.jpg" alt="">
+                        <img class="property-details__slider-img" src="assets/images/thumbs/property-details-slider-1.jpg" alt="">
+                        <img class="property-details__slider-img" src="assets/images/thumbs/property-details-slider-1.jpg" alt="">
+                        <img class="property-details__slider-img" src="assets/images/thumbs/property-details-slider-1.jpg" alt="">
+                    </div>
+
+                    <div class="property-details__thumb">
+                        <img class="property-details__thumb-img" src="assets/images/thumbs/property-details-slider-1.jpg" alt="">
+                        <img class="property-details__thumb-img" src="assets/images/thumbs/property-details-slider-1.jpg" alt="">
+                        <img class="property-details__thumb-img" src="assets/images/thumbs/property-details-slider-1.jpg" alt="">
+                        <img class="property-details__thumb-img" src="assets/images/thumbs/property-details-slider-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="property-details__block">
+                    <h6 class="title">Property Description</h6>
+                    <div class="property-details__desc">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. Molestiae similique incidunt eveniet vitae pariatur repellendus animi odio.
+                        </p>
+                        <p>
+                            Vitae fugiat, repellendus suscipit quaerat eveniet magnam, ad maiores officia illum exercitationem cum aliquam autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. Molestiae similique incidunt eveniet vitae pariatur repellendus animi odio.
+                        </p>
+                    </div>
+                    <h6 class="title">Amenities</h6>
+                    <ul class="property-details-amenities">
+                        <li class="property-details-amenities__item">
+                            <span class="text">Television,</span>
+                        </li>
+                        <li class="property-details-amenities__item">
+                            <span class="text">Air conditioner,</span>
+                        </li>
+                        <li class="property-details-amenities__item">
+                            <span class="text">2 Kitchen,</span>
+                        </li>
+                        <li class="property-details-amenities__item">
+                            <span class="text">3 Bath,</span>
+                        </li>
+                        <li class="property-details-amenities__item">
+                            <span class="text">4 Bed,</span>
+                        </li>
+                    </ul>
+                    <h6 class="title">Location</h6>
+                    <iframe class="property-details__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17864.191107382172!2d90.38382625926867!3d23.86931801941986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1696322188182!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="property-details__block">
+                    <div class="accordion custom--accordion" id="faq-accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-item-1" aria-expanded="false">
+                                    Who can invest with greece House
+                                </button>
+                            </h2>
+                            <div id="faq-accordion-item-1" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. Molestiae similique incidunt eveniet vitae pariatur repellendus animi odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-item-2" aria-expanded="false">
+                                    How does liquidity work at Greece House
+                                </button>
+                            </h2>
+                            <div id="faq-accordion-item-2" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. Molestiae similique incidunt eveniet vitae pariatur repellendus animi odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-item-3" aria-expanded="false">
+                                    Is Greece House a long-term investment?
+                                </button>
+                            </h2>
+                            <div id="faq-accordion-item-3" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                                <div class="accordion-body">
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. Molestiae similique incidunt eveniet vitae pariatur repellendus animi odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-item-4" aria-expanded="false">
+                                    How does Greece House work
+                                </button>
+                            </h2>
+                            <div id="faq-accordion-item-4" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                                <div class="accordion-body">
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. Molestiae similique incidunt eveniet vitae pariatur repellendus animi odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-item-5" aria-expanded="false">
+                                    How does liquidity work at Greece House
+                                </button>
+                            </h2>
+                            <div id="faq-accordion-item-5" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                                <div class="accordion-body">
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. Molestiae similique incidunt eveniet vitae pariatur repellendus animi odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat amet unde voluptas commodi nostrum repudiandae facere suscipit incidunt? Libero error qui, adipisci est officia provident ullam. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-details__block">
+                    <h6 class="title">Share now</h6>
+                    <ul class="social-list social-list--soft">
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="input-group input-group--copy">
+                        <input class="form--control" type="text" value="https://script.viserlab.com/investlab/property/greece-house/">
+                        <button class="btn btn-soft--base" type="button">
+                            <i class="las la-copy"></i>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-5 col-lg-4">
-                <aside>
-                    <h6>Sidebar</h6>
+            <div class="col-lg-5 col-xxl-4">
+                <aside id="property-details-sidebar" class="property-details-sidebar">
+                    <!-- Close button for medium devices -->
+                    <button type="button" class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="property-details-sidebar__block">
+                        <div class="block-heading">
+                            <h6 class="block-heading__title">Invest Amount</h6>
+                            <p class="block-heading__subtitle">Available for funding: $20000</p>
+                        </div>
+                         <ul class="property-details-amount-info"> 
+                            <li class="property-details-amount-info__item">
+                                <span class="label">Invest Amount:</span>
+                                <span class="value">$5000</span>
+                            </li>
+                            <li class="property-details-amount-info__item">
+                                <span class="label">Profit:</span>
+                                <span class="value">25%</span>
+                            </li>
+                            <li class="property-details-amount-info__item">
+                                <span class="label">Down Payment:</span>
+                                <span class="value">$500</span>
+                            </li>
+                            <li class="property-details-amount-info__item">
+                                <span class="label">Total Installments:</span>
+                                <span class="value">12</span>
+                            </li>
+                            <li class="property-details-amount-info__item">
+                                <span class="label">Interest Back Date:</span>
+                                <span class="value">12/03/2024</span>
+                            </li>
+                            <li class="property-details-amount-info__item">
+                                <span class="label">Capital Back:</span>
+                                <span class="value">Yes</span>
+                            </li>
+                            <li class="property-details-amount-info__item">
+                                <span class="label">Interest + Capital:</span>
+                                <span class="value">$6,250</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="property-details-sidebar__block investors">
+                        <div class="block-heading">
+                            <div class="block-heading__wrapper">
+                                <h6 class="block-heading__title">Real Estate Investor</h6>
+                                <div class="block-heading__arrows"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="property-details__investors">
+                            <div class="property-details-investor">
+                                <div class="property-details-investor__wrapper">
+                                    <div class="property-details-investor__thumb">
+                                        <a href="#"><img src="assets/images/thumbs/real-estate-investor-1.jpg" alt=""></a>
+                                    </div>
+
+                                    <div class="property-details-investor__content">
+                                        <h6 class="name"><a href="#">Johan Deo</a></h6>
+                                        <span class="designation">Agent of Property</span>
+                                        <ul class="meta-list">
+                                            <li class="meta-list__item">
+                                                <span class="icon"><i class="far fa-building"></i></span>
+                                                <span class="text">55 Properties</span>
+                                            </li>
+                                            <li class="meta-list__item">
+                                                <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                <span class="text">United State</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-details-investor">
+                                <div class="property-details-investor__wrapper">
+                                    <div class="property-details-investor__thumb">
+                                        <a href="#"><img src="assets/images/thumbs/real-estate-investor-1.jpg" alt=""></a>
+                                    </div>
+
+                                    <div class="property-details-investor__content">
+                                        <h6 class="name"><a href="#">Johan Deo</a></h6>
+                                        <span class="designation">Agent of Property</span>
+                                        <ul class="meta-list">
+                                            <li class="meta-list__item">
+                                                <span class="icon"><i class="far fa-building"></i></span>
+                                                <span class="text">55 Properties</span>
+                                            </li>
+                                            <li class="meta-list__item">
+                                                <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                <span class="text">United State</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-details-sidebar__block">
+                        <div class="block-heading">
+                            <h6 class="block-heading__title">Latest Properties</h6>
+                        </div>
+                        <div class="property-details__cards">
+                            <div class="property-details-card">
+                                <a href="#">
+                                    <img class="property-details-card__thumb" src="assets/images/thumbs/property-details-card-1.jpg" alt="">
+                                </a>
+                                <div class="property-details-card__content">
+                                    <h6 class="title"><a href="#">Garden Vila</a></h6>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>United State</span>
+                                    </div>
+                                    <span class="price">$1000</span>
+                                </div>
+                            </div>
+                            <div class="property-details-card">
+                                <a href="#">
+                                    <img class="property-details-card__thumb" src="assets/images/thumbs/property-details-card-2.jpg" alt="">
+                                </a>
+                                <div class="property-details-card__content">
+                                    <h6 class="title"><a href="#">Elegant Family Home</a></h6>
+
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Paris, France</span>
+                                    </div>
+                                    <span class="price">$1000</span>
+                                </div>
+                            </div>
+                            <div class="property-details-card">
+                                <a href="#">
+                                    <img class="property-details-card__thumb" src="assets/images/thumbs/property-details-card-3.jpg" alt="">
+                                </a>
+                                <div class="property-details-card__content">
+                                    <h6 class="title"><a href="#">Park House</a></h6>
+
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>United State</span>
+                                    </div>
+                                    <span class="price">$4000 - $2000</span>
+                                </div>
+                            </div>
+                            <div class="property-details-card">
+                                <a href="#">
+                                    <img class="property-details-card__thumb" src="assets/images/thumbs/property-details-card-4.jpg" alt="">
+                                </a>
+                                <div class="property-details-card__content">
+                                    <h6 class="title"><a href="#">Garden Vila</a></h6>
+
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>United State</span>
+                                    </div>
+                                    <span class="price">$5000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </aside>
             </div>
         </div>
     </div>
 </section>
-<!-- ======================= Property Details Page End =========================== -->
+<!-- ==================== Property Details Page End ====================== -->
+
+<!-- ==================== Invest Now Modal start ====================== -->
+<div id="custom-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ==================== Invest Now Modal End ======================== -->
 
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')

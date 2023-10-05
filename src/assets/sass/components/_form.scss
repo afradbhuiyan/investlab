@@ -321,6 +321,28 @@ textarea.form--control {
     }
 }
 
+.input-group--copy {
+    flex-wrap: nowrap;
+    border: 1px solid hsl(var(--base-l-900));
+    border-radius: 8px;
+    overflow: hidden;
+    
+    &:focus-within {
+        border-color: hsl(var(--base));
+    }
+
+    .form--control {
+        border-color: transparent;
+        background-color: transparent;
+        color: hsl(var(--gray-two));
+    }
+    
+    .btn {
+        border-top-left-radius: 8px !important;
+        border-bottom-left-radius: 8px !important;
+    }
+}
+
 .input-group.input-with-text {
     flex-wrap: nowrap;
 }
