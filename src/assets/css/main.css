@@ -1860,11 +1860,15 @@ button:focus {
     }
 }
 
-.blog--card img[class*=card-img] {
+.blog--card .card-img {
+    overflow: hidden;
+    max-height: 384px;
+}
+
+.blog--card .card-img img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    max-height: 384px;
 }
 
 .blog--card .card-date {
@@ -4102,6 +4106,23 @@ input#confirm-password {
     }
 }
 /* ================================= Filter Form Css End ======================== */
+/* ================================= Search Form Css Start ====================== */
+.search-form .input-group {
+    flex-wrap: nowrap;
+}
+
+.search-form .form--control {
+    font-size: 1.25rem;
+    padding: 20px 28px;
+}
+
+.search-form .btn {
+    font-size: 1.75rem;
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+/* ================================= Search Form Css End ======================== */
 /* ================================= Home Page Css Start ======================== */
 /* Banner Section Css Start */
 .banner {
@@ -6029,4 +6050,98 @@ input#confirm-password {
 }
 
 /* ================================= Account Pages Css End ====================== */
+/* ================================= Blog Page Css Start ======================== */
+.blog-page__search-sm {
+    margin-bottom: 24px;
+}
+
+.blog-page-sidebar__block {
+    padding: 24px;
+    border-radius: 8px;
+    background-color: hsl(var(--white));
+}
+
+.blog-page-sidebar__block:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.blog-page-sidebar__block:first-child {
+    margin-bottom: 16px;
+}
+
+/* ================================= Blog Page Css End ========================== */
+/* ================================= Blog Details Page Css Start ================ */
+.blog-details {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0px 2px 15px hsl(var(--white)/0.25);
+}
+
+.blog-details__thumb {
+    height: 450px;
+    max-height: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .blog-details__thumb {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .blog-details__thumb {
+        height: 300px;
+    }
+}
+
+.blog-details__content {
+    padding: 35px 25px;
+}
+
+@media screen and (max-width: 767px) {
+    .blog-details__content {
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .blog-details__content {
+        padding: 25px 15px;
+    }
+}
+
+.blog-details__title {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.blog-details__desc {
+    margin-bottom: 15px;
+}
+
+.blog-details .social-list__link {
+    border: 1px solid hsl(var(--black)/0.1);
+    color: hsl(var(--body-color));
+}
+
+.blog-details .social-list__link:hover {
+    border-color: hsl(var(--base));
+    color: hsl(var(--white));
+}
+
+.quote-text {
+    background-color: hsl(var(--base)/0.1);
+    padding: 30px 20px;
+    border-radius: 5px;
+    border-left: 3px solid hsl(var(--base));
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .quote-text {
+        padding: 25px 15px;
+    }
+}
+/* ================================= Blog Details Page Css End ================== */
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,20 @@
+/* ================================= Search Form Css Start ====================== */
+.search-form {
+    // border: 1px solid black;
+    
+    .input-group {
+        flex-wrap: nowrap;
+    }
+
+    .form--control {
+        @include fs-20;
+        padding: 20px 28px;
+    }
+
+    .btn {
+        @include fs-28;
+        border-top-right-radius: 8px !important;
+        border-bottom-right-radius: 8px !important;
+    }
+}
+/* ================================= Search Form Css End ======================== */

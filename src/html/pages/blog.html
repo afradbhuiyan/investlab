@@ -1,11 +1,75 @@
 @@include('../partials/_template-top.html')
 @@include('../partials/_header.html')
 
-<section class="py-120">
-    <div class="container">
-        <h1>Blogs</h1>
+@@include('../partials/_breadcrumb.html', {
+    "breadcrumbText": "Blog"
+})
+
+<!--  ======================= Blog Page Start =============================  -->
+<section class="blog-page py-120 bg-pattern">
+    <div class="container custom--container">
+        <div class="row"> 
+            <div class="col-lg-8">
+                <div class="blog-page__search-sm">
+                    @@include('../partials/_search-form.html')
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-xsm-6 col-sm-6">
+                        @@include('../partials/_blog-card.html', {
+                            "card-img": "assets/images/thumbs/blog-card-img-1.jpg",
+                            "card-title": "Ten Important Tips For Launching",
+                            "card-btn-style": "outline-"
+                        })
+                    </div>
+                    <div class="col-xsm-6 col-sm-6">
+                        @@include('../partials/_blog-card.html', {
+                            "card-img": "assets/images/thumbs/blog-card-img-2.jpg",
+                            "card-title": "What Is Turn Key Real Estate Investing?",
+                            "card-btn-style": "outline-"
+                        })
+                    </div>
+                    <div class="col-xsm-6 col-sm-6">
+                        @@include('../partials/_blog-card.html', {
+                            "card-img": "assets/images/thumbs/blog-card-img-3.jpg",
+                            "card-title": "How to Make Better Investments",
+                            "card-btn-style": "outline-"
+                        })
+                    </div>
+                    <div class="col-xsm-6 col-sm-6">
+                        @@include('../partials/_blog-card.html', {
+                            "card-img": "assets/images/thumbs/blog-card-img-1.jpg",
+                            "card-title": "Ten Important Tips For Launching",
+                            "card-btn-style": "outline-"
+                        })
+                    </div>
+                    <div class="col-xsm-6 col-sm-6">
+                        @@include('../partials/_blog-card.html', {
+                            "card-img": "assets/images/thumbs/blog-card-img-2.jpg",
+                            "card-title": "What Is Turn Key Real Estate Investing?",
+                            "card-btn-style": "outline-"
+                        })
+                    </div>
+                    <div class="col-xsm-6 col-sm-6">
+                        @@include('../partials/_blog-card.html', {
+                            "card-img": "assets/images/thumbs/blog-card-img-3.jpg",
+                            "card-title": "How to Make Better Investments",
+                            "card-btn-style": "outline-"
+                        })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <aside class="blog-page-sidebar">
+                    <div class="blog-page-sidebar__block">
+                        @@include('../partials/_search-form.html')
+                    </div>
+                </aside>
+            </div> 
+        </div>
     </div>
 </section>
+<!--  ======================= Blog Page End ===============================  -->
 
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')

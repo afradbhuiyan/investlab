@@ -451,12 +451,16 @@
         --bs-card-spacer-y: 16px;
         --bs-card-spacer-x: 16px;
     }
-
-    img[class*="card-img"] {
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+    
+    .card-img {
+        overflow: hidden;
         max-height: 384px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .card-date {
