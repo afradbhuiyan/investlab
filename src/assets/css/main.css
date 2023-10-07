@@ -3873,32 +3873,6 @@ input#confirm-password {
 }
 
 /* ================================= Social Icon Css End ======================== */
-/* ================================= Subscribe Form Css Start =================== */
-.subscribe-form {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-}
-
-.subscribe-form .form--control {
-    border-radius: 0px;
-    border: none;
-    color: hsl(var(--white));
-    font-weight: 400;
-    padding: 13px 13px 13px 0px;
-    background-color: transparent;
-    border-bottom: 1px solid #0E4866;
-}
-
-.subscribe-form .form--control::placeholder {
-    color: hsl(var(--white)/0.6);
-}
-
-.subscribe-form .btn {
-    margin-top: 22px;
-}
-
-/* ================================= Subscribe Form Css End ===================== */
 /* ================================= Breadcrumb Css Start ======================= */
 .breadcrumb {
     min-height: 185px;
@@ -3968,7 +3942,7 @@ input#confirm-password {
 }
 
 /* ================================= Breadcrumb Css End ========================= */
-/* ================= Slick Arrow & Dots css Start ================ */
+/* ================================= Slick Css Start ============================ */
 .slick-initialized.slick-slider {
     margin-left: -12px;
     margin-right: -12px;
@@ -4075,7 +4049,34 @@ input#confirm-password {
     background-color: hsl(var(--base));
 }
 
-/* ================= Slick Arrow & Dots css Start ================ */
+/* ================================= Slick Css End ============================== */
+/* ================================= Subscribe Form Css Start =================== */
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.subscribe-form .form--control {
+    border-radius: 0px;
+    border: none;
+    color: hsl(var(--white));
+    font-weight: 400;
+    padding: 13px 13px 13px 0px;
+    background-color: transparent;
+    border-bottom: 1px solid #0E4866;
+}
+
+.subscribe-form .form--control::placeholder {
+    color: hsl(var(--white)/0.6);
+}
+
+.subscribe-form .btn {
+    margin-top: 22px;
+}
+
+/* ================================= Subscribe Form Css End ===================== */
+/* ================================= Filter Form Css Start ====================== */
 .filter-form__block .title {
     font-size: 1.125rem;
     font-weight: 500;
@@ -4117,6 +4118,7 @@ input#confirm-password {
         font-size: 1rem;
     }
 }
+/* ================================= Filter Form Css End ======================== */
 /* ================================= Home Page Css Start ======================== */
 /* Banner Section Css Start */
 .banner {
@@ -5095,7 +5097,7 @@ input#confirm-password {
     }
 }
 /* ================================= Property Page Css End ====================== */
-/* ================================= Property Details Page Css Start ======================== */
+/* ================================= Property Details Page Css Start ============ */
 .property-details .row--one {
     margin-bottom: 42px;
 }
@@ -5810,7 +5812,7 @@ input#confirm-password {
         font-size: 0.875rem;
     }
 }
-/* ================================= Property Details Page Css End ========================== */
+/* ================================= Property Details Page Css End ============== */
 /* ================================= Contact Page Css Start ===================== */
 .contact-page {
     flex-grow: 1;
