@@ -2047,7 +2047,7 @@ input[type=number] {
 
 .form--label {
     font-weight: 500;
-    color: hsl(var(--black)/0.8);
+    color: hsl(var(--black-two));
     margin-bottom: 8px;
 }
 
@@ -2345,6 +2345,57 @@ textarea.form--control {
     cursor: pointer;
 }
 
+.input-group--custom {
+    display: flex;
+    border: 1px solid hsl(var(--base)/0.32);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.input-group--custom:focus-within {
+    border-color: hsl(var(--base));
+}
+
+.input-group--custom:focus-within .btn--group {
+    border-left-color: hsl(var(--base));
+}
+
+.input-group--custom .form--control {
+    border-width: 0px;
+    border-radius: 0px;
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+    font-weight: 600;
+    color: hsl(var(--gray-two));
+}
+
+.input-group--custom .btn--group {
+    border-left: 1px solid hsl(var(--base)/0.32);
+    background-color: #F8F8F8;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.input-group--custom .btn--group button {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: hsl(var(--base));
+    line-height: 16px;
+    white-space: nowrap;
+}
+
+.input-group--custom .btn--group .divider {
+    width: 1px;
+    height: 14px;
+    background-color: hsl(var(--base)/0.55);
+    display: inline-block;
+    margin: 0 20px;
+}
+
 .input-group--copy {
     flex-wrap: nowrap;
     border: 1px solid hsl(var(--base-l-900));
@@ -2454,48 +2505,36 @@ input#confirm-password {
 
 /* ================================= Form Css End =================================== */
 /* ================================= Modal Css Start ================================ */
-.custom--modal .modal-header {
-    border-bottom: 1px solid hsl(var(--white)/0.12);
-    padding: 15px;
-}
-
-.custom--modal .modal-header.close {
-    width: 35px;
-    height: 35px;
-    background-color: hsl(var(--danger));
-    font-size: 1.5625rem;
-    line-height: 1;
-    border-radius: 4px;
-    transition: 0.2s linear;
-}
-
-.custom--modal .modal-header.close:hover {
-    background-color: hsl(var(--danger-l-100));
-}
-
-.custom--modal .modal-header.close :focus {
-    box-shadow: none;
+.custom--modal {
+    --bs-modal-width: 520px;
 }
 
 .custom--modal .modal-content {
-    background-color: hsl(var(--black));
-    border-radius: 10px !important;
+    border-width: 0px;
+    background-color: hsl(var(--white));
+    border-radius: 12px !important;
+    padding: 32px 28px;
+}
+
+@media screen and (max-width: 424px) {
+    .custom--modal .modal-content {
+        padding: 22px 18px;
+    }
+}
+
+.custom--modal .modal-header,
+.custom--modal .modal-body,
+.custom--modal .modal-footer {
+    padding: 0px;
+}
+
+.custom--modal .modal-header {
+    padding-bottom: 16px;
+    border-bottom: 1px solid hsl(var(--base-l-900));
 }
 
 .custom--modal .modal-body {
-    padding: 15px;
-}
-
-.custom--modal .modal-icon i {
-    font-size: 2rem;
-    color: hsl(var(--base));
-    border: 3px solid hsl(var(--base));
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    padding-top: 16px;
 }
 
 .custom--modal .modal-footer {
@@ -2503,10 +2542,108 @@ input#confirm-password {
     flex-wrap: wrap;
     flex-shrink: 0;
     align-items: center;
-    justify-content: center;
-    padding: 15px;
-    border-top: 1px solid hsl(var(--white)/0.12);
     justify-content: flex-end;
+    border-top: 1px solid hsl(var(--base-l-900));
+    padding-top: 16px;
+    margin-top: 16px;
+}
+
+.custom--modal .modal-title {
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.custom--modal .close-btn {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid hsl(var(--gray));
+    color: hsl(var(--gray));
+    border-radius: 6px;
+    font-size: 1.125rem;
+}
+
+@media screen and (max-width: 424px) {
+    .custom--modal .close-btn {
+        width: 22px;
+        height: 22px;
+        font-size: 0.875rem;
+    }
+}
+
+.custom--modal .modal-form__header:not(:last-child), .custom--modal .modal-form__body:not(:last-child), .custom--modal .modal-form__footer:not(:last-child) {
+    margin-bottom: 28px;
+}
+
+@media screen and (max-width: 424px) {
+    .custom--modal .modal-form__header:not(:last-child), .custom--modal .modal-form__body:not(:last-child), .custom--modal .modal-form__footer:not(:last-child) {
+        margin-bottom: 18px;
+    }
+}
+
+.custom--modal .modal-form__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.custom--modal .modal-form__footer .btn {
+    width: 100%;
+    border-radius: 8px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+.custom--modal .modal-form__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 12px;
+}
+
+.custom--modal .modal-form__title span {
+    color: hsl(var(--base));
+}
+
+.custom--modal .modal-form__desc {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 120%;
+ /* 16.8px */
+}
+
+.custom--modal .modal-form__info-item {
+    font-size: 0.875rem;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom--modal .modal-form__info-item:not(:last-child) {
+    border-bottom: 1px solid hsl(var(--black-two)/0.06);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.custom--modal .modal-form__info-item .label {
+    font-weight: 400;
+    color: hsl(var(--gray-two));
+}
+
+.custom--modal .modal-form__info-item .value {
+    font-weight: 600;
+    color: hsl(var(--black-two));
+}
+
+.custom--modal .modal-form .form-group {
+    margin-bottom: 20px;
+}
+
+.custom--modal .modal-form .form--label {
+    margin-bottom: 12px;
 }
 
 /* ================================= Modal Css End ================================== */
@@ -5359,13 +5496,8 @@ input#confirm-password {
 @media screen and (max-width: 991px) {
     .property-details-sidebar .close-btn {
         display: block;
-    }
-}
-
-@media screen and (max-width: 374px) {
-    .property-details-sidebar .close-btn {
-        top: 17px;
-        right: 24px;
+        top: 16px;
+        right: 16px;
     }
 }
 
@@ -5411,8 +5543,20 @@ input#confirm-password {
     background-color: hsl(var(--white));
 }
 
+@media screen and (max-width: 991px) {
+    .property-details-sidebar__block {
+        padding: 16px;
+    }
+}
+
 .property-details-sidebar__block:not(:last-child) {
     margin-bottom: 24px;
+}
+
+@media screen and (max-width: 991px) {
+    .property-details-sidebar__block:not(:last-child) {
+        margin-bottom: 0px;
+    }
 }
 
 .property-details-amount-info {
@@ -5427,6 +5571,12 @@ input#confirm-password {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 424px) {
+    .property-details-amount-info__item {
+        font-size: 0.875rem;
+    }
 }
 
 .property-details-amount-info__item:not(:last-child) {
@@ -5446,10 +5596,9 @@ input#confirm-password {
     gap: 16px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 424px) {
     .property-details-investor__wrapper {
-        flex-direction: column;
-        align-items: center;
+        gap: 8px;
     }
 }
 
@@ -5474,20 +5623,19 @@ input#confirm-password {
     margin-bottom: 0px;
 }
 
-@media screen and (max-width: 991px) {
-    .property-details-investor__content .name {
-        text-align: center;
-    }
-}
-
 .property-details-investor__content .name a {
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 150%;
 }
 
-.property-details-investor__content .name a a:hover,
-.property-details-investor__content .name a a:focus {
+@media screen and (max-width: 424px) {
+    .property-details-investor__content .name a {
+        font-size: 1rem;
+    }
+}
+
+.property-details-investor__content .name a:hover, .property-details-investor__content .name a:focus {
     color: hsl(var(--base));
 }
 
@@ -5499,9 +5647,9 @@ input#confirm-password {
     line-height: 150%;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 424px) {
     .property-details-investor__content .designation {
-        text-align: center;
+        font-size: 0.8125rem;
     }
 }
 
@@ -5525,6 +5673,8 @@ input#confirm-password {
 }
 
 .property-details-investor__content .meta-list__item {
+    font-size: 0.875rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -5536,17 +5686,29 @@ input#confirm-password {
     }
 }
 
+@media screen and (max-width: 424px) {
+    .property-details-investor__content .meta-list__item {
+        font-size: 0.8125rem;
+    }
+}
+
 .property-details-investor__content .meta-list__item .icon {
-    font-size: 0.875rem;
     color: hsl(var(--base));
     display: inline-block;
 }
 
 .property-details-investor__content .meta-list__item .text {
-    font-size: 0.875rem;
-    font-weight: 500;
     line-height: 150%;
     white-space: nowrap;
+}
+
+.property-details-investor__content .meta-list__item:last-child .text {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .property-details-card {
@@ -5554,13 +5716,40 @@ input#confirm-password {
     gap: 24px;
 }
 
+@media screen and (max-width: 424px) {
+    .property-details-card {
+        gap: 12px;
+    }
+}
+
 .property-details-card:not(:last-child) {
     margin-bottom: 24px;
+}
+
+@media screen and (max-width: 424px) {
+    .property-details-card:not(:last-child) {
+        margin-bottom: 16px;
+    }
 }
 
 .property-details-card__thumb {
     max-width: 115px;
     max-height: 85px;
+}
+
+@media screen and (max-width: 424px) {
+    .property-details-card__thumb {
+        max-width: 100px;
+    }
+}
+
+.property-details-card__thumb a {
+    width: 100%;
+    height: 100%;
+}
+
+.property-details-card__thumb img {
+    height: 100%;
     object-fit: cover;
     border-radius: 4px;
 }
@@ -5577,6 +5766,17 @@ input#confirm-password {
     font-size: 1.125rem;
     font-weight: 600;
     line-height: 150%;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 424px) {
+    .property-details-card__content .title a {
+        font-size: 1rem;
+    }
 }
 
 .property-details-card__content .title a:hover, .property-details-card__content .title a:focus {
@@ -5593,12 +5793,23 @@ input#confirm-password {
     margin-bottom: 4px;
 }
 
+@media screen and (max-width: 424px) {
+    .property-details-card__content .location {
+        font-size: 0.75rem;
+    }
+}
+
 .property-details-card__content .price {
     color: hsl(var(--base));
     font-weight: 700;
     line-height: 150%;
 }
 
+@media screen and (max-width: 424px) {
+    .property-details-card__content .price {
+        font-size: 0.875rem;
+    }
+}
 /* ================================= Property Details Page Css End ========================== */
 /* ================================= Contact Page Css Start ===================== */
 .contact-page {

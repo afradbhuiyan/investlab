@@ -27,7 +27,7 @@ input[type=number] {
 .form--label {
     @extend .fs-15;
     font-weight: 500;
-    color: hsl(var(--black)/0.8);
+    color: hsl(var(--black-two));
     margin-bottom: 8px;
 
     &.required::after {
@@ -318,6 +318,58 @@ textarea.form--control {
         width: calc(100% - 14px);
         padding-left: 5px;
         cursor: pointer;
+    }
+}
+
+.input-group--custom {
+    display: flex;
+    border: 1px solid hsl(var(--base)/.32);
+    border-radius: 8px;
+    overflow: hidden;
+    
+    &:focus-within {
+        border-color: hsl(var(--base));
+    }
+
+    &:focus-within .btn--group {
+        border-left-color: hsl(var(--base));
+    }
+
+    .form--control {
+        border-width: 0px;
+        border-radius: 0px;
+        padding-top: 14.5px;
+        padding-bottom: 14.5px;
+        font-weight: 600;
+        color: hsl(var(--gray-two));
+    }
+
+    .btn--group {
+        border-left: 1px solid hsl(var(--base)/.32);
+        background-color: #F8F8F8;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        display: flex;
+        align-items: center;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        button {
+            @include fs-14;
+            font-weight: 600;
+            color: hsl(var(--base));
+            line-height: 16px;
+            white-space: nowrap;
+        }
+
+        .divider{
+            width: 1px;
+            height: 14px;
+            background-color: hsl(var(--base)/.55);
+            display: inline-block;
+            margin: 0 20px;
+
+        }
     }
 }
 

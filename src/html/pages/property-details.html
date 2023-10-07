@@ -5,7 +5,7 @@
     "breadcrumbText": "Property Details"
 })
 <!-- ==================== Property Details Page Start ==================== -->
-<section class="property-details py-120">
+<section class="property-details py-120 bg-pattern">
     <div class="container custom--container">
         <div class="row gy-4 gy-lg-0 row--one">
             <div class="col-lg-7 col-xxl-8">
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="property-details__buttons">
-                    <button type="button" class="btn btn--lg btn--base" data-bs-toggle="modal" data-bs-target="#custom-modal">
+                    <button type="button" class="btn btn--lg btn--base" data-bs-toggle="modal" data-bs-target="#invest-modal">
                         Invest Now
                     </button>
 
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="row row--two">
             <div class="col-lg-7 col-xxl-8">
                 <div class="property-details__block">
@@ -300,9 +300,10 @@
                         </div>
                         <div class="property-details__cards">
                             <div class="property-details-card">
-                                <a href="#">
-                                    <img class="property-details-card__thumb" src="assets/images/thumbs/property-details-card-1.jpg" alt="">
-                                </a>
+                                <div class="property-details-card__thumb">
+                                    <a href="#"><img src="assets/images/thumbs/property-details-card-1.jpg" alt=""></a>
+                                </div>
+
                                 <div class="property-details-card__content">
                                     <h6 class="title"><a href="#">Garden Vila</a></h6>
                                     <div class="location">
@@ -313,12 +314,12 @@
                                 </div>
                             </div>
                             <div class="property-details-card">
-                                <a href="#">
-                                    <img class="property-details-card__thumb" src="assets/images/thumbs/property-details-card-2.jpg" alt="">
-                                </a>
+                                <div class="property-details-card__thumb">
+                                    <a href="#"><img src="assets/images/thumbs/property-details-card-2.jpg" alt=""></a>
+                                </div>
+
                                 <div class="property-details-card__content">
                                     <h6 class="title"><a href="#">Elegant Family Home</a></h6>
-
                                     <div class="location">
                                         <i class="fas fa-map-marker-alt"></i>
                                         <span>Paris, France</span>
@@ -327,31 +328,31 @@
                                 </div>
                             </div>
                             <div class="property-details-card">
-                                <a href="#">
-                                    <img class="property-details-card__thumb" src="assets/images/thumbs/property-details-card-3.jpg" alt="">
-                                </a>
+                                <div class="property-details-card__thumb">
+                                    <a href="#"><img src="assets/images/thumbs/property-details-card-3.jpg" alt=""></a>
+                                </div>
+
                                 <div class="property-details-card__content">
                                     <h6 class="title"><a href="#">Park House</a></h6>
-
                                     <div class="location">
                                         <i class="fas fa-map-marker-alt"></i>
                                         <span>United State</span>
                                     </div>
-                                    <span class="price">$4000 - $2000</span>
+                                    <span class="price">$2000-$4000</span>
                                 </div>
                             </div>
                             <div class="property-details-card">
-                                <a href="#">
-                                    <img class="property-details-card__thumb" src="assets/images/thumbs/property-details-card-4.jpg" alt="">
-                                </a>
+                                <div class="property-details-card__thumb">
+                                    <a href="#"><img src="assets/images/thumbs/property-details-card-4.jpg" alt=""></a>
+                                </div>
+
                                 <div class="property-details-card__content">
                                     <h6 class="title"><a href="#">Garden Vila</a></h6>
-
                                     <div class="location">
                                         <i class="fas fa-map-marker-alt"></i>
                                         <span>United State</span>
                                     </div>
-                                    <span class="price">$5000</span>
+                                    <span class="price">$1000</span>
                                 </div>
                             </div>
                         </div>
@@ -364,19 +365,56 @@
 <!-- ==================== Property Details Page End ====================== -->
 
 <!-- ==================== Invest Now Modal start ====================== -->
-<div id="custom-modal" class="modal">
-    <div class="modal-dialog">
+<div id="invest-modal" class="modal fade custom--modal">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title">Invest Now</h5>
+                <button class="close-btn" type="button"  data-bs-dismiss="modal">
+                    <i class="las fa-times"></i>
+                </button>
             </div>
             <div class="modal-body">
-                <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <form class="modal-form" action="">
+                    <div class="modal-form__header">
+                        <h6 class="modal-form__title"><span>Property:</span> Greece House Family</h6>
+                        <p class="modal-form__desc">
+                            Buy shares of rental properties, earn monthly income, and watch your money grow
+                        </p>
+                    </div>
+                    <div class="modal-form__body">
+                        <div class="form-group">
+                            <label class="form--label" for="">Invest Amount</label>
+                            <div class="input-group--custom"> 
+                                <input class="form--control" type="text" id="" value="$5000">
+                                <div class="btn--group">
+                                    <button type="button">Min</button>
+                                    <span class="divider"></span>
+                                    <button type="button">Max</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="modal-form__info">
+                            <li class="modal-form__info-item">
+                                <span class="label">Per Instalment</span>
+                                <span class="value">$100</span>
+                            </li>
+                            <li class="modal-form__info-item">
+                                <span class="label">Intarest Amount</span>
+                                <span class="value">$80</span>
+                            </li>
+                            <li class="modal-form__info-item">
+                                <span class="label">Next Installment Date</span>
+                                <span class="value">12/01/2023</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-form__footer">
+                        <button type="button" class="btn btn-outline--base">Pay via Gateway</button>
+                        <button type="button" class="btn btn--base">Pay for Balance</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

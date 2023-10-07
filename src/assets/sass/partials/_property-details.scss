@@ -3,15 +3,10 @@
     .row {
         
         &--one {
-            // border: 1px solid red;
             margin-bottom: 42px;
 
             @include md-screen {
                 margin-bottom: 32px
-            }
-
-            & > div {
-                // border: 1px solid black;
             }
         }
     }
@@ -71,12 +66,11 @@
         display: flex;
         gap: 12px;
         align-items: center;        
-        // border: 1px solid black;
 
         .title {
             line-height: 150%;
             margin-bottom: 0px;
-            // border: 1px solid black;
+
             @include md-screen {
                 @include fs-24;
             }
@@ -90,7 +84,6 @@
             @include md-screen {
                 @include fs-18;
             }
-            // border: 1px solid black;
         }
     }
 
@@ -203,7 +196,6 @@
         margin-top: 32px;
         margin-left: auto !important;
         margin-right: auto !important;
-        // border: 1px solid black;
 
         @include lg-screen {
             max-width: 100%;
@@ -376,11 +368,8 @@
 
         @include md-screen {
             display: block;
-        }
-
-        @include xxsm-screen {
-            top: 17px;
-            right: 24px;
+            top: 16px;
+            right: 16px;
         }
 
         &:focus,
@@ -431,10 +420,18 @@
     &__block {
         padding: 24px;
         border-radius: 8px;
-        background-color: hsl(var(--white));
+        background-color: hsl(var(--white));        
+
+        @include md-screen {
+            padding: 16px;
+        }
 
         &:not(:last-child) {
             margin-bottom: 24px;
+
+            @include md-screen {
+                margin-bottom: 0px;
+            }
         }
     }
 }
@@ -450,6 +447,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include xsm-screen {
+            @include fs-14;
+        }
 
         &:not(:last-child) {
             border-bottom: 1px solid hsl(var(--base-l-900));
@@ -473,9 +474,8 @@
         display: flex;
         gap: 16px;
         
-        @include md-screen {
-            flex-direction: column;
-            align-items: center;
+        @include xsm-screen {
+            gap: 8px;
         }
     }
 
@@ -500,18 +500,18 @@
 
         .name {
             margin-bottom: 0px;
-            
-            @include md-screen {
-                text-align: center;
-            }
 
             a {
                 @include fs-20;
                 font-weight: 600;
                 line-height: 150%; 
+
+                @include xsm-screen {
+                    @include fs-16;
+                }
                 
-                a:hover,
-                a:focus {
+                &:hover,
+                &:focus {
                     color: hsl(var(--base));
                 }
             }
@@ -524,8 +524,8 @@
             font-weight: 500;
             line-height: 150%;
 
-            @include md-screen {
-                text-align: center;
+            @include xsm-screen {
+                @include fs-13;
             }
         }
 
@@ -544,25 +544,40 @@
             }
 
             &__item {
+                @include fs-14;
+                font-weight: 500;
                 display: flex;
                 align-items: center;
                 gap: 12px;
-
+                
                 @include lg-screen {
                     gap: 6px;
                 }
 
+                @include xsm-screen {
+                    @include fs-13;
+                }
+
                 .icon {
-                    @include fs-14;
+                    
                     color: hsl(var(--base));
                     display: inline-block;
                 }
 
                 .text {
-                    @include fs-14;
-                    font-weight: 500;
-                    line-height: 150%;
+                    line-height: 150%; 
                     white-space: nowrap;
+                }
+
+                &:last-child {
+                    .text {
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: normal;
+                    }
                 }
             }
         }
@@ -573,15 +588,36 @@
     display: flex;
     gap: 24px;
 
+    @include xsm-screen {
+        gap: 12px;
+    }
+
     &:not(:last-child) {
         margin-bottom: 24px;
+        
+        @include xsm-screen {
+            margin-bottom: 16px;
+        }
     }
 
     &__thumb {
         max-width: 115px;
         max-height: 85px;
-        object-fit: cover;
-        border-radius: 4px;
+        
+        @include xsm-screen {
+            max-width: 100px;
+        }
+
+        a {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
 
     }
 
@@ -594,7 +630,16 @@
             a {
                 @include fs-18;
                 font-weight: 600;
-                line-height: 150%;    
+                line-height: 150%;   
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                @include xsm-screen {
+                    @include fs-16;
+                }
 
                 &:hover,
                 &:focus {
@@ -611,12 +656,20 @@
             align-items: center;
             gap: 8px;
             margin-bottom: 4px;
+
+            @include xsm-screen {
+                @include fs-12;
+            }
         }
 
         .price {
             color: hsl(var(--base));
             font-weight: 700;
             line-height: 150%;
+
+            @include xsm-screen {
+                @include fs-14;
+            }
         }
     }
 }
