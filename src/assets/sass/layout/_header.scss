@@ -3,7 +3,7 @@
     position: relative;
     padding: 15px 0;
     background-color: hsl(var(--white));
-    box-shadow: 49px 18px 31px -13px rgba(147, 131, 128, 0.05); 
+    box-shadow: var(--header-box-shadow); 
     z-index: 1000;
 
     @include md-screen {

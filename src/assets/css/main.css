@@ -167,9 +167,10 @@
     --body-color: var(--gray);
     --body-bg: var(--light);
     --background-gradient: linear-gradient(45deg, hsl(var(--base)), hsl(var(--base-two)));
-    --header-box-shadow: 0px -1px 15px 3px hsl(var(--black) /.3);
-    --mobile-box-shadow: 0px -1px 5px 0px hsl(var(--black) /.92);
-    --box-shadow: 0px 2px 15px hsl(var(--black) /.05);
+    --header-box-shadow: 49px 18px 31px -13px rgba(147, 131, 128, 0.05);
+    --card-box-shadow: 0px 2px 15px hsl(var(--black) /.05);
+    --card-horizontal-box-shadow: 20px 79px 76px 0px rgba(159, 144, 132, 0.10);
+    --card-blog-box-shadow: 20px 79px 76px 0px rgba(159, 144, 132, 0.10);
 }
 
 /* ================================= Css Variable Css End ========================= */
@@ -1391,7 +1392,7 @@ button:focus {
 /* ================================= Card Css Start ================================= */
 .custom--card {
     border-radius: 5px;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--card-box-shadow);
     background-color: hsl(var(--white));
     border: transparent;
 }
@@ -1636,6 +1637,11 @@ button:focus {
     --bs-card-spacer-y: 26px;
     --bs-card-spacer-x: 44px;
     flex-direction: row;
+    transition: 0.2s linear;
+}
+
+.property-horizontal--card:hover {
+    box-shadow: var(--card-horizontal-box-shadow);
 }
 
 @media screen and (max-width: 991px) {
@@ -1859,8 +1865,12 @@ button:focus {
     --bs-card-border-radius: 14px;
     --bs-card-spacer-y: 24px;
     --bs-card-spacer-x: 36px;
-    transition: 0.3s linear;
+    transition: 0.2s linear;
     height: 100%;
+}
+
+.blog--card:hover {
+    box-shadow: var(--card-blog-box-shadow);
 }
 
 @media screen and (max-width: 1199px) {
@@ -3346,7 +3356,7 @@ input#confirm-password {
     position: relative;
     padding: 15px 0;
     background-color: hsl(var(--white));
-    box-shadow: 49px 18px 31px -13px rgba(147, 131, 128, 0.05);
+    box-shadow: var(--header-box-shadow);
     z-index: 1000;
 }
 
@@ -4739,14 +4749,6 @@ input#confirm-password {
 }
 /* Featured Property Section Css End */
 /* All Property Section Css Start */
-.all-property__cards .card {
-    transition: 0.2s linear;
-}
-
-.all-property__cards .card:hover {
-    box-shadow: 20px 79px 76px 0px rgba(159, 144, 132, 0.1);
-}
-
 .all-property__cards .card:not(:last-child) {
     margin-bottom: 24px;
 }
