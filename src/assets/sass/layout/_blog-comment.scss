@@ -1,0 +1,103 @@
+/* ================================= Blog Comment Css Start ===================== */
+.blog-comment {
+
+    &-list {
+        &__item {
+            display: flex;
+            align-items: start;
+            gap: 24px;
+            
+            @include msm-screen {
+                gap: 16px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 36px;
+                
+                @include msm-screen {
+                    margin-bottom: 18px;
+                }
+            }
+        }
+    }
+
+    &-form {
+        margin-top: 40px;
+
+        &__title {
+            line-height: 160%;
+            margin-bottom: 24px;
+        }
+
+        .form--control {
+            min-height: 165px;
+            padding: 20px 16px;
+            background-color: hsl(var(--white));
+        }
+    }
+
+    &__title {
+        line-height: 160%;
+        margin-bottom: 40px;
+        
+        @include msm-screen {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__thumb {
+        width: 100%;
+        height: 100%;
+        max-width: 85px;
+        max-height: 85px;
+        border-radius: 50%;
+        flex-shrink: 0; 
+
+        @include msm-screen {
+            max-width: 55px;
+            max-height: 55px;
+        }
+    }
+
+    &__content {}
+
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    &__name {
+        max-width: calc(100% - 130px);
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 600;
+        line-height: 160%;
+        margin-bottom: 0px;
+    }
+
+    &__date {
+        @include fs-14;
+        font-weight: 500;
+        line-height: 150%;
+        color: hsl(var(--base));
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__msg {
+        @include fs-18;
+        line-height: 160%;
+
+        @include msm-screen {
+            @include fs-16;
+        }
+    }
+}
+/* ================================= Blog Comment Css End ======================= */
