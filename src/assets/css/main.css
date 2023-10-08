@@ -2441,65 +2441,6 @@ input#confirm-password {
     color: hsl(var(--black)/0.4);
 }
 
-.range-slider__slide {
-    border-width: 0px !important;
-    background-color: hsl(var(--base)/0.15);
-    margin-bottom: 28px;
-}
-
-.range-slider .ui-slider-horizontal {
-    height: 3px;
-}
-
-.range-slider .ui-widget-header {
-    background-color: hsl(var(--base));
-}
-
-.range-slider .ui-slider-handle {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-}
-
-.range-slider .ui-state-default,
-.range-slider .ui-widget-content .ui-state-default,
-.range-slider .ui-widget-header .ui-state-default,
-.range-slider .ui-button,
-.range-slider html .ui-button.ui-state-disabled:hover,
-.range-slider html .ui-button.ui-state-disabled:active {
-    background-color: hsl(var(--base)) !important;
-    border-color: hsl(var(--base)) !important;
-    outline: none;
-}
-
-.range-slider__inputs {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.range-slider__inputs .input-group {
-    width: 40%;
-    flex-wrap: nowrap;
-}
-
-.range-slider__inputs .input-group-text {
-    color: hsl(var(--gray));
-    border-color: hsl(var(--base));
-    background-color: transparent;
-    border-radius: 4px;
-    padding: 0px 6px;
-}
-
-.range-slider__inputs .form--control {
-    font-weight: 500;
-    border: 1px solid hsl(var(--base)) !important;
-    background-color: transparent !important;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border-radius: 4px;
-}
-
 /* ================================= Form Css End =================================== */
 /* ================================= Modal Css Start ================================ */
 .custom--modal {
@@ -4174,6 +4115,69 @@ input#confirm-password {
     }
 }
 /* ================================= Search Form Css End ======================== */
+/* ================================= Range Slider Css Start ===================== */
+.range-slider__slide {
+    border-width: 0px !important;
+    background-color: hsl(var(--base)/0.15);
+    margin-bottom: 28px;
+}
+
+.range-slider .ui-slider-horizontal {
+    height: 3px;
+}
+
+.range-slider .ui-widget-header {
+    background-color: hsl(var(--base));
+}
+
+.range-slider .ui-slider-handle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.range-slider .ui-state-default,
+.range-slider .ui-widget-content .ui-state-default,
+.range-slider .ui-widget-header .ui-state-default,
+.range-slider .ui-button,
+.range-slider html .ui-button.ui-state-disabled:hover,
+.range-slider html .ui-button.ui-state-disabled:active {
+    background-color: hsl(var(--base)) !important;
+    border-color: hsl(var(--base)) !important;
+    outline: none;
+}
+
+.range-slider__inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.range-slider__inputs .input-group {
+    width: 40%;
+    flex-wrap: nowrap;
+}
+
+.range-slider__inputs .input-group-text {
+    color: hsl(var(--gray));
+    border-color: hsl(var(--base));
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 0px 6px;
+}
+
+.range-slider__inputs .form--control {
+    font-weight: 500;
+    border: 1px solid hsl(var(--base)) !important;
+    background-color: transparent !important;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 4px;
+}
+
+/* ================================= Range Slider Css End ======================= */
 /* ================================= Home Page Css Start ======================== */
 /* Banner Section Css Start */
 .banner {

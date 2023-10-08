@@ -1,42 +1,67 @@
-/* ================================= Range Slider Css Start =========================== */
-.custom--range {
-    &__content {
+/* ================================= Range Slider Css Start ===================== */
+.range-slider {
+
+    &__slide {
+        border-width: 0px !important;
+        background-color: hsl(var(--base)/.15);
+        margin-bottom: 28px;
+    }
+
+    .ui-slider-horizontal {
+        height: 3px;
+    }
+
+    .ui-widget-header {
+        background-color: hsl(var(--base));
+    }
+
+    .ui-slider-handle {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-button,
+    html .ui-button.ui-state-disabled:hover,
+    html .ui-button.ui-state-disabled:active {
+        background-color: hsl(var(--base)) !important;
+        border-color: hsl(var(--base)) !important;
+        outline: none;
+
+    }
+
+    &__inputs {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
-        margin-top: 10px;
-        label {
+        align-items: center;
+
+        .input-group {
             width: 40%;
+            flex-wrap: nowrap;
         }
-        input {
-            width: calc(100% - 40%);
-            text-align: right;
+
+        .input-group-text {
+            color: hsl(var(--gray));
+            border-color: hsl(var(--base));
+            background-color: transparent;
+            border-radius: 4px;
+            padding: 0px 6px;
         }
-    }
-    input {
-        border: 0;
-        color: hsl(var(--body-color));
-        font-weight: 500;
-    }
-    #slider-range {
-        height: 5px;
-        border: 0;
-        background: hsl(var(--base)/.2);
-        .ui-widget-header {
-            background-color: hsl(var(--base));
-        }
-        span:focus{
-            background-color: hsl(var(--base));
-        }
-        .ui-slider-handle {
-            width: 15px !important;
-            height: 15px !important;
-            background-color: hsl(var(--base)) !important;
-            border: 2px solid hsl(var(--white)) !important;
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
+        
+        .form--control {
+            font-weight: 500;
+            border: 1px solid hsl(var(--base)) !important;
+            background-color: transparent !important;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            border-radius: 4px;
         }
     }
+
 }
-/* ================================= Range Slider Css End =========================== */ 
+/* ================================= Range Slider Css End ======================= */
