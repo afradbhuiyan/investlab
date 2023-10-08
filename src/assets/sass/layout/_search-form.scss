@@ -1,7 +1,7 @@
 /* ================================= Search Form Css Start ====================== */
 .search-form {
     // border: 1px solid black;
-    
+
     .input-group {
         flex-wrap: nowrap;
     }
@@ -9,12 +9,31 @@
     .form--control {
         @include fs-20;
         padding: 20px 28px;
+        
+        @include lg-screen {
+            @include fs-18;
+            padding: 16px 20px;
+        }
+
+        @include md-screen {
+            @include fs-16;
+        }
     }
 
     .btn {
         @include fs-28;
         border-top-right-radius: 8px !important;
         border-bottom-right-radius: 8px !important;
+
+        @include lg-screen {
+            @include fs-24;
+        }
+
+        @include md-screen {
+            @include fs-20;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
     }
 }
 /* ================================= Search Form Css End ======================== */

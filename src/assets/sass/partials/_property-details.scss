@@ -359,7 +359,6 @@
     .close-btn {
         @include fs-20;
         padding: 0;
-        border-radius: 50%;
         color: hsl(var(--black)/.7);
         position: absolute;
         top: 24px;
@@ -603,9 +602,10 @@
     &__thumb {
         max-width: 115px;
         max-height: 85px;
+        flex-shrink: 0;
         
         @include xsm-screen {
-            max-width: 100px;
+            max-width: 90px;
         }
 
         a {

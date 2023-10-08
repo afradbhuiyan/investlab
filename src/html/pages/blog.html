@@ -5,15 +5,17 @@
     "breadcrumbText": "Blog"
 })
 
-<!--  ======================= Blog Page Start =============================  -->
+<!-- ======================= Blog Page Start ==================================== -->
 <section class="blog-page py-120 bg-pattern">
     <div class="container custom--container">
         <div class="row"> 
-            <div class="col-lg-8">
-                <div class="blog-page__search-sm">
-                    @@include('../partials/_search-form.html')
+            <div class="col-lg-7 col-xl-8">
+                <div class="text-end d-lg-none mb-4">
+                    <button class="btn btn--sm btn-outline--base btn--sidebar-open" type="button" data-toggle="sidebar" data-target="#blog-page-sidebar">
+                        <i class="las la-long-arrow-alt-left"></i>
+                        <span>Open Sidebar</span>
+                    </button>
                 </div>
-
                 <div class="row gy-4">
                     <div class="col-xsm-6 col-sm-6">
                         @@include('../partials/_blog-card.html', {
@@ -43,33 +45,30 @@
                             "card-btn-style": "outline-"
                         })
                     </div>
-                    <div class="col-xsm-6 col-sm-6">
-                        @@include('../partials/_blog-card.html', {
-                            "card-img": "assets/images/thumbs/blog-card-img-2.jpg",
-                            "card-title": "What Is Turn Key Real Estate Investing?",
-                            "card-btn-style": "outline-"
-                        })
-                    </div>
-                    <div class="col-xsm-6 col-sm-6">
-                        @@include('../partials/_blog-card.html', {
-                            "card-img": "assets/images/thumbs/blog-card-img-3.jpg",
-                            "card-title": "How to Make Better Investments",
-                            "card-btn-style": "outline-"
-                        })
-                    </div>
                 </div>
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            <i class="fas fa-angle-left"></i>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-lg-4">
-                <aside class="blog-page-sidebar">
-                    <div class="blog-page-sidebar__block">
-                        @@include('../partials/_search-form.html')
-                    </div>
-                </aside>
+            <div class="col-lg-5 col-xl-4">
+                @@include('../partials/_blog-sidebar.html')                
             </div> 
         </div>
     </div>
 </section>
-<!--  ======================= Blog Page End ===============================  -->
+<!-- ======================= Blog Page End ====================================== -->
 
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')

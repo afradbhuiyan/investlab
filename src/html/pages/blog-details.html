@@ -1,12 +1,29 @@
 @@include('../partials/_template-top.html')
 @@include('../partials/_header.html')
 
+@@include('../partials/_breadcrumb.html', {
+    "breadcrumbText": "Blog Details"
+})
 
-<section class="py-120">
-    <div class="container">
-        <h2>Blog Details</h2>
+<!-- ======================= Blog Details Page Start ================================== -->
+<section class="blog-page blog-details py-120 bg-pattern">
+    <div class="container custom--container">
+        <div class="row"> 
+            <div class="col-lg-7 col-xl-8">
+                <div class="text-end d-lg-none mb-4">
+                    <button class="btn btn--sm btn-outline--base btn--sidebar-open" type="button" data-toggle="sidebar" data-target="#blog-page-sidebar">
+                        <i class="las la-long-arrow-alt-left"></i>
+                        <span>Open Sidebar</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-5 col-xl-4">
+                @@include('../partials/_blog-sidebar.html')                
+            </div> 
+        </div>
     </div>
 </section>
+<!-- ======================= Blog Details Page End ==================================== -->
 
 @@include('../partials/_footer.html')
 @@include('../partials/_template-bottom.html')

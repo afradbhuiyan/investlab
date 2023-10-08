@@ -2,16 +2,21 @@
 .pagination {
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 56px;
+    margin-top: 42px;
+    gap: 16px;
+
     @include lg-screen {
-        margin-top: 48px;
+        margin-top: 36px;
     }
+
     @include md-screen {
-        margin-top: 40px;
+        margin-top: 28px;
     }
+
     @include sm-screen {
-        margin-top: 32px;
+        margin-top: 20px;
     }
+
     .page-item {
         &.active {
             .page-link {
@@ -20,24 +25,37 @@
                 border-color: hsl(var(--base));
             }
         }
+
         .page-link {
-            border: 1px solid hsl(var(--black) / .15);
-            margin: 0 5px;
-            border-radius: 50%;
-            height: 40px;
-            width: 40px;
+            width: 58px;
+            height: 53px;
+            border-radius: 4px;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: transparent;
-            font-weight: 500;
-            padding: 0;
+            border: 1px solid hsl(var(--black)/.08); 
             color: hsl(var(--body-color));
+            background-color: hsl(var(--white));
+            font-weight: 600;
+            line-height: 150%;
+
+            @include lg-screen {
+                width: 48px;
+                height: 43px;
+            }
+
+            @include md-screen {
+                width: 40px;
+                height: 35px;
+            }
+            
             &:hover {
-                background-color: hsl(var(--base));
                 color: hsl(var(--white));
+                background-color: hsl(var(--base));
                 border-color: hsl(var(--base));
             }
+
             &:focus {
                 box-shadow: none;
             }

@@ -65,6 +65,17 @@
     .icon {
         margin-right: 5px;
     }
+
+    // Custom Button
+    &--sidebar-open {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        i {
+            @include fs-22;
+        }
+    }
     
     &--base {
         background-color: hsl(var(--base)) !important;
