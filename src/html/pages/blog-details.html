@@ -8,16 +8,113 @@
 <!-- ======================= Blog Details Page Start ================================== -->
 <section class="blog-page blog-details py-120 bg-pattern">
     <div class="container custom--container">
-        <div class="row"> 
-            <div class="col-lg-7 col-xl-8">
+        <div class="row justify-content-center"> 
+            <div class="col-sm-11 col-md-10 col-lg-7 col-xl-8">
                 <div class="text-end d-lg-none mb-4">
                     <button class="btn btn--sm btn-outline--base btn--sidebar-open" type="button" data-toggle="sidebar" data-target="#blog-page-sidebar">
                         <i class="las la-long-arrow-alt-left"></i>
                         <span>Open Sidebar</span>
                     </button>
                 </div>
+                <div class="blog-details__inner">
+                    <img class="blog-details__thumb" src="assets/images/thumbs/blog-details-img.jpg" alt="">
+                    <div class="blog-details__content">
+                        <div class="blog-details__date">
+                            <h4 class="day">04</h4>
+                            <span class="month">Jun</span>
+                        </div>
+                        <ul class="blog-details-meta">
+                            <li class="blog-details-meta__item">
+                                <i class="fas fa-comment"></i>
+                                <span class="text">3 Comments</span>
+                            </li>
+                        </ul>
+                        <h1 class="blog-details__title">
+                            Ten Important Tips For Launching Your Real Estate Investing Career
+                        </h1>
+                        <div class="blog-details__desc">
+                            <p>
+                                There are many variations of passages of Lorem Ipsum available, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et corrupti quas, ipsa a voluptatem debitis amet accusamus nesciunt ut impedit eos velit vel ea ex iure expedita odit illum incidunt. There are many variations of passages of Lorem Ipsum available, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et corrupti quas, ipsa a voluptatem debitis amet accusamus nesciunt ut impedit eos velit vel ea ex iure expedita odit illu...
+                            </p>
+                            <p>
+                                There are many variations of passages of Lorem Ipsum available, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et corrupti quas, ipsa a voluptatem debitis amet accusamus nesciunt ut impedit eos velit vel ea ex iure expedita odit illum incidunt. 
+                            </p>
+                            <p>
+                                There are many variations of passages of Lorem Ipsum available, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et corrupti quas,
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-details__comments">
+                    <div class="blog-comment">
+                        <h5 class="blog-comment__title">3 Comments available</h5>
+
+                        <ul class="blog-comment-list">
+                            <li class="blog-comment-list__item">
+                                <img class="blog-comment__thumb" src="assets/images/thumbs/user-01.png" alt="">
+                                <div class="blog-comment__content">
+                                    <div class="blog-comment__top">
+                                        <h6 class="blog-comment__name">Alexi Laiho</h6>
+                                        <div class="blog-comment__date">
+                                            <i class="far fa-calendar"></i>
+                                            <span>Fri, 15 Sep 2023</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="blog-comment__msg">
+                                        "Basically, the kit consists of more than a hundred ready- to-use elements that you can combine to get the exact prototype you want."
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="blog-comment-list__item">
+                                <img class="blog-comment__thumb" src="assets/images/thumbs/user-02.png" alt="">
+                                <div class="blog-comment__content">
+                                    <div class="blog-comment__top">
+                                        <h6 class="blog-comment__name">Theresa Webb</h6>
+                                        <div class="blog-comment__date">
+                                            <i class="far fa-calendar"></i>
+                                            <span>Fri, 15 Sep 2023</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="blog-comment__msg">
+                                        "Basically, the kit consists of more than a hundred ready- to-use elements that you can combine to get the exact prototype you want."
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="blog-comment-list__item">
+                                <img class="blog-comment__thumb" src="assets/images/thumbs/user-03.png" alt="">
+                                <div class="blog-comment__content">
+                                    <div class="blog-comment__top">
+                                        <h6 class="blog-comment__name">Devon Lane</h6>
+                                        <div class="blog-comment__date">
+                                            <i class="far fa-calendar"></i>
+                                            <span>Fri, 15 Sep 2023</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="blog-comment__msg">
+                                        "Basically, the kit consists of more than a hundred ready- to-use elements that you can combine to get the exact prototype you want."
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <form class="blog-comment-form" action="">
+                           <h5 claas="blog-comment-form__title">Leave a Comment</h5> 
+                           
+                           <div class="form-group">
+                                <textarea class="form--control" placeholder="Write Message"></textarea>
+                           </div>
+
+                           <button type="button" class="btn btn--base">
+                                Post Comment
+                           </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-5 col-xl-4">
+            <div class="col-sm-11 col-md-10 col-lg-5 col-xl-4">
                 @@include('../partials/_blog-sidebar.html')                
             </div> 
         </div>
