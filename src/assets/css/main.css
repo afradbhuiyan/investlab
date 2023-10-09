@@ -3303,6 +3303,7 @@ input#confirm-password {
 /* ================================= Preload Css End ============================== */
 /* ================================= Header Css Start ============================= */
 .header {
+    width: 100%;
     position: relative;
     padding: 15px 0;
     background-color: hsl(var(--white));
@@ -3312,6 +3313,10 @@ input#confirm-password {
 
 @media screen and (max-width: 991px) {
     .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
         padding: 10px 0;
         max-height: 101vh;
         overflow-y: auto;
@@ -3425,6 +3430,12 @@ input#confirm-password {
     margin: 0px 24px 0px 19px;
     display: inline-block;
     background-color: hsl(var(--black)/0.15);
+}
+
+@media screen and (max-width: 575px) {
+    .navbar-actions--md .btn {
+        padding: 12px 24px;
+    }
 }
 
 .language-box {
@@ -3676,11 +3687,11 @@ input#confirm-password {
     color: hsl(var(--white));
     font-weight: 500;
     white-space: nowrap;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
 }
 
 .footer-bottom .footer-link:hover, .footer-bottom .footer-link:focus {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
     color: hsl(var(--base));
 }
 
@@ -4031,6 +4042,14 @@ input#confirm-password {
     color: hsl(var(--white)/0.6);
 }
 
+.subscribe-form .form--control:focus::placeholder {
+    color: hsl(var(--white));
+}
+
+.subscribe-form .form--control:focus {
+    border-bottom-color: hsl(var(--white)/0.6);
+}
+
 .subscribe-form .btn {
     margin-top: 22px;
 }
@@ -4170,6 +4189,7 @@ input#confirm-password {
 .range-slider__inputs .input-group-text {
     color: hsl(var(--gray));
     border-color: hsl(var(--base));
+    border-right-width: 0px;
     background-color: transparent;
     border-radius: 4px;
     padding: 0px 6px;
@@ -4178,9 +4198,11 @@ input#confirm-password {
 .range-slider__inputs .form--control {
     font-weight: 500;
     border: 1px solid hsl(var(--base)) !important;
+    border-left: 0px !important;
     background-color: transparent !important;
     padding-top: 6px;
     padding-bottom: 6px;
+    padding-left: 0px;
     border-radius: 4px;
 }
 
@@ -4547,21 +4569,28 @@ input#confirm-password {
 /* ================================= Home Page Css Start ======================== */
 /* Banner Section Css Start */
 .banner {
-    padding-top: 135px;
-    padding-bottom: 155px;
+    padding-top: 133px;
+    padding-bottom: 153px;
+}
+
+@media screen and (max-width: 1199px) {
+    .banner {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 @media screen and (max-width: 991px) {
     .banner {
-        padding-top: 85px;
-        padding-bottom: 105px;
+        padding-top: 150px;
+        padding-bottom: 80px;
     }
 }
 
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 575px) {
     .banner {
-        padding-top: 55px;
-        padding-bottom: 75px;
+        padding-top: 130px;
+        padding-bottom: 60px;
     }
 }
 
@@ -4580,7 +4609,6 @@ input#confirm-password {
 }
 
 .banner-content__title {
-    text-transform: capitalize;
     margin-bottom: 32px;
     line-height: 120%;
 }
@@ -4599,13 +4627,14 @@ input#confirm-password {
 
 @media screen and (max-width: 575px) {
     .banner-content__title {
-        max-width: 85%;
+        max-width: 95%;
     }
 }
 
 @media screen and (max-width: 424px) {
     .banner-content__title {
         max-width: 100%;
+        font-size: clamp(1.875rem, -0.0481rem + 9.6154vw, 2.5rem);
     }
 }
 
@@ -4647,6 +4676,12 @@ input#confirm-password {
 
 .banner-info__item .title {
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 424px) {
+    .banner-info__item .title {
+        font-size: clamp(1.5rem, 0.3462rem + 5.7692vw, 1.875rem);
+    }
 }
 
 .banner-info__item .title span {
@@ -6004,11 +6039,11 @@ input#confirm-password {
 }
 
 .property-details-amount-info__item:not(:last-child) {
-    border-bottom: 1px solid hsl(var(--base-l-900));
+    border-bottom: 1px solid hsl(var(--base-l-900)/0.5);
 }
 
 .property-details-amount-info__item:first-child {
-    border-top: 1px solid hsl(var(--base-l-900));
+    border-top: 1px solid hsl(var(--base-l-900)/0.5);
 }
 
 .property-details-amount-info__item:last-child {

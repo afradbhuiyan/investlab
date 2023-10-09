@@ -48,6 +48,7 @@
         .input-group-text {
             color: hsl(var(--gray));
             border-color: hsl(var(--base));
+            border-right-width: 0px;
             background-color: transparent;
             border-radius: 4px;
             padding: 0px 6px;
@@ -56,9 +57,11 @@
         .form--control {
             font-weight: 500;
             border: 1px solid hsl(var(--base)) !important;
+            border-left: 0px !important;
             background-color: transparent !important;
             padding-top: 6px;
             padding-bottom: 6px;
+            padding-left: 0px;
             border-radius: 4px;
         }
     }

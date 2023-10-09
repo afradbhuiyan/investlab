@@ -1,17 +1,22 @@
 /* ================================= Home Page Css Start ======================== */
 /* Banner Section Css Start */
 .banner {
-    padding-top: 135px;
-    padding-bottom: 155px;
-
-    @include md-screen {
-        padding-top: 85px;
-        padding-bottom: 105px;
+    padding-top: 133px;
+    padding-bottom: 153px;
+  
+    @include lg-screen {
+      padding-top: 120px;
+      padding-bottom: 120px;
     }
-
-    @include xsm-screen {
-        padding-top: 55px;
-        padding-bottom: 75px;
+    
+    @include md-screen {
+      padding-top: calc(80px + 70px); // add header height
+      padding-bottom: 80px;
+    }
+  
+    @include msm-screen {
+      padding-top: calc(60px + 70px); //add header height
+      padding-bottom: 60px;
     }
 
     &-content {
@@ -27,9 +32,8 @@
                 @include fs-20;
             }
         }
-
+        
         &__title {
-            text-transform: capitalize;
             margin-bottom: 32px;
             line-height: 120%;
 
@@ -42,11 +46,12 @@
             }
 
             @include msm-screen {
-                max-width: 85%;
+                max-width: 95%;
             }
 
             @include xsm-screen {
                 max-width: 100%;
+                font-size: clamp(1.875rem, -0.0481rem + 9.6154vw, 2.5rem);
             }
         }
 
@@ -83,6 +88,10 @@
             .title {
                 margin-bottom: 10px;
 
+                @include xsm-screen {
+                    font-size: clamp(1.5rem, 0.3462rem + 5.7692vw, 1.875rem);
+                }
+                
                 span {
                     color: hsl(var(--base));
                 }

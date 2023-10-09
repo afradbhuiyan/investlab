@@ -87,11 +87,11 @@
         color: hsl(var(--white));
         font-weight: 500;
         white-space: nowrap;
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
 
         &:hover,
         &:focus {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
             color: hsl(var(--base));
         } 
     }

@@ -452,11 +452,11 @@
         }
 
         &:not(:last-child) {
-            border-bottom: 1px solid hsl(var(--base-l-900));
+            border-bottom: 1px solid hsl(var(--base-l-900)/.5);
         }
 
         &:first-child {
-            border-top: 1px solid hsl(var(--base-l-900));
+            border-top: 1px solid hsl(var(--base-l-900)/.5);
         }
 
         &:last-child {
