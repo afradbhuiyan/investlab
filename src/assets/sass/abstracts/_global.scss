@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 64px;
-  
+
   @include md-screen {
     margin-bottom: 48px;
   }
@@ -15,7 +15,7 @@
 
   &.mb-less {
     margin-bottom: 32px;
-    
+
     @include md-screen {
       margin-bottom: 24px;
     }
@@ -54,6 +54,7 @@
   }
 
   &__title {
+    font-size: clamp(1.625rem, 1.281rem + 1.7201vw, 3rem);
     line-height: 120%;
     margin-bottom: 0px;
     text-align: center;
@@ -70,7 +71,7 @@
     span {
       @include fs-18;
     }
-    
+
     i {
       @include fs-40;
       line-height: 1;
@@ -124,4 +125,5 @@
     background-color: hsl(var(--white));
   }
 }
+
 /* ================================= Global Classes Css End =========================== */

@@ -684,6 +684,10 @@
         &__desc {
             @include fs-18;
             line-height: 150%;
+
+            @include msm-screen {
+                @include fs-16;
+            }
         }
 
         &__info {
