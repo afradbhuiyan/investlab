@@ -30,12 +30,18 @@
         width: 100%;
         background-color: hsl(var(--white));
         border-bottom: 1px solid hsl(var(--black)/.08);
-        position: sticky;
+        position: sticky !important;
         top: 0px;
         left: 0px;
         right: 0px;
         animation: slide-down .8s;
         transition: .3s linear;
+    }
+
+    &.internal-page-header {
+        @include md-screen {
+            position: relative;
+        }
     }
 }
 

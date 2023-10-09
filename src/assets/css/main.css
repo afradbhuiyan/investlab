@@ -3336,12 +3336,18 @@ input#confirm-password {
     width: 100%;
     background-color: hsl(var(--white));
     border-bottom: 1px solid hsl(var(--black)/0.08);
-    position: sticky;
+    position: sticky !important;
     top: 0px;
     left: 0px;
     right: 0px;
     animation: slide-down 0.8s;
     transition: 0.3s linear;
+}
+
+@media screen and (max-width: 991px) {
+    .header.internal-page-header {
+        position: relative;
+    }
 }
 
 .navbar {
