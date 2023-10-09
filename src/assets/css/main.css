@@ -1775,6 +1775,12 @@ button:focus {
     margin-bottom: 32px;
 }
 
+@media screen and (max-width: 575px) {
+    .property-horizontal--card .card-progress {
+        margin-bottom: 24px;
+    }
+}
+
 .property-horizontal--card .card-progress__bar {
     border-radius: 10px;
     background-color: hsl(var(--base-l-900));

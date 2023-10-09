@@ -363,6 +363,10 @@
 
     .card-progress {
         margin-bottom: 32px;
+        
+        @include msm-screen {
+            margin-bottom: 24px;
+        }
 
         &__bar {
             border-radius: 10px;
