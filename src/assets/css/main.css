@@ -5437,11 +5437,6 @@ input#confirm-password {
         transform: translateY(0px);
     }
 }
-
-.latest-blogs .blog--card:hover {
-    box-shadow: 20px 79px 76px 0px rgba(159, 144, 132, 0.1);
-}
-
 /* Latest Blogs Section Css End */
 /* ================================= Home Page Css End ========================== */
 /* ================================= Property Page Css Start ==================== */
